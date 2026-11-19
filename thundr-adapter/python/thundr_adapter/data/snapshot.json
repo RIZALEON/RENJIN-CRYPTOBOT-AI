@@ -1,0 +1,12 @@
+{
+  "snapshot_of": "thundr-commands.json (canonical THUNDR-CORE registry)",
+  "source_file": "grounding/thundr-commands.json (copy of the canonical Mac registry)",
+  "copied_date": "2026-11-19",
+  "schema": "thundr.core.commands.v1",
+  "version": "1.0.0",
+  "source_rev": 2,
+  "source_date": "2026-11-15",
+  "commands": 124,
+  "content_sha256": "71d132a0628e6671e515dfba316381e9053914a5535f814fc8b1052ad42fb215",
+  "note": "Bundled fallback. The loader prefers the canonical registry when present (THUNDR_CORE env, then the Mac path). Refresh via adapter.update.apply with GO."
+}

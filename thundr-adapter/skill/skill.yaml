@@ -1,0 +1,5 @@
+name: "thundr-adapter"
+title: "ThundR Plugin Adapter"
+description: "Drive the ThundR Plugin Adapter to communicate with ThundR, run diagnostics, analysis, debugging, repairs, updates, and visual integrations, offline and GO-gated."
+category: "Work and knowledge"
+include_in_prompt: false

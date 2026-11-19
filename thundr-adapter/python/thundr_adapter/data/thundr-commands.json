@@ -1,0 +1,3109 @@
+{
+ "schema": "thundr.core.commands.v1",
+ "name": "THUNDR CRYPTOBOT core registry",
+ "version": "1.0.0",
+ "source": {
+  "list": "ЯSCRIBE/NOTES/COMMANDS-AND-FUNCTIONS/COMMANDS-AND-FUNCTIONS@2.rzl",
+  "rev": 2,
+  "date": "2026-11-15"
+ },
+ "rules": {
+  "refuse_reply": "needs Rizal's GO. ThundR never signs, mints, seals, installs, removes files or writes the chain/wallet. Nothing was run.",
+  "close_app": "`close <App>` is NOT aliased: in ThundR `close` closes a ThundR panel only.",
+  "add_only": "Never remove an existing host command; add aliases instead."
+ },
+ "hosts": [
+  "ios",
+  "macos",
+  "android",
+  "linux-rvm",
+  "ubuntu-touch",
+  "cryptogame",
+  "apps-native"
+ ],
+ "groups": {
+  "wrap": "RDRAGON wrap",
+  "rdragon": "RDRAGON wrap",
+  "17e": "17e skill",
+  "ragent": "RAGENT router",
+  "dragongate": "RDRGN DragonGate",
+  "gate": "RDRGN DragonGate",
+  "rdrgn": "RDRGN DragonGate",
+  "ds": "RDRGN DragonGate",
+  "rscribe": "ЯSCRIBE",
+  "scribe": "ЯSCRIBE",
+  "master": "COMMANDS-MASTER",
+  "thundr": "*present",
+  "go": "*go",
+  "refuse": "*go",
+  "rsync": "RSYNC feed",
+  "feed": "RSYNC feed"
+ },
+ "refuse": [
+  [
+   "^optimize\\s+(clean|deep)\\b",
+   "optimize clean / optimize deep (removes files)"
+  ],
+  [
+   "^eggs?\\s+install\\b",
+   "eggs install"
+  ],
+  [
+   "^self[- ]?evolution\\b",
+   "self-evolution"
+  ],
+  [
+   "^rebirth\\b.*\\bgo\\b",
+   "REBIRTH … go (real run)"
+  ],
+  [
+   "^(egg\\s+apply|api/egg/apply|api/approve)\\b",
+   "egg apply / approve endpoint"
+  ],
+  [
+   "^rscribe\\s+build\\b.*--run\\b",
+   "rscribe build --run (real Apple build/sign)"
+  ],
+  [
+   "^17e\\s+(uninstall|delete|rm|sign|keychain|wallet)\\b",
+   "17e uninstall/delete/rm/sign/keychain/wallet"
+  ]
+ ],
+ "aliases": [
+  [
+   "^manual(?:\\s+(.+))?$",
+   "AUTOMANUAL",
+   "manual [words] → AUTOMANUAL [words]"
+  ]
+ ],
+ "local_commands": [
+  "scribe commands",
+  "rscribe commands",
+  "commands all",
+  "commands <group>",
+  "which app <command>",
+  "scribe where <command>",
+  "thundr core",
+  "rsync feed install",
+  "rsync feed status",
+  "rsync feed off",
+  "rsync feed sync",
+  "feed on",
+  "feed off"
+ ],
+ "commands": [
+  {
+   "id": "C001",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`open <App>`",
+   "does": "Open an allowed app (Terminal, Safari, Finder, TextEdit, System Settings, DRAGON SKULL, Xcode, TerraformЯ, Grok Bot)",
+   "defined": "wrap.py:891",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C002",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`open <App> <path or shortname>`",
+   "does": "Open a file/project only under `~/R/ЯLAB` or `/Volumes/MICRO DISK`",
+   "defined": "wrap.py:892",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C003",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`xcode` / `terminal`",
+   "does": "Quick open",
+   "defined": "wrap.py:893",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C004",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`open grokbot` / `typegrokbot <msg>`",
+   "does": "Bring Grok Bot front / type a message into it",
+   "defined": "wrap.py:894",
+   "status": "present",
+   "go": false,
+   "thundr": "MCR thundr_cmd (OPEN GROKBOT / TYPEGROKBOT)",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C005",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`close <App>` / `quit <App>`",
+   "does": "Graceful quit (macOS may ask to save). Never: Grok Bot, Finder, DRAGON SKULL, ThundR",
+   "defined": "wrap.py:895",
+   "status": "different",
+   "go": false,
+   "thundr": "ThundR `close` closes a float panel (local); never quits apps. List `close <App>` is the RDRAGON wrap verb — not aliased (would quit apps).",
+   "hosts": {
+    "ios": "thundr-different",
+    "macos": "thundr-different",
+    "android": "thundr-different",
+    "linux-rvm": "thundr-different",
+    "ubuntu-touch": "thundr-different",
+    "cryptogame": "thundr-different",
+    "apps-native": "thundr-different"
+   }
+  },
+  {
+   "id": "C006",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`analyze` / `mem` / `ram`",
+   "does": "Neo 8 GB map + biggest apps + tips (read-only)",
+   "defined": "wrap.py:896, 1140s",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C007",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`optimize apps`",
+   "does": "Quit heavy Safari / System Settings / TextEdit only",
+   "defined": "wrap.py:897, 1173–1181",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C008",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`optimize` / `optimize report`",
+   "does": "Run `TOOLS/optimize.sh`",
+   "defined": "wrap.py:898, 1207–1224",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C009",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`optimize clean`",
+   "does": "Cleanup that removes files",
+   "defined": "wrap.py:899 · **GO**",
+   "status": "refuse-stub",
+   "go": true,
+   "thundr": "ThundR refuses locally: needs Rizal's GO",
+   "hosts": {
+    "ios": "refuse",
+    "macos": "refuse",
+    "android": "refuse",
+    "linux-rvm": "refuse",
+    "ubuntu-touch": "refuse",
+    "cryptogame": "refuse",
+    "apps-native": "refuse"
+   }
+  },
+  {
+   "id": "C010",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`optimize deep`",
+   "does": "Deep cleanup; wrap currently replies that it needs a Decider GO and does not run it",
+   "defined": "wrap.py:900, 1215 · **GO**",
+   "status": "refuse-stub",
+   "go": true,
+   "thundr": "ThundR refuses locally: needs Rizal's GO",
+   "hosts": {
+    "ios": "refuse",
+    "macos": "refuse",
+    "android": "refuse",
+    "linux-rvm": "refuse",
+    "ubuntu-touch": "refuse",
+    "cryptogame": "refuse",
+    "apps-native": "refuse"
+   }
+  },
+  {
+   "id": "C011",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`scroll` / `scroll safari` / `scroll full` / `scroll list`",
+   "does": "Screenshot scroll capture via ds-hostd (local port)",
+   "defined": "wrap.py:901, 1186–1206",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C012",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`rscribe` / `rscribe build [ios/macos]`",
+   "does": "Open ЯSCRIBE / plan an Apple build (plan is dry unless `--run`)",
+   "defined": "wrap.py:902, 521–526, 538–549",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C013",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`draw …` / `rate good` / `rate bad <note>`",
+   "does": "Image gen and teach it",
+   "defined": "wrap.py:903, 1225–1235",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C014",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`manual` / `manual <words>`",
+   "does": "Unified AUTOMANUAL contents / open a section",
+   "defined": "wrap.py:904, 920–956",
+   "status": "different",
+   "go": false,
+   "thundr": "ThundR has `AUTOMANUAL` (KNOW); list says `manual` / `manual <words>` → alias added",
+   "hosts": {
+    "ios": "thundr-different",
+    "macos": "thundr-different",
+    "android": "thundr-different",
+    "linux-rvm": "thundr-different",
+    "ubuntu-touch": "thundr-different",
+    "cryptogame": "thundr-different",
+    "apps-native": "thundr-different"
+   }
+  },
+  {
+   "id": "C015",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`ragent <msg>` / `ask ragent <msg>`",
+   "does": "Talk to RAGENT at `(local)`; sign/mint words become a request card",
+   "defined": "wrap.py:905",
+   "status": "present",
+   "go": false,
+   "thundr": "MCR thundr_intent _RAGENT_CMD + iOS Apple lane",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C016",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`open ragent` / `ragent autoopen on/off`",
+   "does": "Open GHOSTMACHINE in Xcode, then RAGENT's Coding Assistant",
+   "defined": "wrap.py:906",
+   "status": "present",
+   "go": false,
+   "thundr": "MCR thundr_intent _OPEN_RAGENT",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C017",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`prep 17e install` / `install rboard 17e` / `prep install <scheme>`",
+   "does": "Open GHOSTMACHINE, check 17e visible, unsigned build check, ask RAGENT. **Never signs or installs**",
+   "defined": "wrap.py:907 · actual install still **GO**",
+   "status": "present",
+   "go": true,
+   "thundr": "MCR thundr_intent _PREP_CMD (never installs)",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C018",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "plain follow-ups (`put rboard on my 17e`, `then open ragent`, `you do that`)",
+   "does": "Mapped to the commands above",
+   "defined": "wrap.py:908",
+   "status": "present",
+   "go": false,
+   "thundr": "MCR thundr_intent _FOLLOW",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C019",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`open terminal in <folder>` / `launch terminal`",
+   "does": "Terminal via ds-hostd, folder only under ЯLAB or MICRO DISK",
+   "defined": "wrap.py:909",
+   "status": "present",
+   "go": false,
+   "thundr": "MCR thundr_intent _TERM",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C020",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`permissions` / `check access` / `request accessibility`",
+   "does": "ThundR checks Accessibility + Automation; you flip the macOS switch",
+   "defined": "wrap.py:910",
+   "status": "present",
+   "go": false,
+   "thundr": "MCR thundr_intent _PERM + thundr_access",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C021",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e status` / `17e apps` / `17e ls <app> [path]`",
+   "does": "17e connected? our apps + versions; list Documents",
+   "defined": "wrap.py:911 (hook 957–969)",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C022",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e pull` / `17e sync`",
+   "does": "Copy Documents off the phone into the Neo mirror (no deletes)",
+   "defined": "wrap.py:912",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C023",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e push` / `17e send` / `17e sync up`",
+   "does": "Write into Documents / RLINE inbox (phone copy backed up first)",
+   "defined": "wrap.py:913",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C024",
+   "group": "RDRAGON wrap (Mac chat)",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`command` / `commands` / `help`",
+   "does": "This list",
+   "defined": "wrap.py:914",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap (Mac chat); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C025",
+   "group": "RDRAGON wrap · other entry points",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`/rvm <command>`",
+   "does": "Run a command in the RVM guest (also `/api` bridge exec)",
+   "defined": "wrap.py(local port)–1414, DSP 1463",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap · other entry points; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C026",
+   "group": "RDRAGON wrap · other entry points",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`/parts`, `/recall`, `TEST`, `WALIS DEEP`",
+   "does": "Named as app commands in the DSP facts string (RDRGN/RVM side)",
+   "defined": "wrap.py(local port)–1464",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap · other entry points; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C027",
+   "group": "RDRAGON wrap · other entry points",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe <verb> …`",
+   "does": "Guest `rscribe` verbs: `archive`, `json`, `list`, `mind`, `new`, `pin`, `recover`, `restore`, `search`, `show`, `unpin`, `verify`, `version`",
+   "defined": "wrap.py:23, 534–549",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap · other entry points; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C028",
+   "group": "RDRAGON wrap · other entry points",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`shot` / `sshot` / `see` (optional `rscribe` prefix)",
+   "does": "Shot-sense via ghostcmd",
+   "defined": "wrap.py:528–533, `/api/see` 1358",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap · other entry points; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C029",
+   "group": "RDRAGON wrap · other entry points",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "POST `/v1/chat/completions` (via wrap)",
+   "does": "Command intercepts first, else model",
+   "defined": "wrap.py ~882–1255",
+   "status": "present",
+   "go": false,
+   "thundr": "RAgentEngine / Neo front",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C030",
+   "group": "RDRAGON wrap · other entry points",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "GET `/api/version`",
+   "does": "Reports wrap identity `RDRAGON` / `0.2.2` / parity `DragonSkull 1.0.4 (10)` — **stale vs iOS 1.0.6.0 (47)**",
+   "defined": "wrap.py(local port)",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRAGON wrap · other entry points; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C031",
+   "group": "RDRAGON wrap · other entry points",
+   "owner_app": "RDRAGON wrap",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`/api/rscribe/cmd`, `/api/ds/cmd`, `/api/mind/ask`, `/api/img/gen`, `/api/audio`, `/api/egg/build`, `/api/egg/apply`, `/api/approve`, `/api/deny`",
+   "does": "Matching tools; egg apply / casket / estop are privileged",
+   "defined": "wrap.py(local port)–1431 · apply/sign **GO**",
+   "status": "refuse-stub",
+   "go": true,
+   "thundr": "ThundR refuses locally: needs Rizal's GO",
+   "hosts": {
+    "ios": "refuse",
+    "macos": "refuse",
+    "android": "refuse",
+    "linux-rvm": "refuse",
+    "ubuntu-touch": "refuse",
+    "cryptogame": "refuse",
+    "apps-native": "refuse"
+   }
+  },
+  {
+   "id": "C032",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e` / `17e status`",
+   "does": "Connected? transport, tunnel, pairing; our apps + versions; mirror summary",
+   "defined": "635–648",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C033",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e apps`",
+   "does": "Same as status (same branch)",
+   "defined": "635",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C034",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e ls <app> [path]` (aliases `list`, `files`)",
+   "does": "List Documents (3 levels; secret-looking names hidden)",
+   "defined": "649–661",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C035",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e pull <app> [path]`",
+   "does": "devicectl copy → rsync into `~/R/ЯLAB/DEVICES/17E-MIRROR/<bundle>/`",
+   "defined": "662–665, `pull()` 132",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C036",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e sync`",
+   "does": "Pull Documents of every our-app (no `--delete`)",
+   "defined": "671–679",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C037",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e push <app> <file> [Documents/dest]`",
+   "does": "Copy one local file under `~/R/ЯLAB` onto the phone, Documents/ only; existing phone file first saved to `phone-bak/`",
+   "defined": "680–683, `push()` 182",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C038",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e send <app> <file>`",
+   "does": "Push into `Documents/RLINE/RSCALE-END/inbox/f.RDRAGON--<name>`",
+   "defined": "684–689",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C039",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e sync up <app>`",
+   "does": "Push changed files from the mirror `outbox/`",
+   "defined": "666–670, `sync_up()` 206",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C040",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e diag <app>` (aliases `diagnose`, `diagnostic`, `analyze`, `analyse`, `analysis`, `doctor`)",
+   "does": "Read-only full diagnostic; writes `DIAG-*.md` in the mirror",
+   "defined": "690–691, `diag()` 280",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C041",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e wireless` (aliases `wifi`, `wi-fi`, `network`)",
+   "does": "USB vs Wi-Fi, pairing, Bonjour",
+   "defined": "692–693, `wireless()` 571",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C042",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e wireless on` (also `enable` / `activate` / `start`)",
+   "does": "On USB only: confirm / turn on wireless debugging. DeviceHub has no reliable checkbox in Xcode 27; never unticks anything",
+   "defined": "692–693, `_devicehub_checkbox()` 564",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C043",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e help` / `17e commands` / `17e ?`",
+   "does": "This skill table",
+   "defined": "634",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by 17e skill (RDRAGON → iPhone 17e); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C044",
+   "group": "17e skill (RDRAGON → iPhone 17e)",
+   "owner_app": "RDRAGON 17e skill",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`17e install` / `uninstall` / `delete` / `rm` / `sign` / `keychain` / `wallet`",
+   "does": "**Refused**",
+   "defined": "694–695",
+   "status": "refuse-stub",
+   "go": true,
+   "thundr": "ThundR refuses locally: needs Rizal's GO",
+   "hosts": {
+    "ios": "refuse",
+    "macos": "refuse",
+    "android": "refuse",
+    "linux-rvm": "refuse",
+    "ubuntu-touch": "refuse",
+    "cryptogame": "refuse",
+    "apps-native": "refuse"
+   }
+  },
+  {
+   "id": "C045",
+   "group": "RAGENT router",
+   "owner_app": "RAGENT / RXCODE",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "GET `/v1/models` or `/models`",
+   "does": "Lists `ragent-thundr-offline` (+ online when enabled)",
+   "defined": "header 5, `do_GET` ~277",
+   "status": "present",
+   "go": false,
+   "thundr": "ragent-thundr-offline lane (RAGENT router)",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C046",
+   "group": "RAGENT router",
+   "owner_app": "RAGENT / RXCODE",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "POST `/v1/chat/completions` or `/chat/completions`",
+   "does": "Default route: **Apple Intelligence first** (RXCODE.app), then Granite 4.2 3B on `(local)` via `ragent-fallback`. (local port) is not an upstream",
+   "defined": "header 6–9, `do_POST` ~289",
+   "status": "present",
+   "go": false,
+   "thundr": "RAgentEngine / Neo front",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C047",
+   "group": "RAGENT router",
+   "owner_app": "RAGENT / RXCODE",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "GET `/health`",
+   "does": "Routing status; does not start a model. After the MLX hook also reports `mlx_running` and `mlx=(local)`",
+   "defined": "header 7, hook ~488–500 / 612–625",
+   "status": "present",
+   "go": false,
+   "thundr": "RAgentEngine health",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C048",
+   "group": "RAGENT router",
+   "owner_app": "RAGENT / RXCODE",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "Header `X-RAGENT-Force-Fallback: 1` or env `RAGENT_FORCE_FALLBACK=1`",
+   "does": "Skip Apple (tests only)",
+   "defined": "line 9",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RAGENT router; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C049",
+   "group": "RAGENT router",
+   "owner_app": "RAGENT / RXCODE",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "**MLX coder lane** `(local)` model `mlx-qwen2.5-coder-3b`",
+   "does": "If MLX is up **and** the prompt matches the regex, route here first; on error fall through to Apple-first",
+   "defined": "hook 408–485 and duplicate add-only block 531–626",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RAGENT router; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C050",
+   "group": "RAGENT router",
+   "owner_app": "RAGENT / RXCODE",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "MLX trigger regex",
+   "does": "`\\b(swift\\",
+   "defined": "swiftui\\|uikit\\|xcodeproj\\|reasoning)\\b\\|\\.swift\\b\\|write a (swift\\|func\\|function)\\|func\\s+\\w+\\s*\\(` (case-insensitive)|lines 411–413 and 537–539",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RAGENT router; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C051",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`:commands` / `/commands`",
+   "does": "List every DRAGON SKULL command, answered on the phone, never sent to the model",
+   "defined": "16, 190",
+   "status": "different",
+   "go": false,
+   "thundr": "ThundR `commands`/`help` already exist (Neo command centre / help panel); list catalog added under new names, plain `commands` unchanged",
+   "hosts": {
+    "ios": "thundr-different",
+    "macos": "thundr-different",
+    "android": "thundr-different",
+    "linux-rvm": "thundr-different",
+    "ubuntu-touch": "thundr-different",
+    "cryptogame": "thundr-different",
+    "apps-native": "thundr-different"
+   }
+  },
+  {
+   "id": "C052",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`/recall <topic>`",
+   "does": "Search BATIBABOX memory",
+   "defined": "17",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C053",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`/batibabox`",
+   "does": "Memory status",
+   "defined": "18",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C054",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`/parts [name]`",
+   "does": "List or show parts",
+   "defined": "19",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C055",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`/rvm <command>` · `rvm boot` · `rvm stop`",
+   "does": "One Linux command in the RVM; 120 s; output stays on screen",
+   "defined": "19",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C056",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`rscribe [ls |YYYYMMDD]`",
+   "does": "Today's ЯSCRIBE copy in the RVM, or list/show a day",
+   "defined": "20",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C057",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`bridge <status|read|write|diag|exec|update|repair> …`",
+   "does": "DRAGON BRIDGE 0.1 on `(local)` (off until enabled)",
+   "defined": "21",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C058",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`REBIRTH [run <n|all> [go]]`",
+   "does": "List pending eggs/jobs; `run` is dry; `go` needs owner-approved sha256 + Face ID. Never deletes transcripts. sign/delete/publish only listed",
+   "defined": "22 · **GO** for any real run",
+   "status": "refuse-stub",
+   "go": true,
+   "thundr": "`REBIRTH … go` (real run) refused in ThundR: needs Rizal's GO; list / dry `run` passes on to RDRGN",
+   "hosts": {
+    "ios": "refuse",
+    "macos": "refuse",
+    "android": "refuse",
+    "linux-rvm": "refuse",
+    "ubuntu-touch": "refuse",
+    "cryptogame": "refuse",
+    "apps-native": "refuse"
+   }
+  },
+  {
+   "id": "C059",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`TEST [quick|status|stop]`",
+   "does": "STANDARD BOT TEST",
+   "defined": "23",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C060",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`CHALKBOARD [show]` / `CHALKBOARD post <message>`",
+   "does": "Local chalkboard (append-only)",
+   "defined": "25–26",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C061",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`CHALK word <WORD>` / `CHALK results`",
+   "does": "Silent word record / PASS counts (word not echoed)",
+   "defined": "27–28",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C062",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`HANDOFF [note <text>]`",
+   "does": "New timestamped handoff note, never overwritten",
+   "defined": "29",
+   "status": "present",
+   "go": false,
+   "thundr": "MCR thundr_handoff",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C063",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`REOPS [status]`",
+   "does": "Offline reverse-engineering capability description + self-check (no decompile)",
+   "defined": "30",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C064",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`FIX [detect|verify|mac|iphone|ipad]`",
+   "does": "No-wipe self-check. Erase/restore never runs from the app",
+   "defined": "31",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C065",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`MANUAL`",
+   "does": "Command manual + standing laws",
+   "defined": "32",
+   "status": "different",
+   "go": false,
+   "thundr": "ThundR has `AUTOMANUAL` (KNOW); list says `manual` / `manual <words>` → alias added",
+   "hosts": {
+    "ios": "thundr-different",
+    "macos": "thundr-different",
+    "android": "thundr-different",
+    "linux-rvm": "thundr-different",
+    "ubuntu-touch": "thundr-different",
+    "cryptogame": "thundr-different",
+    "apps-native": "thundr-different"
+   }
+  },
+  {
+   "id": "C066",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`hostconnect` / `hostpair` / `hoststatus` / `hostreq` / `hostexec` / `hostshot` / `hostmouse` / `hostkey` / `hostui` / `hostapp` / `hoststop` / `hostallow`",
+   "does": "Neo HostBridge (`ds-hostd`). Privileged actions need hostreq / Touch ID or Face ID",
+   "defined": "35–45",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C067",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`/gate help` / `status` / `online on|off` / `confirm <code>` / `allow` / `deny` / `allow list` / `plugins owner|signed` / `kill on|off`",
+   "does": "DRAGONGATE. `online on` and `kill off` need a pop-up code",
+   "defined": "46–57 · going online is explicit and gated",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C068",
+   "group": "RDRGN DragonGate (iOS)",
+   "owner_app": "RDRGN (info.rizal.dragonskull)",
+   "runs_on": [
+    "ios-rdrgn"
+   ],
+   "cmd": "`rscribe list|new|edit|cat|show|archive|restore|search`",
+   "does": "RVM-terminal ЯSCRIBE (scope `rvm`)",
+   "defined": "60–67",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by RDRGN DragonGate (iOS); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C069",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe archive`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C070",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe json`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C071",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe list`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C072",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe mind`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C073",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe new`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C074",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe pin`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C075",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe recover`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C076",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe restore`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C077",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe search`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C078",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe show`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C079",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe unpin`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C080",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe verify`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C081",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe version`",
+   "does": "ЯSCRIBE note verb (wrap.py:23, 546)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C082",
+   "group": "ЯSCRIBE CLI / wrap verbs",
+   "owner_app": "ЯSCRIBE",
+   "runs_on": [
+    "macos-neo",
+    "rvm"
+   ],
+   "cmd": "`rscribe build [ios/macos]`",
+   "does": "Plan an Apple build (dry unless --run; real build/sign is GO)",
+   "defined": "§8",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by ЯSCRIBE CLI / wrap verbs; ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C083",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`RWALLET`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "present",
+   "go": false,
+   "thundr": "iOS thundr-shell-v120 (in-window RWALLET) + MCR",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C084",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/rwallet`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "present",
+   "go": false,
+   "thundr": "iOS thundr-shell-v120 (in-window RWALLET) + MCR",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C085",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`ASSM`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "present",
+   "go": false,
+   "thundr": "iOS ASSM sign-in",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C086",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/assm`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "present",
+   "go": false,
+   "thundr": "iOS ASSM sign-in",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C087",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`TEST`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C088",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/commands`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "different",
+   "go": false,
+   "thundr": "ThundR `commands`/`help` already exist (Neo command centre / help panel); list catalog added under new names, plain `commands` unchanged",
+   "hosts": {
+    "ios": "thundr-different",
+    "macos": "thundr-different",
+    "android": "thundr-different",
+    "linux-rvm": "thundr-different",
+    "ubuntu-touch": "thundr-different",
+    "cryptogame": "thundr-different",
+    "apps-native": "thundr-different"
+   }
+  },
+  {
+   "id": "C089",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/rvm`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C090",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`rscribe`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C091",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/parts`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C092",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/recall`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C093",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/batibabox`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C094",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`handoff`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "present",
+   "go": false,
+   "thundr": "MCR thundr_handoff",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C095",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`REOPS`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C096",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`FIX`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C097",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`MANUAL`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "different",
+   "go": false,
+   "thundr": "ThundR has `AUTOMANUAL` (KNOW); list says `manual` / `manual <words>` → alias added",
+   "hosts": {
+    "ios": "thundr-different",
+    "macos": "thundr-different",
+    "android": "thundr-different",
+    "linux-rvm": "thundr-different",
+    "ubuntu-touch": "thundr-different",
+    "cryptogame": "thundr-different",
+    "apps-native": "thundr-different"
+   }
+  },
+  {
+   "id": "C098",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`td-*`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C099",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`qr*`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C100",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`version`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C101",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`eggs *`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C102",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`update`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C103",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`heart*`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C104",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`scroll*`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C105",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/say`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C106",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/listen`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C107",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/transcribe`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C108",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/sfx`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C109",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/music`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C110",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`/beat`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C111",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`optimize`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "catalog",
+   "go": false,
+   "thundr": "Owned by COMMANDS-MASTER everyday verbs (RDRGN web); ThundR lists it (scribe commands / which app) and passes the line on unchanged",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "list+route",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C112",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`open grokbot`",
+   "does": "Everyday chat verb in COMMANDS-MASTER (303-row catalog)",
+   "defined": "§6.2",
+   "status": "present",
+   "go": false,
+   "thundr": "MCR thundr_cmd (OPEN GROKBOT / TYPEGROKBOT)",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C113",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`eggs install`",
+   "does": "Decider-gated per its description",
+   "defined": "§6.2 · GO",
+   "status": "refuse-stub",
+   "go": true,
+   "thundr": "ThundR refuses locally: needs Rizal's GO",
+   "hosts": {
+    "ios": "refuse",
+    "macos": "refuse",
+    "android": "refuse",
+    "linux-rvm": "refuse",
+    "ubuntu-touch": "refuse",
+    "cryptogame": "refuse",
+    "apps-native": "refuse"
+   }
+  },
+  {
+   "id": "C114",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`mint`",
+   "does": "Decider-gated per its description",
+   "defined": "§6.2 · GO",
+   "status": "present",
+   "go": true,
+   "thundr": "existing ThundR guard (proposes only, never mints)",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "id": "C115",
+   "group": "COMMANDS-MASTER everyday verbs (RDRGN web)",
+   "owner_app": "RDRGN web (COMMANDS-MASTER)",
+   "runs_on": [
+    "ios-rdrgn",
+    "android-rdrgn",
+    "linux-rdrgn"
+   ],
+   "cmd": "`self-evolution`",
+   "does": "Decider-gated per its description",
+   "defined": "§6.2 · GO",
+   "status": "refuse-stub",
+   "go": true,
+   "thundr": "ThundR refuses locally: needs Rizal's GO",
+   "hosts": {
+    "ios": "refuse",
+    "macos": "refuse",
+    "android": "refuse",
+    "linux-rvm": "refuse",
+    "ubuntu-touch": "refuse",
+    "cryptogame": "refuse",
+    "apps-native": "refuse"
+   }
+  },
+  {
+   "id": "C116",
+   "group": "RTOR release signing (ThundR = signer of record)",
+   "owner_app": "ThundR / RTOR",
+   "runs_on": [
+    "macos-neo"
+   ],
+   "cmd": "`rtor sign <app> <version> <sha256-12>`",
+   "does": "Rizal's explicit per-release command only: ThundR prepares ONE sign request (app+version+manifest sha256 prefix, single-use, logged) and sends it to the iPhone 17e ЯCASKET; Rizal approves with Face ID; the signature is attached as <file>.sig.json. ThundR never holds or copies the key; no batch/auto signing.",
+   "defined": "~/R/ЯLAB/RTOR/tools/rtor-sign-request --signer thundr (2026-11-17 Rizal GO t31u)",
+   "status": "staged",
+   "go": true,
+   "thundr": "Request card → rtor-sign-request; refused unless Rizal's own words name app, version and sha256 prefix",
+   "hosts": {
+    "ios": "list+route",
+    "macos": "thundr",
+    "android": "list+route",
+    "linux-rvm": "list+route",
+    "ubuntu-touch": "list+route",
+    "cryptogame": "list+route",
+    "apps-native": "list+route"
+   }
+  },
+  {
+   "group": "ThundR models (backup hybrid model)",
+   "owner_app": "ThundR (Apple apps)",
+   "runs_on": [
+    "ios",
+    "ipados",
+    "macos"
+   ],
+   "defined": "APPS/SHARED/RLM-SERVER/RLMServer.swift + THUNDR-CORE models.backup_local_llm (2026-11-17 t209u)",
+   "status": "present",
+   "go": false,
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "n/a",
+    "linux-rvm": "n/a",
+    "ubuntu-touch": "n/a",
+    "cryptogame": "n/a"
+   },
+   "id": "C117",
+   "cmd": "`thundr model status`",
+   "does": "Shows the model chain on this device: primary (Apple on-device / Granite / gate), the backup RLM SERVER / Local LLM Server (on/off, endpoints, 429 state) and which provider answered last.",
+   "thundr": "native ThundR + float core"
+  },
+  {
+   "group": "ThundR models (backup hybrid model)",
+   "owner_app": "ThundR (Apple apps)",
+   "runs_on": [
+    "ios",
+    "ipados",
+    "macos"
+   ],
+   "defined": "APPS/SHARED/RLM-SERVER/RLMServer.swift + THUNDR-CORE models.backup_local_llm (2026-11-17 t209u)",
+   "status": "present",
+   "go": false,
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "n/a",
+    "linux-rvm": "n/a",
+    "ubuntu-touch": "n/a",
+    "cryptogame": "n/a"
+   },
+   "id": "C118",
+   "cmd": "`thundr model backup on|off`",
+   "does": "Turns the backup model (RLM SERVER / Local LLM Server) on or off on this device only. Primary stays first, offline line stays last. Not GO-gated; no alias to anything GO-gated.",
+   "thundr": "native ThundR + float core"
+  },
+  {
+   "group": "RSYNC feed (GHOSTCHAIN + RTRACKR)",
+   "owner_app": "every app with ThundR core (web floats/scout, native RThundRHelper, TerraformЯ in-game, MCR) + rsync-feed CLI for bots",
+   "runs_on": [
+    "ios",
+    "ipados",
+    "macos",
+    "android",
+    "linux-rvm",
+    "ubuntu-touch",
+    "cryptogame"
+   ],
+   "defined": "THUNDR-CORE templates t254u (2026-11-17, Rizal pt254u) + SCROLLS/RSYNC-FEED-20261117/tools/rsync-feed",
+   "status": "present",
+   "go": false,
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "thundr",
+    "linux-rvm": "thundr",
+    "ubuntu-touch": "thundr",
+    "cryptogame": "thundr"
+   },
+   "thundr": "native ThundR + float core",
+   "id": "C119",
+   "cmd": "`rsync feed install` (alias `feed on`)",
+   "does": "Subscribes this app as a verify-only LEECH to the RSYNC GHOSTCHAIN + RTRACKR feed and syncs now, then every 15 min and on app open. Checks ЯLOGIN enrollment (if not enrolled: opens ЯLOGIN option 3; Rizal approves with Face ID; never auto-approves). Rtor feed.json not live yet → public read-only GHOSTCHAIN/RTRACKR files. Every item checked with Rtor verify; unsigned or bad signature = refused (view-only quarantine, never applied). Fetches rizal.pw/rizal.info only (DRAGONGATE allowlist). Must be typed, not pasted."
+  },
+  {
+   "group": "RSYNC feed (GHOSTCHAIN + RTRACKR)",
+   "owner_app": "every app with ThundR core (web floats/scout, native RThundRHelper, TerraformЯ in-game, MCR) + rsync-feed CLI for bots",
+   "runs_on": [
+    "ios",
+    "ipados",
+    "macos",
+    "android",
+    "linux-rvm",
+    "ubuntu-touch",
+    "cryptogame"
+   ],
+   "defined": "THUNDR-CORE templates t254u (2026-11-17, Rizal pt254u) + SCROLLS/RSYNC-FEED-20261117/tools/rsync-feed",
+   "status": "present",
+   "go": false,
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "thundr",
+    "linux-rvm": "thundr",
+    "ubuntu-touch": "thundr",
+    "cryptogame": "thundr"
+   },
+   "thundr": "native ThundR + float core",
+   "id": "C120",
+   "cmd": "`rsync feed status`",
+   "does": "Shows enrollment, feed endpoint (live / not live yet), mode, last sync and each item's verdict (VERIFIED / REFUSED + why), plus the GHOSTCHAIN link/tip check."
+  },
+  {
+   "group": "RSYNC feed (GHOSTCHAIN + RTRACKR)",
+   "owner_app": "every app with ThundR core (web floats/scout, native RThundRHelper, TerraformЯ in-game, MCR) + rsync-feed CLI for bots",
+   "runs_on": [
+    "ios",
+    "ipados",
+    "macos",
+    "android",
+    "linux-rvm",
+    "ubuntu-touch",
+    "cryptogame"
+   ],
+   "defined": "THUNDR-CORE templates t254u (2026-11-17, Rizal pt254u) + SCROLLS/RSYNC-FEED-20261117/tools/rsync-feed",
+   "status": "present",
+   "go": false,
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "thundr",
+    "linux-rvm": "thundr",
+    "ubuntu-touch": "thundr",
+    "cryptogame": "thundr"
+   },
+   "thundr": "native ThundR + float core",
+   "id": "C121",
+   "cmd": "`rsync feed off` (alias `feed off`)",
+   "does": "Stops the feed subscription and the auto-sync in this app. Cached verified items stay in the app's own storage."
+  },
+  {
+   "group": "RSYNC feed (GHOSTCHAIN + RTRACKR)",
+   "owner_app": "every app with ThundR core (web floats/scout, native RThundRHelper, TerraformЯ in-game, MCR) + rsync-feed CLI for bots",
+   "runs_on": [
+    "ios",
+    "ipados",
+    "macos",
+    "android",
+    "linux-rvm",
+    "ubuntu-touch",
+    "cryptogame"
+   ],
+   "defined": "THUNDR-CORE templates t254u (2026-11-17, Rizal pt254u) + SCROLLS/RSYNC-FEED-20261117/tools/rsync-feed",
+   "status": "present",
+   "go": false,
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "thundr",
+    "linux-rvm": "thundr",
+    "ubuntu-touch": "thundr",
+    "cryptogame": "thundr"
+   },
+   "thundr": "native ThundR + float core",
+   "id": "C122",
+   "cmd": "`rsync feed sync`",
+   "does": "One feed sync now (what the 15-minute timer and app-open run do)."
+  },
+  {
+   "group": "ThundR panels (☰ PROFILE · GHOSTMACHINE)",
+   "owner_app": "ThundR (Apple apps)",
+   "runs_on": [
+    "ios",
+    "ipados",
+    "macos"
+   ],
+   "defined": "APPS/SHARED/RPANELS/RPanels.swift + THUNDR-CORE JS (window.RPANELS) (2026-11-17 t212u)",
+   "status": "present",
+   "go": false,
+   "thundr": "native ThundR + float core",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "n/a",
+    "linux-rvm": "n/a",
+    "ubuntu-touch": "n/a",
+    "cryptogame": "n/a"
+   },
+   "id": "C123",
+   "cmd": "`panel profile` (alias `panel menu`, `☰`)",
+   "does": "Opens the ☰ PROFILE panel: ASSM profile @chaserizal, ThundR, rizal.pw ЯLOGIN state / sign-in, Rtor, ЯWALLET (view, own unlock). Never signs."
+  },
+  {
+   "group": "ThundR panels (☰ PROFILE · GHOSTMACHINE)",
+   "owner_app": "ThundR (Apple apps)",
+   "runs_on": [
+    "ios",
+    "ipados",
+    "macos"
+   ],
+   "defined": "APPS/SHARED/RPANELS/RPanels.swift + THUNDR-CORE JS (window.RPANELS) (2026-11-17 t212u)",
+   "status": "present",
+   "go": false,
+   "thundr": "native ThundR + float core",
+   "hosts": {
+    "ios": "thundr",
+    "macos": "thundr",
+    "android": "n/a",
+    "linux-rvm": "n/a",
+    "ubuntu-touch": "n/a",
+    "cryptogame": "n/a"
+   },
+   "id": "C124",
+   "cmd": "`panel ghostmachine` (alias `panel gm`)",
+   "does": "Opens the GHOSTMACHINE panel: GIZMO, CRYPTOGAME (RCODE + TerraformЯ, integrated cryptobots), app/game builder, MINT with ЯWALLET as a DRY-RUN request card (GO-gated, never signs or writes a chain), rizal.info ASSM state / sign-in, Rtor."
+  }
+ ],
+ "models": {
+  "backup_local_llm": {
+   "enabled": true,
+   "base_url": "http://127.0.0.1:8080",
+   "api": "openai",
+   "model": "base",
+   "mesh_base_urls": [],
+   "timeout_s": 25,
+   "health_timeout_s": 2,
+   "health": {
+    "openai": "/v1/models",
+    "ollama": "/api/tags"
+   },
+   "serve_in_app": true,
+   "serve_port": 8080,
+   "serve_lan": false,
+   "platforms": [
+    "ios",
+    "ipados",
+    "macos"
+   ],
+   "order": [
+    "primary (Apple on-device / Granite / local gate)",
+    "backup: in-app RLM SERVER or the Local LLM Server app (same device), then mesh_base_urls",
+    "offline / ThundR command line"
+   ],
+   "on_429": "backup exhausted until Retry-After",
+   "note": "t209u 2026-11-17 (Rizal pt209u). Apple devices only. Per-device peers (e.g. a phone by its mesh name) go in each device's UserDefaults rlm.backup.config or in mesh_base_urls here; no home IPs/hostnames in shared files."
+  }
+ },
+ "panels": {
+  "apple": {
+   "profile": [
+    "assm_profile @chaserizal",
+    "thundr",
+    "login rizal.pw (ЯLOGIN)",
+    "rtor rizal.pw",
+    "rwallet view"
+   ],
+   "ghostmachine": [
+    "gizmo",
+    "cryptogame (rcode + terraformr, cryptobots)",
+    "app/game builder",
+    "mint with rwallet (dry-run, GO)",
+    "login rizal.info (ASSM)",
+    "rtor rizal.info"
+   ],
+   "note": "t212u 2026-11-17 (Rizal 9:52 PM). Apple apps only. Mint/ЯWALLET stay DRY-RUN; sealing needs Rizal's GO (rtor-sign-request)."
+  }
+ }
+}
