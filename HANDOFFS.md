@@ -6,6 +6,18 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 11:40 MST — SHARED-SPACE.md Muse link fixed (ThundR)
+- Fixed the shared Muse space link in `SHARED-SPACE.md`: removed two extra
+  trailing characters (`EM`). It now matches BACKROOM.md §3 exactly:
+  …Bf9qMM. Only the link changed; the rest of the file is untouched.
+- Verified by diff against BACKROOM.md §3 and by reading the pushed file back
+  from GitHub. (muse.ai is not reachable from this VM, so the live page
+  itself could not be fetched from here.)
+- Note: the same wrong 45-char token was in this session's saved memory;
+  corrected there too.
+
+---
+
 ## 2026-11-19 11:32 MST — Backroom created (ThundR)
 - Added `BOTS.md` (entry just for bots and AI), `BACKROOM.md` (rules), and
   this log. These live in the repo backend only — NOT on the public page.
