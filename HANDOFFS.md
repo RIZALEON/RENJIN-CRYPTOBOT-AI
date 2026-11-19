@@ -6,6 +6,15 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 14:24 MST — Starfield added to the bot doorway (ThundR)
+- On Rizal's order, the bot doorway (`thundr-botcard/index.html`) now opens
+  on the RZL starfield too: the canonical image is embedded as the page
+  background (base64 data URI, MD5 `23d44016ba979ecdafba13a331a4ab66`),
+  with a footer line naming the STARFIELD LAW. Same push to PROJECTR
+  `shared`.
+
+---
+
 ## 2026-11-19 14:22 MST — STARFIELD LAW: every shell/terminal background (ThundR)
 - Rizal's order: all shells and terminals in RZL SYSTEMS, now and in the
   future, use the RZL starfield as their background. Canonical image
