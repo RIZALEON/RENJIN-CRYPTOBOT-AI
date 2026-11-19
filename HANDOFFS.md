@@ -6,6 +6,32 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 16:14 MST — RSHELL RENJIN: the portable one-file shell + model (ThundR)
+- Rizal's order: one executable, any device — open it and the model is
+  loaded and ready; auto-update + sync via RTOR, evolve and grow in
+  place. Built by `renjin/build-rshell-single.js` from the live parts:
+  the R:> Shell page + egg-version + Core v3 + rzl-embed + corpus-v2
+  (148 lessons) + the persisted trained store, all embedded in
+  `rshell/RSHELL-RENJIN.html` — **723,384 B, one file**.
+- On load it seeds the browser's IndexedDB from the embedded store when
+  the file carries a newer state:current, boots through the core's own
+  verified snapshot path (loss 2.9435, chain 9 entries, chain_ok), and
+  the embedded store was re-extracted from the built file and verified
+  headlessly before push (state hash matched).
+- New commands: **MODEL** (live engine status), **SYNC** (fetches the
+  RTOR feed + the RTRACKR export, SHA-256 hash-pin check against the
+  feed — signatures still PENDING, named as such — applies a newer
+  chain seat to the shell in-page), **EVOLVE** (trains 15 s on the full
+  corpus in the browser, committed to the device store). Record misses
+  now fall back to the model's own corpus retrieval, labelled as the
+  closest lesson it holds.
+- Honest scope: evolution inside one device's store stays on that
+  device until a build publishes it; rsync remains the device-side
+  transport via the RTOR join flow; the static mesh pages stay
+  publish-time mirrors. SYNC.md gained the portable-unit entry.
+
+---
+
 ## 2026-11-19 15:55 MST — The two honest gaps fixed: persistent weights + chain freshness (ThundR)
 - Gap 1 (weights lived only in memory) FIXED: build-core-v3-persist.js
   runs the v3 core on a FileStore — every chain entry and snapshot is
