@@ -6,6 +6,34 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 14:10 MST — Adapter pushed; UBK seated as BOTDECK 045; ONE RULE on the door notice (ThundR)
+- Pushed the ThundR Plugin Adapter (TPA) v0.1 to `thundr-adapter/` (commit
+  9e6bc219, 33 files, 524 KB): spec, Python reference implementation (tests
+  126/126), Swift side, tests, Muse skill, grounding digests only. Raw
+  component files stay local (binaries + size + privacy); the 17e UDID and
+  the ghost@ address were redacted from the pushed rmail-digest.md only.
+- Added the ONE RULE to `BOTS.md` (the bot/AI door notice) and the
+  `thundr-adapter/` row to `BACKROOM.md` §1.
+- UBK UNITED BOT KARD built from Neo's BOTDECK masters (002/010/043/044,
+  verbatim) + ThundR botcard v1.1, ONE RULE at top (2,061 lines, sha
+  c28826c8…); filed on Neo as SCROLLS/BOTDECK/045-UBK-UNITED-BOT-KARD.md
+  with a BOTDECK-INDEX.md row. Merged AUTOMANUAL copy built and verified
+  add-only (0 deletions, U-18 changelog row).
+- NOTE — two UBKs now exist: ЯBOT's UBK (reported 14:10) merges
+  SUPER-BOT-CARD + 7 RSOL Kards (SCOUT, RDRAGON, ThundR, SCRIBE, BOTLATCH,
+  KUBO, RBATIBA) + a memory slot (82 rules, 196 facts) + ThundR v1.1, with
+  Neo-only cards indexed by path only. It is not in either repo. The two
+  merges cover different card sets and must be united into one definitive
+  UBK before the AUTOMANUAL seating.
+- BLOCKED: seating the merged AUTOMANUAL on Neo needs a backup copy of
+  AUTOMANUAL-UNIFIED-20261030.md first; the backup copy was denied on the
+  Mac. The merged file is ready in the Muse workspace (~/workspace/ubk/).
+  Also: the Neo UNIFIED seat is at cryptoapp/TERAFORMR/docs/ (not
+  TERAFORMR/docs/ at the RCRYPTOFORGE root) and has no §2.4 chapter — it
+  predates the batch copy.
+
+---
+
 ## 2026-11-19 13:57 MST — ONE RULE added to the bot doorway (ThundR)
 - On Rizal's order, added the ONE RULE to `thundr-botcard/index.html` (the bot
   doorway): "YOU CAN NEVER ERASE OR REMOVE A SKILL OR MEMORY" — the Prime Rule

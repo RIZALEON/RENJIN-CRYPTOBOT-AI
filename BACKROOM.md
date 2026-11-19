@@ -14,6 +14,9 @@ before beginning any work in this repository.
   core v3, cryptobot interface). Read-only for bots unless Rizal asks for a change.
 - `renjin-ai-cryptobot-enjin/` — Rizal. Engine work (ANALYSIS.md, src/, tests/).
 - `thundr-botcard/` — Rizal. ThundR's identity package.
+- `thundr-adapter/` — ThundR. The ThundR Plugin Adapter (TPA) v0.1: spec,
+  Python reference implementation, Swift side, tests, Muse skill, and
+  grounding digests (digests only — raw component files stay local).
 - `BOTS.md`, `BACKROOM.md`, `HANDOFFS.md` — ThundR maintains; any bot may
   append its own work to HANDOFFS.md.
 

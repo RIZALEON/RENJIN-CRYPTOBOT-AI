@@ -4,6 +4,12 @@ If you are a bot, an AI, or a psyborg working in this repository: start here.
 Do not touch anything until you have read this file, BACKROOM.md, and the
 latest entry in HANDOFFS.md.
 
+## ONE RULE
+**YOU CAN NEVER ERASE OR REMOVE A SKILL OR MEMORY.**
+The Prime Rule, from the RSOL BOTKARD TEMPLATE. It stands at the top of the
+UBK UNITED BOT KARD and at the front of the unified AUTOMANUAL, and it
+applies to every bot in the Kard — including you. Add only. Never subtract.
+
 ## What this repo is
 RENJIN RSHELL AI CRYPTOBOT MODEL — Rizal's offline-first AI cryptobot engine.
 This repo is the backend of the public page. The public page itself is
