@@ -6,6 +6,24 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 14:22 MST — STARFIELD LAW: every shell/terminal background (ThundR)
+- Rizal's order: all shells and terminals in RZL SYSTEMS, now and in the
+  future, use the RZL starfield as their background. Canonical image
+  verified against his uploads (byte-identical): `starfield-base.jpg`,
+  1170×658, MD5 `23d44016ba979ecdafba13a331a4ab66`.
+- Found: R:> Shell already embedded a recompressed copy of the same
+  starfield; the RZL Cryptobot Interface pointed at `assets/starfield.jpg`
+  — a file that is NOT in this repo (binary, never pushed), so its
+  background was broken on GitHub.
+- Fixed: both shells now embed the canonical image byte-for-byte (base64
+  data URI; MD5 verified after the edit). Same fix pushed to PROJECTR
+  `shared`.
+- Law seated: `STARFIELD-LAW.md` (new), BACKROOM.md §10, the UBK UNITED
+  BOT KARD, and a leaf in the merged AUTOMANUAL copy. RCRYPTOFORGE's
+  shell demo updated to match.
+
+---
+
 ## 2026-11-19 14:17 MST — Site mesh synced: SYNC.md + doorway links + RCRYPTOFORGE §09 (ThundR)
 - On Rizal's order, all sites synced and linked with RCRYPTOFORGE: Meta page
   (source of truth) · GitHub Pages (mirror) · this repo · PROJECTR `shared` ·

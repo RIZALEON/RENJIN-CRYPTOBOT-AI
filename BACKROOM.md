@@ -80,3 +80,10 @@ unless Rizal says otherwise.
 - GitHub writes need Rizal's approval (connector write approval, one tap per push).
 - Public shares and deploys need his explicit ask.
 - When in doubt, ask Rizal. A short question beats a wrong commit.
+
+## 10. Starfield law (2026-11-19)
+- Every shell and terminal in RZL SYSTEMS uses the RZL starfield as its
+  background — now and in the future, no exceptions. Full text:
+  `STARFIELD-LAW.md` in this repo (canonical image MD5
+  23d44016ba979ecdafba13a331a4ab66). Web shells embed the exact image;
+  a shell that does not open on the starfield is not finished.
