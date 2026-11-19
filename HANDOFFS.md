@@ -6,6 +6,32 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 14:44 MST — RTRACKR + RTOR instilled into the shell knowledge (ThundR)
+- On Rizal's order, everything published to RTRACKR was found, verified and
+  instilled into the R:> Shell + Cryptobot Interface knowledge (KB 21 → 34
+  entries, both repos): 13 new entries covering every block, every item,
+  and both systems.
+- RTRACKR source: rizal.pw/rtrackr (repo RIZALEON/rizal.pw) — export
+  rzl.rtrackr.export.v1, 2026-11-11: RGHOSTCHAIN height 4, 5 blocks
+  (0 genesis · 1 nft_mint GENESIS serial 1 @chaserizal · 2 cryptobot_mint
+  ThundR serial 2 · 3 cryptobot_mint TERAFORMR CRYPTOGAME · 4
+  rghostkey_bind), 3 live assets. All data files verified against the
+  published SHA256SUMS. Systems: R TOKEN (Solana, tracking only),
+  CRYPTOGAME pair 100 Rcoins = 1 Rtoken, wallets roster, GHOSTCUBE
+  Ghostroot labeling rule.
+- RTOR (Rizal pointed at rizal.pw + rizal.pw/rtor mid-task): the published
+  feed (rtor-feed-v1, 28 entries — 20 appcast / 3 web / 1 pck / 4 data; the
+  data entries ARE the RTRACKR files) and its rules instilled too:
+  fail-closed verify (owner key e5833fdfbbfe, Face ID via ЯCASKET), status
+  PENDING — no owner signatures published yet, every entry refused until
+  Rizal signs; GHOSTKEY ring (6 public device keys); owner-command policy
+  (2026-11-18). RTOR never writes the chain; RMINT hybrid on Neo is the
+  only writer.
+- Verified in Node (KB parses; test questions land on the right entries)
+  and live on the Pages shell after the push.
+
+---
+
 ## 2026-11-19 14:24 MST — Starfield added to the bot doorway (ThundR)
 - On Rizal's order, the bot doorway (`thundr-botcard/index.html`) now opens
   on the RZL starfield too: the canonical image is embedded as the page
