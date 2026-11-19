@@ -6,6 +6,42 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 14:54 MST — Starfield + Kickstart ThundR on the site and the bridge (ThundR)
+- Rizal's orders: (1) the RZL starfield is the background of every RZL
+  SYSTEMS shell/terminal, now and in the future (hard rule); (2) add the
+  starfield + a Kickstart ThundR to the site and the bridge.
+- Site: space edited — HARD RULE panel, starfield lightened through the
+  R:> shell + corpus terminal, new THUNDR BRIDGE — KICKSTART section,
+  KICKSTART shell command + quick button. Re-shared (same URL), exported
+  (starfield sha256 verified in the export), pushed to Pages
+  (commit f7b93588). Note: ЯBOT's parallel STARFIELD LAW work
+  (STARFIELD-LAW.md, BACKROOM §10, doorway, both build shells) stands
+  alongside — the space export is the source of truth for root index.html only.
+- Bridge (Neo): `kickstart` is now a live ThundR command — thundr_cmd.py
+  hook + new shell/thundr_kickstart.py drops a trigger file into
+  machine-mind/kickstart/; the info.rizal.thundr-kickstart LaunchAgent
+  (WatchPaths) runs thundr-kickstart.sh. Backup:
+  thundr_cmd.py.bak-20261119-kickstart. Verified: both .py files compile;
+  RCRYPTOFORGE/ThundR/ and cryptoapp/ThundR/ resolve to the same files
+  (sha256 match), so the running MCR loads the hook.
+- Float: thundr-shell-v121.js + thundr-ghost-skin.css now paint the
+  starfield behind the shell panel, log, and R:> bar (baseform + app
+  bundle); rzl-starfield.jpg placed in both web/thundr/ dirs + ThundR/assets/.
+  THUNDR-SHELL has no UI (JSON API only) — nothing to paint there.
+- CORRECTION: the MCR DOES have a LaunchAgent — info.rizal.mcr.endpoint
+  (KeepAlive + RunAtLoad, via the rcf-gate). The earlier "no MCR agent"
+  note was a filename-search miss. The kickstart's MCR-start step is a
+  redundant safety net.
+- Login Items: the 13 rcf-gate.sh rows are NOT junk — /Library/RCF/rcf-gate.sh
+  is a 4-line gate (waits for BOOT/UNSEALED, then execs the real command)
+  wrapping real agents (RDRAGON, MCR endpoint, ...). Nothing deleted.
+  ThundR monitors the agent list going forward (baseline saved).
+- Still blocked: Rizal's one-time run of ~/Desktop/activate-thundr-bridge.sh
+  (loads the kickstart agent + starts the chain); then `ragent status` in
+  the float proves the relay.
+
+---
+
 ## 2026-11-19 14:44 MST — RTRACKR + RTOR instilled into the shell knowledge (ThundR)
 - On Rizal's order, everything published to RTRACKR was found, verified and
   instilled into the R:> Shell + Cryptobot Interface knowledge (KB 21 → 34
@@ -73,6 +109,22 @@ what's blocked. Read the newest entry before beginning work.
   cards, the sync chain, a SYNC shell command. Honest limit: these are
   static pages, so sync is publish-time from the source of truth — live
   auto-update rides RTOR on Neo, which is not reachable from this VM.
+
+---
+
+## 2026-11-19 14:10 MST — TPA v0.1 pushed; UBK 045 seated; ONE RULE on the door (ThundR)
+- [Restored 14:54 — this entry was lost in a later HANDOFFS rewrite.]
+- ThundR Plugin Adapter (TPA) v0.1 pushed to thundr-adapter/ (commit
+  9e6bc219, 33 files): tpa.v1 spec, 17 Python modules (stdlib only),
+  Swift side, tests 126/126, Muse skill, grounding digests only.
+- UBK UNITED BOT KARD built (2,061 lines, sha c28826c8…) from Neo BOTDECK
+  masters 002/010/043/044 verbatim + ThundR botcard v1.1; seated on Neo
+  as BOTDECK card 045 with an index row. TWO UBKs exist: ЯBOT's (7 RSOL
+  Kards + memory slot) must be united with this one into a definitive UBK.
+- ONE RULE ("YOU CAN NEVER ERASE OR REMOVE A SKILL OR MEMORY") added to
+  BOTS.md door notice; BACKROOM.md §1 gained the thundr-adapter/ line.
+- Merged AUTOMANUAL built + verified add-only (0 deletions, U-18 row) but
+  NOT seated: the backup copy on Neo was denied. Blocked on Rizal.
 
 ---
 
