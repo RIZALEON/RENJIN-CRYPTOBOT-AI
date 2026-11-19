@@ -6,6 +6,27 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 15:47 MST — Running counter + SIZE: the model reports its own live metrics (ThundR)
+- On Rizal's order, both shell pages gained a running counter under the
+  brand line: RGHOSTCHAIN height/blocks, corpus lessons, KB size,
+  weights, a ticking session clock, and an answered counter that
+  increments with every command. The numbers are read from the page's
+  own data; the counter runs in the page, online or offline.
+- New command SIZE (alias METRICS, listed in HELP): the shell counts
+  itself live — DIM 64 / HID 128 / CTX 32, 49,152 ternary weights
+  (12,288 B packed / 196,608 B as FP32 latents), corpus v2 147 lessons /
+  9,637 B, KB entries, chain height + tip, session count + clock. A KB
+  entry routes plain size/metrics questions to the same facts.
+- Taught to the model: corpus-v2 grew by the metrics addendum (lessons
+  142–147, add-only). Retrained (build-log-v3-metrics.txt): the trainer
+  confirmed 147 lines / 9,637 B; loss 22.56 → 3.166, held-out 3.161,
+  model chain 9 entries ok. Grounded test as run: 7/16 — two v1
+  questions now land on the new metrics lessons (lesson 143 answers the
+  ternary-weights question with the same fact), chain questions steady
+  at 4/6.
+
+---
+
 ## 2026-11-19 14:54 MST — The living RGHOSTCHAIN ingrained into the model (ThundR)
 - On Rizal's order ("the living Rghostchain must be ingrained into the
   model"), the chain went in at model level, not just shell knowledge.
