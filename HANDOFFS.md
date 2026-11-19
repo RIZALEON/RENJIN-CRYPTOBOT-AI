@@ -6,6 +6,31 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 15:55 MST — The two honest gaps fixed: persistent weights + chain freshness (ThundR)
+- Gap 1 (weights lived only in memory) FIXED: build-core-v3-persist.js
+  runs the v3 core on a FileStore — every chain entry and snapshot is
+  written through to **src/store-v3.json** (549,215 B). Run: grow 5.743 →
+  train 2,238 steps → loss 2.944, held-out 2.957 (best recorded), chain 9
+  entries ok, state:current 84e7ab41… A fresh process then booted from
+  the file alone: model restored, loss identical (2.9435), state hash
+  verified against the chain. Tamper test: one flipped base64 char in a
+  copy → "VERIFY FAILED: snapshot tampered", refused. Logs:
+  build-log-v3-persist.txt + build-log-v3-persist-verify.txt.
+- Gap 2 (chain seat only as fresh as the last republish) FIXED on this
+  side: (a) SIZE now prints a freshness line — the export's live age in
+  days, from the embedded exported_at (2026-11-11T08:21:54-07:00); a KB
+  entry answers freshness questions ("a stale export is named, never
+  hidden" is also corpus lesson 148; corpus-v2 now 148 lessons /
+  9,723 B — the persist run trained on exactly that);
+  (b) a daily watcher (cron `rtrackr-export-watcher`, ~09:30 America/
+  Denver, state in the RENJIN goal's hidden_files) compares the live
+  export's SHA-256 against the seat: a new export is flagged the day it
+  appears, and a seat older than 14 days is named once a week.
+- What stays Neo-side, honestly: the republish itself (rtrackr_export on
+  Neo) and RTOR's owner signatures. The watcher detects; Neo publishes.
+
+---
+
 ## 2026-11-19 15:47 MST — Running counter + SIZE: the model reports its own live metrics (ThundR)
 - On Rizal's order, both shell pages gained a running counter under the
   brand line: RGHOSTCHAIN height/blocks, corpus lessons, KB size,
