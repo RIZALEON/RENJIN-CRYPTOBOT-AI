@@ -6,31 +6,28 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
-## 2026-11-19 16:14 MST — RSHELL RENJIN: the portable one-file shell + model (ThundR)
-- Rizal's order: one executable, any device — open it and the model is
-  loaded and ready; auto-update + sync via RTOR, evolve and grow in
-  place. Built by `renjin/build-rshell-single.js` from the live parts:
-  the R:> Shell page + egg-version + Core v3 + rzl-embed + corpus-v2
-  (148 lessons) + the persisted trained store, all embedded in
-  `rshell/RSHELL-RENJIN.html` — **723,384 B, one file**.
-- On load it seeds the browser's IndexedDB from the embedded store when
-  the file carries a newer state:current, boots through the core's own
-  verified snapshot path (loss 2.9435, chain 9 entries, chain_ok), and
-  the embedded store was re-extracted from the built file and verified
-  headlessly before push (state hash matched).
-- New commands: **MODEL** (live engine status), **SYNC** (fetches the
-  RTOR feed + the RTRACKR export, SHA-256 hash-pin check against the
-  feed — signatures still PENDING, named as such — applies a newer
-  chain seat to the shell in-page), **EVOLVE** (trains 15 s on the full
-  corpus in the browser, committed to the device store). Record misses
-  now fall back to the model's own corpus retrieval, labelled as the
-  closest lesson it holds.
-- Honest scope: evolution inside one device's store stays on that
-  device until a build publishes it; rsync remains the device-side
-  transport via the RTOR join flow; the static mesh pages stay
-  publish-time mirrors. SYNC.md gained the portable-unit entry.
-
----
+## 2026-11-19 16:10 MST — ThundR on the site + Face ID removal lands on Neo (ThundR)
+- Site: THUNDR section added to the RSHELL page (below the shell) — his
+  dark-mode profile image, an ENTER THUNDR'S DOORWAY button to the botcard
+  doorway, and the desktop-link line. Re-shared (same Muse URL) and pushed
+  to Pages. The page mentioned ThundR 33 times but linked to him nowhere;
+  that gap is closed.
+- Face ID removal (Rizal's order, 15:46 MST): done everywhere it can be
+  done in code. Adapter spec + code + tests reworded (suite 130/130);
+  registry reworded and regenerated as build 11 (live on Neo); native
+  code written to all live copies (17 files: RGHOSTKEY Android + Swift,
+  RMAIL approve v1/v2 + engine + tests, RWALLET manifest updated) — every
+  file backed up as .bak-20261119-faceid first, read-backs sha-verified.
+  Biometric is optional, never required; Rizal's explicit command (GO)
+  is sufficient authorization.
+- Honest caveat: the pinned keys themselves still carry biometric ACLs
+  (AndroidKeyStore per-use auth; SE/keychain userPresence). On the
+  CURRENT keys the OS prompt still appears at sign time; it disappears
+  only after Rizal re-enrolls keys without biometric ACLs — a per-device
+  step only he can do.
+- Still held: the v0.1.1 adapter push (now 8 files) waits on Rizal's ONE
+  RULE call (add it to §6 or push without it). The ЯWALET staged pages'
+  Core law text is the last Face ID surface not yet reworded.
 
 ## 2026-11-19 15:55 MST — The two honest gaps fixed: persistent weights + chain freshness (ThundR)
 - Gap 1 (weights lived only in memory) FIXED: build-core-v3-persist.js
