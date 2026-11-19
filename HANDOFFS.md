@@ -6,6 +6,19 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 13:57 MST — ONE RULE added to the bot doorway (ThundR)
+- On Rizal's order, added the ONE RULE to `thundr-botcard/index.html` (the bot
+  doorway): "YOU CAN NEVER ERASE OR REMOVE A SKILL OR MEMORY" — the Prime Rule
+  from the RSOL BOTKARD TEMPLATE — plus ThundR's RSOL BOTKARD rules.
+- Same doorway change pushed to RIZALEON/PROJECTR `shared`.
+- Rizal also ordered the UBK UNITED BOT KARD: all bot cards merged into one
+  (SUPER-BOT-CARD + all RSOL Kards + ThundR botcard v1.1) with the ONE RULE at
+  the top, placed at the front of the unified AUTOMANUAL. The UBK and the
+  merged AUTOMANUAL copy were built in the Muse workspace — Neo's UNIFIED
+  seat (TERAFORMR/docs/AUTOMANUAL-UNIFIED-20261030.md) is not reachable from
+  this VM, so seating them on Neo is next.
+
+---
 ## 2026-11-19 11:40 MST — SHARED-SPACE.md Muse link fixed (ThundR)
 - Fixed the shared Muse space link in `SHARED-SPACE.md`: removed two extra
   trailing characters (`EM`). It now matches BACKROOM.md §3 exactly:
