@@ -6,6 +6,30 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 16:58 MST — PURE .RZL LAW + the Interface gets the living pack (ThundR)
+- Rizal's law, verbatim: "make sure this RENJIN MODEL STAYS PURE .RZL
+  FILE FORMAT ALWAYS" — and his word that .RZL is a registered file
+  type on every operating system (recorded as the owner's statement in
+  PURE-RZL-LAW.md; public extension databases list .rzl only as
+  uncommon binary data — registration lives in the apps that open the
+  eggs, which is RZL's own software). Seated: PURE-RZL-LAW.md in both
+  repos, corpus-v2 lesson 150, a KB purity entry in both shells, and
+  `renjin/check-purity.js` — the build now FAILS if a foreign model
+  format enters the tree. Scan at seating: PURE ✓, 34 files, zero
+  GGUF/safetensors/ONNX/.bin/.pt.
+- Rizal's yes to evolving-everywhere: the Cryptobot Interface now
+  carries the same living model pack as the R:> Shell — builder
+  generalized (source/output/title args), new one-file build
+  `renjin-rzl-cryptobot-interface/RENJIN-INTERFACE.html` (726,724 B):
+  boots the trained model, MODEL/SYNC/EVOLVE/CITATION/SIZE, citation at
+  the bottom. Both single files' embedded stores re-verified headlessly
+  (state hash matched, state:current e5c6c2cf…).
+- Retrain on corpus 150 (purity lesson in): loss 3.081, held-out 3.078
+  — a less lucky seed than the 2.975 run; variance at this scale is
+  real and the figure is reported as run.
+
+---
+
 ## 2026-11-19 16:40 MST — EVOLVE verified live + citation moved to the bottom (ThundR)
 - EVOLVE retest on the live one-file shell PASSED: "EVOLVE — done on
   this device: 1641 steps · loss 25.948 → 3.222 · held-out 3.25 · its
