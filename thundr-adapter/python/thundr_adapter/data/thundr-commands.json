@@ -1418,7 +1418,7 @@
     "ios-rdrgn"
    ],
    "cmd": "`REBIRTH [run <n|all> [go]]`",
-   "does": "List pending eggs/jobs; `run` is dry; `go` needs owner-approved sha256 + Face ID. Never deletes transcripts. sign/delete/publish only listed",
+   "does": "List pending eggs/jobs; `run` is dry; `go` needs owner-approved sha256 + Rizal's explicit command (GO). Never deletes transcripts. sign/delete/publish only listed",
    "defined": "22 · **GO** for any real run",
    "status": "refuse-stub",
    "go": true,
@@ -1602,7 +1602,7 @@
     "ios-rdrgn"
    ],
    "cmd": "`hostconnect` / `hostpair` / `hoststatus` / `hostreq` / `hostexec` / `hostshot` / `hostmouse` / `hostkey` / `hostui` / `hostapp` / `hoststop` / `hostallow`",
-   "does": "Neo HostBridge (`ds-hostd`). Privileged actions need hostreq / Touch ID or Face ID",
+   "does": "Neo HostBridge (`ds-hostd`). Privileged actions need hostreq / Rizal's explicit command (GO)",
    "defined": "35–45",
    "status": "catalog",
    "go": false,
@@ -2832,7 +2832,7 @@
     "macos-neo"
    ],
    "cmd": "`rtor sign <app> <version> <sha256-12>`",
-   "does": "Rizal's explicit per-release command only: ThundR prepares ONE sign request (app+version+manifest sha256 prefix, single-use, logged) and sends it to the iPhone 17e ЯCASKET; Rizal approves with Face ID; the signature is attached as <file>.sig.json. ThundR never holds or copies the key; no batch/auto signing.",
+   "does": "Rizal's explicit per-release command only: ThundR prepares ONE sign request (app+version+manifest sha256 prefix, single-use, logged) and sends it to the iPhone 17e ЯCASKET; Rizal approves with his explicit command (GO); the signature is attached as <file>.sig.json. ThundR never holds or copies the key; no batch/auto signing.",
    "defined": "~/R/ЯLAB/RTOR/tools/rtor-sign-request --signer thundr (2026-11-17 Rizal GO t31u)",
    "status": "staged",
    "go": true,
@@ -2921,7 +2921,7 @@
    "thundr": "native ThundR + float core",
    "id": "C119",
    "cmd": "`rsync feed install` (alias `feed on`)",
-   "does": "Subscribes this app as a verify-only LEECH to the RSYNC GHOSTCHAIN + RTRACKR feed and syncs now, then every 15 min and on app open. Checks ЯLOGIN enrollment (if not enrolled: opens ЯLOGIN option 3; Rizal approves with Face ID; never auto-approves). Rtor feed.json not live yet → public read-only GHOSTCHAIN/RTRACKR files. Every item checked with Rtor verify; unsigned or bad signature = refused (view-only quarantine, never applied). Fetches rizal.pw/rizal.info only (DRAGONGATE allowlist). Must be typed, not pasted."
+   "does": "Subscribes this app as a verify-only LEECH to the RSYNC GHOSTCHAIN + RTRACKR feed and syncs now, then every 15 min and on app open. Checks ЯLOGIN enrollment (if not enrolled: opens ЯLOGIN option 3; Rizal approves with his explicit command (GO); never auto-approves). Rtor feed.json not live yet → public read-only GHOSTCHAIN/RTRACKR files. Every item checked with Rtor verify; unsigned or bad signature = refused (view-only quarantine, never applied). Fetches rizal.pw/rizal.info only (DRAGONGATE allowlist). Must be typed, not pasted."
   },
   {
    "group": "RSYNC feed (GHOSTCHAIN + RTRACKR)",

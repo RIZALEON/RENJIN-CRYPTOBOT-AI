@@ -383,9 +383,9 @@ def rghostkey_status() -> dict:
         "adapter_stance": ("request/queue only: the adapter never signs, "
                            "seals, enrolls, or mints. Signing happens only "
                            "on the pinned device, by the human, through "
-                           "RGHOSTKEY (biometric-only unlock on the device; "
-                           "no held unlock context, no timer, no "
-                           "auto-approve)."),
+                           "RGHOSTKEY (device unlock on the device; "
+                           "biometric optional, never required; no held "
+                           "unlock context, no timer, no auto-approve)."),
         "known_gaps": [
             "Android bridge has 3 pre-existing JSONException errors "
             "blocking assembleDebug (fix documented, not applied — "

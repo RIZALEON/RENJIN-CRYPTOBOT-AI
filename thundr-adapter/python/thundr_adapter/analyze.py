@@ -192,8 +192,8 @@ RZL_INDEX = {
                   "rzl.rghostchain.enjin_egg.payload.v1, draft, "
                   "NOT_APPENDED, role loader. Verified 2026-11-19: sha256 "
                   "matches the manifest, size 7160 B, .rzl and .html "
-                  "byte-identical. Awaits owner signing (RGHOSTKEY / "
-                  "Face ID).")},
+                  "byte-identical. Awaits owner signing (RGHOSTKEY; "
+                  "biometric optional, never required).")},
         {"name": "RVM", "pieces": 155, "unique": 13, "size_mb": 272.49,
          "not_pure": 23, "status": "COMPLETE as runtime",
          "note": ("RVM 0.1.0–0.1.4 + RVM-LINUX 0.1.1–0.1.2 (+android). "
@@ -250,10 +250,10 @@ RZL_GAPS = (
     "RVM-LINUX-0.1.0 is not pure (raw .bin kernel/disk images).",
 )
 
-# Drafts that are verified but await owner signing (RGHOSTKEY / Face ID).
+# Drafts that are verified but await owner signing (RGHOSTKEY; biometric optional, never required).
 RZL_AWAITING_SIGNING = (
     "RbotLoadR 0.0.1 — UNSIGNED DRAFT, verified (sha256 d1ea6a6a…; "
-    "NOT_APPENDED); owner signs with RGHOSTKEY / Face ID later.",
+    "NOT_APPENDED); owner signs with RGHOSTKEY later (biometric optional, never required).",
 )
 
 
@@ -289,7 +289,7 @@ def component_check() -> dict:
 # wallet, ЯBOT wallet, rizal.pw RWALLET, RTRACKR) never edits the feed.
 # "One place, one writer." Assets stay PREVIEW until a verified
 # nft_mint block exists for the rid AND the seal has a signature; seals
-# are written on the phone by RSIGN after Face ID (ES256/P-256, never a
+# are written on the phone by RSIGN on Rizal's command (ES256/P-256, never a
 # private key) and moved phone→Neo over USB via devicectl.
 RGENERATR_ASSETS_SCHEMA = "rzl.rgeneratr.assets.v1"
 

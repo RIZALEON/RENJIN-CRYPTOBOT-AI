@@ -1496,5 +1496,53 @@ class TestSwiftContract(unittest.TestCase):
         self.assertIn("Granite 4.2 3B", self.swift)
 
 
+class TestSpecText(unittest.TestCase):
+    """Source-contract checks on ADAPTER.md (v0.1.1).
+
+    Guards the t31u mail-rule correction, the command-authorization
+    policy (Rizal's explicit GO is sufficient; biometric optional,
+    never required), the AUTOMANUAL doctrine, and the ONE RULE in §6
+    against regressions:
+    the spec must name the superseded rule as superseded, never state
+    it as live law, and never state a biometric as a requirement.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.spec = (ROOT / "ADAPTER.md").read_text()
+
+    def test_mail_rule_is_t31u(self):
+        self.assertIn("t31u policy, 2026-11-11", self.spec)
+        self.assertIn("mail CAN trigger", self.spec)
+        self.assertIn("mail never", self.spec)
+        self.assertIn("auto-signs", self.spec)
+        self.assertIn("Rizal's explicit command (GO) authorizes",
+                      self.spec)
+        self.assertIn("no biometric step is required", self.spec)
+
+    def test_stale_mail_rule_not_stated_as_law(self):
+        self.assertNotIn("triggers sign or mint", self.spec)
+        self.assertNotIn("only on the owner's Face ID", self.spec)
+        self.assertNotIn("seal completes only on", self.spec)
+        self.assertNotIn("Biometric-only", self.spec)
+
+    def test_automanual_doctrine_present(self):
+        self.assertIn("AUTOMANUAL doctrine (index and quote, never dump)",
+                      self.spec)
+        self.assertIn("UNIFIED §x.y", self.spec)
+        self.assertIn("spec-only in v0.1.1", self.spec)
+
+    def test_adapter_version(self):
+        self.assertEqual(protocol.ADAPTER_VERSION, "0.1.1")
+        self.assertIn("adapter version `0.1.1`", self.spec)
+
+    def test_one_rule_in_section_6(self):
+        self.assertIn("ONE RULE (RSOL BOTKARD TEMPLATE, Rizal 2026-11-19)",
+                      self.spec)
+        self.assertIn("YOU CAN NEVER ERASE OR REMOVE A SKILL OR MEMORY",
+                      self.spec)
+        self.assertIn("Repairs and updates are add-only", self.spec)
+
+
 if __name__ == "__main__":
     unittest.main()

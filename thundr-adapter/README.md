@@ -82,8 +82,9 @@ Every command prints one JSON envelope and exits 0 on `ok`, 1 on error,
   adapter layer for every agent. A match is refused; nothing runs.
 - **GO-gated:** wallet/signing verbs (`wallet balances`, `casket verify`,
   `signing status`, `prompt faceid`, `sign this`, `request approval`)
-  map to the LIVE `/rmint/request` + Face ID flow. The adapter hands
-  them back for Rizal's explicit GO; it never forwards them.
+  map to the LIVE `/rmint/request` flow. The adapter hands
+  them back for Rizal's explicit GO — his command is sufficient
+  authorization, no biometric step required; it never forwards them.
 - **Never:** sign, seal, enroll, mint, send, swap, transfer — not even
   with GO. No method exists for them. Signing happens only on the
   pinned device, by the human, through RGHOSTKEY.

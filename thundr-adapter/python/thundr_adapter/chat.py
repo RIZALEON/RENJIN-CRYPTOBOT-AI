@@ -8,7 +8,7 @@ native ``LocalBrain.call`` bridge):
   2. GO-gated wallet/signing verbs (the parser's ready reply in the live
      float: wallet balances, casket verify, signing status, prompt
      faceid, sign this, request approval). They map to the LIVE
-     /rmint/request + Face ID flow, the highest-sensitivity surface, and
+     /rmint/request flow, the highest-sensitivity surface, and
      bot/agent input cannot request, confirm, or send on it (Linux
      brain's bot-tagged guard). They are answered with a GO-gated
      handoff and NEVER forwarded to the MCR or any executor.
@@ -51,7 +51,7 @@ HELP_WORDS = frozenset({"help", "commands", "functions", "?"})
 
 # GO-gated wallet/signing verbs: the sensitive subset of the A2 LocalBrain
 # liveCmd regex (src/LocalBrain.swift), plus the Linux brain's signing
-# guard. These map to the LIVE /rmint/request + Face ID flow. Read-only
+# guard. These map to the LIVE /rmint/request flow. Read-only
 # live verbs (status, inventory, jobs, progress, mcr, gizmo, rcpm) are
 # NOT gated — they route normally. Bare "casket" is not gated either
 # (panel/info verb); "casket verify/approve/sign" is.
@@ -65,10 +65,11 @@ GO_GATED_VERBS = re.compile(
 
 GO_GATED_TEMPLATE = (
     "GO-gated: %(verb)s touches the live wallet/signing flow "
-    "(/rmint/request + Face ID). The adapter never runs it — bot/agent "
+    "(/rmint/request). The adapter never runs it — bot/agent "
     "input cannot request, confirm, or send on that flow. Nothing was "
     "run. To proceed, type the verb in the ThundR R:> shell yourself, "
-    "or get Rizal's explicit GO for that exact action."
+    "or get Rizal's explicit GO for that exact action. Rizal's GO is "
+    "sufficient authorization — no biometric step is required."
 )
 
 # A switch records the adapter's preference only; the live app is not

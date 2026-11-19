@@ -25,7 +25,7 @@ fakes a live brain reply: when no brain is reachable, ``via`` says so.
 from __future__ import annotations
 
 VERSION = "tpa.v1"
-ADAPTER_VERSION = "0.1.0"
+ADAPTER_VERSION = "0.1.1"
 ADAPTER_NAME = "ThundR Plugin Adapter"
 
 # The twelve tpa.v1 methods. Names are stable; new methods arrive as
@@ -135,8 +135,9 @@ def go_gated_reply(reply: str, via: str, verb: str | None = None) -> dict:
     """Build a GO-gated envelope for wallet/signing verbs.
 
     Distinct from ``refused``: the action is not forbidden, it needs
-    Rizal's explicit GO for that exact action (plus Face ID on the
-    device, for the live /rmint/request flow). Nothing was run.
+    Rizal's explicit GO for that exact action — his command is
+    sufficient authorization for the live /rmint/request flow; no
+    biometric step is required. Nothing was run.
     """
     out = {"ok": False, "via": via, "go_gated": True,
            "error": "go-gated", "reply": reply}

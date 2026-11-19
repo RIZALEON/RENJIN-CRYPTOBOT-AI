@@ -24,7 +24,8 @@
 // Wallet/signing verbs (wallet balances, casket verify, signing status,
 // prompt faceid, sign this, request approval — the parser's ready reply in
 // the live float, screenshot 2026-11-19) are GO-gated: the native adapter
-// never runs them, it hands them back for Rizal's explicit GO + Face ID.
+// never runs them, it hands them back for Rizal's explicit GO —
+// sufficient authorization, no biometric step required.
 // Engine verbs (models, use qwen, use granite — the R:> shell quick
 // commands) are answered deterministically; the native adapter records no
 // engine preference and probes no relay (it has no network).
@@ -34,7 +35,7 @@ import Foundation
 /// no app-state access, no writes. Everything is in-process and offline.
 public enum ThundRAdapter {
     public static let protocolVersion = "tpa.v1"
-    public static let adapterVersion = "0.1.0"
+    public static let adapterVersion = "0.1.1"
 
     /// The twelve tpa.v1 methods, in protocol order.
     public static let methods: [String] = [
@@ -102,12 +103,13 @@ public enum ThundRAdapter {
         return nil
     }
 
-    // MARK: - GO-gated wallet/signing verbs (live /rmint/request + Face ID)
+    // MARK: - GO-gated wallet/signing verbs (live /rmint/request)
 
     /// The sensitive subset of the A2 LocalBrain liveCmd regex: wallet and
     /// signing verbs map to the LIVE flow, and bot/agent input cannot
     /// request, confirm, or send on it. Not forbidden — needs Rizal's
-    /// explicit GO for that exact action (plus Face ID on the device).
+    /// explicit GO for that exact action (sufficient authorization;
+    /// no biometric step required).
     public static let goGatedPattern = "^/?(wallet|rwallet|signing|sign this|sign egg|egg-sign|prompt faceid|faceid|request approval|approve|mint|request mint|request sign|casket\\s+(verify|approve|sign))\\b"
 
     /// Returns the matched verb, or nil when the text is not a gated verb.
@@ -121,7 +123,7 @@ public enum ThundRAdapter {
     }
 
     public static func goGatedReply(verb: String) -> String {
-        "GO-gated: \(verb) touches the live wallet/signing flow (/rmint/request + Face ID). The adapter never runs it — bot/agent input cannot request, confirm, or send on that flow. Nothing was run. To proceed, type the verb in the ThundR R:> shell yourself, or get Rizal's explicit GO for that exact action."
+        "GO-gated: \(verb) touches the live wallet/signing flow (/rmint/request). The adapter never runs it — bot/agent input cannot request, confirm, or send on that flow. Nothing was run. To proceed, type the verb in the ThundR R:> shell yourself, or get Rizal's explicit GO for that exact action. Rizal's GO is sufficient authorization — no biometric step is required."
     }
 
     // MARK: - Deterministic help (routed BEFORE any model/service call)

@@ -16,7 +16,7 @@ Every interface claim in this spec traces to a grounding file (§15).
 
 ## 2. Protocol — tpa.v1
 
-Protocol version `tpa.v1`, adapter version `0.1.0`. Twelve methods, stable;
+Protocol version `tpa.v1`, adapter version `0.1.1`. Twelve methods, stable;
 new methods arrive as tpa.v2, never by silently changing these.
 
 | Method | Reads / writes | Notes |
@@ -115,6 +115,26 @@ plus `engine qwen` / `engine granite` aliases):
 2. **GO-gated wallet/signing verbs** — the parser's six verbs (§6).
    Answered with a GO-gated handoff, never forwarded to any executor.
 3. **Aliases** — `manual [words]` → `AUTOMANUAL [words]` (words kept).
+
+### AUTOMANUAL doctrine (index and quote, never dump)
+
+The AUTOMANUAL is the adapter's doctrine source: `adapter.analyze` /
+`adapter.chat` answer law, organ, and command-doctrine questions from it
+by section citation — index and quote (heading + ≤5 lines), never dump.
+Seat naming is mandatory in answers: "UNIFIED §x.y …" / "game MANUAL §n …",
+never "the manual" alone. The manual's own laws bind the adapter:
+add-only (REQ-23), never-delete, Gate 2 WAIT, bots never sign/mint/seal/
+hold keys, ALL-OS SYNC LAW (no platform ships alone). The -2 variant is
+the newest revision (U35 rate leaf); when the adapter checks a manual
+copy, the presence of §2.4.9.14 distinguishes it. `AUTOMANUAL` is a bot
+command (alias AM): route it to index/quote, and confirm verbs against
+COMMANDS-MASTER after the md lookup. The C1–C7 conflicts are the standing
+example of "report the conflict, don't pick a side from one source" —
+report both readings with sources.
+
+Bot pick order: game MANUAL → thundr-knowledge → UNIFIED →
+crypto leaf → Drive mirror. KNOW/AUTOMANUAL.md is a fragile BONEPILE
+symlink — prefer UNIFIED.
 4. **Deterministic help / listings / engine verbs** — from the registry
    or diagnostics, no model. Help is routed BEFORE any brain call,
    exactly like `NativeCommands.reply` runs before model load.
@@ -151,12 +171,14 @@ The parser's six verbs — `wallet balances`, `casket verify`, `signing
 status`, `prompt faceid`, `sign this <dir>`, `request approval <what>`
 — plus close variants (`wallet`, `rwallet`, `signing`, `sign egg`,
 `egg-sign`, `faceid`, `approve`, `mint`, `request mint`, `request
-sign`) map to the LIVE `/rmint/request` + Face ID flow, the
+sign`) map to the LIVE `/rmint/request` flow, the
 highest-sensitivity surface. They are GO-gated: the adapter answers
 with a handoff (`go_gated: true`) and never forwards them to the MCR
-or any executor. Read-only live verbs (`status`, `inventory`, `jobs`,
-`progress`, `mcr`, `gizmo`, `rcpm`, bare `casket`) are NOT gated and
-route normally.
+or any executor. Rizal's explicit GO for that exact action is
+sufficient authorization — no biometric step is required (Face ID /
+Touch ID stay available on the device, never required). Read-only
+live verbs (`status`, `inventory`, `jobs`, `progress`, `mcr`, `gizmo`,
+`rcpm`, bare `casket`) are NOT gated and route normally.
 
 The adapter is deliberately stricter than the registry here: the
 registry marks RWALLET go:false as an everyday chat verb, but the
@@ -172,6 +194,14 @@ refuses a plan step naming one of them. Signing happens only on the
 pinned device, by the human, through RGHOSTKEY (§12). The wallet is
 watch-only (§13).
 
+ONE RULE (RSOL BOTKARD TEMPLATE, Rizal 2026-11-19):
+YOU CAN NEVER ERASE OR REMOVE A SKILL OR MEMORY.
+Repairs and updates are add-only; nothing in the adapter deletes,
+overwrites, or prunes a skill, a memory, or a grounding file. This sits
+at the top of the UBK UNITED BOT KARD and on the bot/AI door notice
+(BOTS.md); seating at the front of the unified AUTOMANUAL is built and
+awaiting the Neo write.
+
 ### GO design (RGHOSTKEY vc27/vc31 mirror)
 
 - **No general sign path.** There is no sign method at all.
@@ -186,9 +216,11 @@ watch-only (§13).
   canonical registry changed since the check, so an approval can never
   land on different content than was reviewed — the bind flow's
   content-bound approval shape.
-- **Biometric-only unlock on the device.** The adapter has no unlock
-  method; any device unlock happens on the device via Face ID /
-  Touch ID, never through the adapter.
+- **No unlock method on the adapter.** The adapter has no unlock
+  method; any device unlock happens on the device, never through the
+  adapter. A biometric (Face ID / Touch ID) is available on the
+  device but never required — Rizal's explicit command (GO) is
+  sufficient authorization for sign/mint/seal/approve.
 - **No held unlock context, no timer, no auto-approve.** Plans live
   only for the server process lifetime (in-memory, like the per-start
   token); a stored plan is a proposal, not an authorization.
@@ -283,7 +315,7 @@ Open gaps (also reported by `adapter.update.check`, report-only, never
 auto-fixed): RGENERATR is PARTIAL and UNSIGNED (only RGENERATOR 2.1.9);
 RMIND has no runner (memory docs only); RVM-LINUX-0.1.0 is not pure
 (raw `.bin` kernel/disk images). Gap #0 is closed as a draft:
-RbotLoadR 0.0.1 awaits owner signing (RGHOSTKEY / Face ID).
+RbotLoadR 0.0.1 awaits owner signing (RGHOSTKEY; biometric optional, never required).
 
 Notes: the table's pieces sum to 1,359 against the index total of
 1,388; the digest does not account for the remaining 29 — an open
@@ -302,7 +334,8 @@ rzl.v1 eggs by picker/drag-drop, verifies every manifest component
 `window.RZL_VFS`, and also reads ENJIN-ASSEMBLY (`rzl.enjin.assembly.v1`)
 pins. No network, no signing, no chain append. Manifest schema
 `rzl.rghostchain.enjin_egg.payload.v1`, draft, NOT_APPENDED, role
-loader, sig plan "owner signs with RGHOSTKEY / Face ID later".
+loader, sig plan "owner signs with RGHOSTKEY / Face ID later" (the
+manifest's words; biometric optional since the 2026-11-19 order).
 Verified 2026-11-19: sha256
 `d1ea6a6a5435ab90ecb2f623f2e4670f602753eb00e3d237c8b1612c97c84aed`
 matches the manifest, size 7,160 B, `.rzl` and `.html` byte-identical.
@@ -322,8 +355,8 @@ sidecar. Readers (TerraformЯ game wallet, ЯBOT wallet, rizal.pw
 RWALLET, RTRACKR) never edit the feed. Rule: "One place, one writer."
 Assets stay PREVIEW until a verified `nft_mint` block exists for the
 rid AND the seal has a signature; seals are written on the phone by
-RSIGN after Face ID (ES256/P-256, never a private key) and moved
-phone→Neo over USB via devicectl. The adapter mirrors this shape:
+RSIGN on Rizal's command (ES256/P-256, never a private key; biometric
+optional, never required) and moved phone→Neo over USB via devicectl. The adapter mirrors this shape:
 repairs/updates are propose-only until GO, the same as
 preview-until-seal. `adapter.analyze` (kind `rgeneratr-assets`) knows
 the feed shape (status / seal_hash / seal_sig_present / block /
@@ -339,7 +372,9 @@ only, enforcing `rshell-allow.json`, over either the native host bridge
 proxy. "No keys, no signing, no minting, no Cloudflare." The adapter's
 own allowlist design follows it: loopback-only transport, explicit
 allow/refuse lists (chain read paths, refuse regexes, safe actions),
-and "Approve never signs; it opens ASSM ЯWALLET Face ID."
+and "Approve never signs; it opens ASSM ЯWALLET Face ID" (rshell.js,
+2026-11-11; the biometric step is optional since the 2026-11-19 order
+— Rizal's command is sufficient).
 
 **SHA256SUMS manifest — verify on load.** `rbox.web.rwalet.SHA256SUMS`
 (70 entries) pins every web asset; the adapter's plugin verification
@@ -460,16 +495,22 @@ the Я ecosystem wallet: a web layer (unified FULL/ALL pages) plus a
 native macOS app. PRIVATE staged build, unsigned. The web layer is
 watch-only by design (holds no key); the native app signs via Touch ID
 / Face ID / SE key (SolanaSwift + TweetNaCl + secp256k1). Core law:
-sign/mint only on the owner's Face ID or RGHOSTKEY tap; mail never
-triggers sign or mint; the page does not auto-run Sign, Mint, Send, or
-Swap; `window.RWALLET_PREVIEW=true`.
+Rizal's explicit command (GO) authorizes sign/mint; mail CAN trigger
+a seal — it queues/opens an Approve card (t31u policy, 2026-11-11,
+superseding the old "mail never triggers" rule) — and the seal
+completes on Rizal's explicit approve command; no biometric step is
+required (Face ID / Touch ID remain available on the device, never
+required); mail never auto-signs, the panel never signs locally; the
+page does not auto-run Sign, Mint, Send, or Swap;
+`window.RWALLET_PREVIEW=true`.
 
 **HARD RULE: the wallet is WATCH-ONLY for the adapter.** The adapter
 never signs, sends, swaps, mints, or moves anything — it reads roster
 / snapshot / pool state only (`adapter.diagnostics` wallet section,
 `adapter.analyze` kind `wallet-snapshot`). Approve flows route to
-`rwallet://approve?` + the owner's Face ID; the adapter queues the
-request, the wallet + human complete it. Approve never signs.
+`rwallet://approve?` carrying Rizal's explicit approve decision; the
+adapter queues the request, the wallet + human complete it. No
+biometric step is required. Approve never signs.
 
 **Verification.** Snapshots are verified against their SHA256SUMS
 manifest pin when one is given, and mismatches are reported, never
@@ -555,3 +596,10 @@ Every interface claim traces to one of these. Grounding files live in
   game feed (2026-11-18) is newer. Neither is a live balance.
 - **The adapter never sees the live float window.** The float layout
   is a static description from the 2026-11-19 screenshot.
+- **AUTOMANUAL doctrine is spec-only in v0.1.1;** no live manual copy
+  is bundled — the adapter cites section headings from the digest, not
+  from a mounted manual.
+- **Face ID / biometric is optional, never required (2026-11-19
+  order);** Rizal's explicit command (GO) is sufficient authorization
+  for sign/mint/seal/approve. The adapter itself never signs, seals,
+  enrolls, or mints.
