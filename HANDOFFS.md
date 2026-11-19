@@ -6,13 +6,18 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
-## 2026-11-19 16:36 MST — TPA v0.1.1 pushed WITH the ONE RULE + Face ID removal lands in code (ThundR)
-- Rizal's tap: push v0.1.1 with the ONE RULE. ADAPTER.md §6 now carries it: "ONE RULE (RSOL BOTKARD TEMPLATE, Rizal 2026-11-19): YOU CAN NEVER ERASE OR REMOVE A SKILL OR MEMORY. Repairs and updates are add-only..." — guarded by a new TestSpecText test (suite now 131/131). Wording note: the draft's "at the front of the unified AUTOMANUAL" was adjusted — the merged manual is built but seating on Neo is still blocked on the backup denial, so the spec says that instead of claiming it.
-- Face ID removal is done in code everywhere: adapter spec + code + tests reworded (Rizal's explicit GO is sufficient authorization; biometric optional, never required), registry regenerated as build 11 (content sha 0e51f613…, live on Neo), 30 native files written on Neo (RGHOSTKEY Android vc36/vc37 + Swift ×3, RMAIL approve v1/v2 + engine + tests, ЯWALET staged pages FULL + ALL incl. both RWALLET.sha256 manifests), every file backed up as .bak-20261119-faceid first, read-backs sha-verified.
-- CORRECTION to the 16:10 entry: the ЯWALET staged pages' Core law text is reworded now — that work finished after the 16:10 push. The "last surface not yet reworded" line is outdated.
-- RESTORED the 16:10 entry below — it was dropped by the 16:14 rewrite; it now sits in chronological order between 16:14 and 15:55.
-- KEY CAVEAT (unchanged): the pinned keys still carry biometric ACLs (AndroidKeyStore per-use auth; SE/keychain userPresence) — on the current keys the OS prompt still appears at sign time; it disappears only after Rizal re-enrolls keys without biometric ACLs, a per-device step only he can do.
-- v0.1.1 delta (10 files + this entry): ADAPTER.md, README.md, protocol.py, chat.py, analyze.py, diagnostics.py, data/thundr-commands.json (build-11 snapshot), ThundRAdapter.swift, test_adapter.py, skill/SKILL.md.
+## 2026-11-19 16:40 MST — EVOLVE verified live + citation moved to the bottom (ThundR)
+- EVOLVE retest on the live one-file shell PASSED: "EVOLVE — done on
+  this device: 1641 steps · loss 25.948 → 3.222 · held-out 3.25 · its
+  own chain: 9 entries · chain_ok true · signed by this device's key".
+  The earlier failed run's grown model had committed, so the retest
+  resumed from it — nothing was lost to the closed connection.
+- Rizal's placement rule for the citation: at the BOTTOM of the site,
+  and the engine quotes it as a reply only when prompted or asked. The
+  one-line citation under the counter bar is removed; the full citation
+  block now sits as the last element of both shell pages (and the
+  rebuilt one-file shell, 726,084 B). CITATION command + KB entry stay
+  (asked = answered); CITATION.md records the rule.
 
 ---
 
@@ -65,31 +70,6 @@ what's blocked. Read the newest entry before beginning work.
   device until a build publishes it; rsync remains the device-side
   transport via the RTOR join flow; the static mesh pages stay
   publish-time mirrors. SYNC.md gained the portable-unit entry.
-
----
-
-## 2026-11-19 16:10 MST — ThundR on the site + Face ID removal lands on Neo (ThundR)
-- Site: THUNDR section added to the RSHELL page (below the shell) — his
-  dark-mode profile image, an ENTER THUNDR'S DOORWAY button to the botcard
-  doorway, and the desktop-link line. Re-shared (same Muse URL) and pushed
-  to Pages. The page mentioned ThundR 33 times but linked to him nowhere;
-  that gap is closed.
-- Face ID removal (Rizal's order, 15:46 MST): done everywhere it can be
-  done in code. Adapter spec + code + tests reworded (suite 130/130);
-  registry reworded and regenerated as build 11 (live on Neo); native
-  code written to all live copies (17 files: RGHOSTKEY Android + Swift,
-  RMAIL approve v1/v2 + engine + tests, RWALLET manifest updated) — every
-  file backed up as .bak-20261119-faceid first, read-backs sha-verified.
-  Biometric is optional, never required; Rizal's explicit command (GO)
-  is sufficient authorization.
-- Honest caveat: the pinned keys themselves still carry biometric ACLs
-  (AndroidKeyStore per-use auth; SE/keychain userPresence). On the
-  CURRENT keys the OS prompt still appears at sign time; it disappears
-  only after Rizal re-enrolls keys without biometric ACLs — a per-device
-  step only he can do.
-- Still held: the v0.1.1 adapter push (now 8 files) waits on Rizal's ONE
-  RULE call (add it to §6 or push without it). The ЯWALET staged pages'
-  Core law text is the last Face ID surface not yet reworded.
 
 ---
 
