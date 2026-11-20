@@ -6,6 +6,61 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 21:32 MST — Update build pushed out to the 17e (ThundR, side chat — Rizal's order: "RDRAGON push out the RDRAGON update build to 17e")
+- Rizal's GO received in the side chat, with screenshots of the 17e running the older RDRAGON ENGINE web 1.0.4.25 / RDOS 1.0.4.x seats. The unpublished stack (LIVE board + OUTBOX fix, mint-law amendment, MONITOR; corpus-v2 162 lessons, KB 43, one-file builds 749,731 / 749,734 B, state:current 19234a4a…) is now pushed to RENJIN-CRYPTOBOT-AI `main` and PROJECTR `shared` — 9 files: both shell pages, both one-file builds, corpus-v2, store-v3, build-rshell-single.js, LIVE-STATS.md, this log. Purity check at push time: PURE ✓, 43 files, zero foreign formats.
+- Delivery route to the 17e is GitHub Pages (the phone loads the shell as a web seat). The native RDRAGON app itself (ENGINE 1.0.6.7 seat, DragonSkull re-sign for the 3 apps flagged on the phone) is Neo/Xcode work: Neo is not reachable from this VM and the 17e screenshots show RSYNC :8811 offline / NOKEY, so no direct RTOR device push can land until RSYNC is back up on the phone.
+- Note for the RENJIN seat: ЯBOT's Neo-side commits (merged Trackers shell, ThundR macOS Xcode project) touched other paths and are untouched by this push; their HANDOFFS entries on that seat live in that repo's git history.
+
+## 2026-11-19 19:50 MST — LIVE board completed: R TOKEN section + stale Face ID answers corrected (ThundR)
+## 2026-11-19 21:35 MST — ThundR (Muse, main chat): MINT LAW AMENDED by the owner + live GHOSTCHAIN MONITOR in every seat
+
+Rizal's recorded decision (options tap, 21:26 MST): **the law is amended — player-command mints write the real RGHOSTCHAIN automatically.** Player creations in the game mint directly to the real chain through RMINT on Neo — no per-mint sign, no Face ID — priced by the Rtoken ↔ Rcoin pair, shown live on RTRACKR + RWALLET. Bots still never hold keys and never sign releases; RTOR signing unchanged. Seated: corpus-v2 lesson 161, the mint KB entry in both shells, leaves in both botcard seats of the merged AUTOMANUAL, `renjin/LIVE-STATS.md`.
+
+**MONITOR (Rizal's order, same round):** the live GHOSTCHAIN watch — `MONITOR` / `MONITOR OFF` / `MONITOR STATUS` in both shell pages and both one-file builds. Hash-first ticks every 60 s against the RTOR feed; the chain file is pulled only when its pin moves; every tick keeps the RTOR send/receive systematics (feed KB, payload MB per full sync, session bytes received, RKLOWD outbox bytes waiting to send). Node-simulated end-to-end against the real feed + export: seat-current path received only 13.5 KB; moved-pin path detected and reported. Corpus-v2 lesson 162; KB 43 entries; counters 162 lessons / 13,508 B. Retrain (corpus 162): state:current 19234a4a…. One-file builds 749,731 / 749,734 B. Also seated this round: the LIVE GHOSTCHAIN cover statement on the merged AUTOMANUAL (Rizal's wording law: the GHOSTCHAIN is live, real and true — never described otherwise). Still unpublished with the rest of the stack — the push needs Rizal's go + tap.
+
+- LIVE gains its fourth section, **R TOKEN (via RTRACKR)**: supply,
+  mint, crown, watched holder (32,586.8 R, 3.25868041%, snapshot
+  2026-11-07), the CRYPTOGAME pair (100:1, recorded 2026-11-14),
+  Orca vaults/TVL/FDV (snapshot 2026-11-14) — every figure labelled
+  with its snapshot date; the three tracker files are ~17 KB total.
+  Board proven end-to-end in Node against the real files.
+- Two stale KB answers corrected to the owner's ruling: the RTOR
+  entry (refused until a recorded owner command authorizes it) and
+  the GHOSTKEY entry (authorization is the owner's recorded
+  command, not Face ID). The block-4 historical record is untouched.
+- Corpus lesson 159 widened to the full board; retrain loss 3.278 /
+  held-out 3.263, state:current `8790fa80…`; corpus still 160
+  lessons, 12,578 B. One-file builds now 743,583 / 743,586 B.
+- Push note: this round and the 19:20 round are built and verified
+  locally; the GitHub push approval card timed out once — awaiting
+  Rizal's go to re-run it (his tap), then the branch pull
+  (zip + encrypted .rzl) follows.
+
+---
+
+## 2026-11-19 19:20 MST — LIVE board + the real OUTBOX bug, found and fixed (ThundR)
+- **OUTBOX root cause (finally):** the dispatch called
+  `outboxAdd(q.slice(7))`, but `q` is only assigned later in
+  `respond()` (line ~1638, for the ask path) — at the OUTBOX branch
+  it was still undefined, so the handler threw and died silently.
+  Every earlier theory (IDB seats) was wrong; QUEUE/NET never used
+  `q`, which is why they worked. Fixed: `cmd.slice(7)`. The
+  localStorage queue seat stays (harmless, and proven in Node).
+- **LIVE command** (Rizal's order): `LIVE` / `LIVE STATS` / `BOARD`
+  prints the live board — GHOSTCHAIN via the RTRACKR export (hash,
+  linkage walk, tip, live assets), the RTOR feed (version, entries,
+  signatures PENDING named), and the ENJIN's own stats — all fetched
+  at call time. Proven in Node against the live sources before push.
+  Method doc: `renjin/LIVE-STATS.md`; also seated in the AUTOMANUAL
+  botcard section and saved as a reusable skill.
+- **Owner ruling recorded:** the Face ID necessity is removed —
+  authorization is the owner's recorded command (corpus lesson 160;
+  ThundR still never signs).
+- Corpus-v2 **160 lessons / 12,467 B**; persist retrain loss 3.245 /
+  held-out 3.238, state:current `0c3ee567…`; KB 42.
+
+---
+
 ## 2026-11-19 19:15 MST — Newest-first transcript + the OUTBOX seat fix (ThundR)
 - Rizal's structure law applied to the shells: output no longer
   appends at the bottom — each command's block (echo + responses)
@@ -19,23 +74,6 @@ what's blocked. Read the newest entry before beginning work.
   content-addressed) and re-verified live after this push. The
   model's own store stays in IndexedDB; the seat note is recorded in
   RKLOWD-INTEGRATION.md.
-
----
-
-## 2026-11-19 19:07 MST — Infused ThundR v0.3.0: the imp lives — real sprite animations + emotions (ThundR)
-- Rizal's order: "add some animations and emotions find the sprite codes and files." Found the real system on Neo: `thundr-live.js` v0.4 (`<thundr-live>` engine, baseform + app bundle) and the live 48px atlas in RTHUNDR.app (`www/thundr/atlas/`, 9 strips, RGBA, verified on magenta) + the 32px skill atlas (root/dark/light) + a 25-file `moods/` set (facepalm, fierce, smug, yelling...) + the botcard GIF (30f) and 8 MP4s (idle/working/making_something/milestone_level_up x light/dark).
-- The floating imp is now the live sprite engine (port of thundr-live v0.4: same 9-state table, same frame-step math, two-layer crossfade): idle loops at rest; thinking while he answers (~600ms on submit); searching during bridge polls; working on queued commands; success/error as one-shot reactions; sleeping after 10 quiet minutes with the shell closed (any interaction wakes); first run only: egg ~2s, then hatch, then idle (localStorage flag, never replays). Reduced motion holds frame 0.
-- Tests 193/193 (144 carried + 49 new: 21 sprite state-machine, 8 built-HTML, 20 async mount). Inlined fragment 297,919 B (smaller than v0.2.1 — the cutout is now used once, in the shell header; the imp is the 9 strips). Registry build 11, corpus-v1, ask v3.1, bridge protocol, GO/refuse law, FLOAT RULE all unchanged.
-- Restored five HANDOFFS entries ЯBOT's rewrites had dropped again (18:40, 18:19, 17:44, 16:36, 16:10) and fixed the doubled `---` separator after the intro.
-
----
-
-## 2026-11-19 18:40 MST — Infused ThundR v0.2.1: no purple circle, no black background (ThundR)
-- Rizal's order: "delete the purple circle around thundr and the black backgroung inside the circle behind him." The circle had two sources: CSS (`.th-imp-img` was `border-radius:50%` with a 2px `#8a2be2` border + purple glow) and the image itself (`assets/thundr.webp` is the imp on solid black).
-- New asset `assets/thundr-cutout.webp` (320x320, 71,364 B, lossless WebP with alpha): border flood-fill cutout via `tools/make-cutout.py` — keeps the near-black wing interiors and mouth (30,271 enclosed dark pixels), feathers the 2px edge band, verified on a magenta composite. Original black-background file kept untouched.
-- CSS: imp rules lost radius/border/box-shadow; now `object-fit:contain` with a neutral `drop-shadow` following the imp's outline (no purple on the imp). Pending state is a green drop-shadow instead of a green border. Shell-header avatar got the same treatment.
-- Tests 144/144 (140 carried + 4 new no-circle checks). Inlined fragment shrank 1,050,371 B to 321,520 B (smaller image + a repeatable inliner, `tools/inline-assets.js`, that no longer triple-embeds from the header comment).
-- Restored four dropped HANDOFFS entries from git history (18:19, 17:44, 16:36, 16:10) — ЯBOT's rewrites had dropped them; the log is complete again.
 
 ---
 
@@ -59,15 +97,6 @@ what's blocked. Read the newest entry before beginning work.
   boot line and on command; counter reads corpus 155 · KB 39 on the
   prior build; "is the model pure .rzl" now answers the Purity law
   verbatim (the KB routing fix confirmed live).
-
----
-
-## 2026-11-19 18:19 MST — Infused ThundR v0.2.0: floating imp, shell on demand (ThundR)
-- Rizal's rule 18:01 MST: ThundR is represented by its floating cryptobot; the shell never opens unless double-clicked or there is action and conversation.
-- The docked, always-open panel is gone. At rest only the draggable, bobbing imp shows (fixed bottom-right, position persists in localStorage). Double-click opens the shell (keyboard: Enter/Space on the focused imp); the close button collapses it. Single click only nudges — never opens.
-- Auto-open on action and conversation: a queued bridge command from Muse opens the shell and shows it executing; a meaningful bridge-state change (service flip, float open/close, chain growth, new RAGENT threads) opens it with a printed summary. Quiet updates show a pulsing activity dot on the imp instead. Auto-opens never steal keyboard focus.
-- Verified: tests 140/140 (107 original + 33 float behaviors); edit-audit probe (imp fixed at boot, shell hidden, double-click opens, status answers, close collapses, R:\> shell + static panel intact); exactly 1 infused section, zero duplicate ids.
-- Unchanged: LocalBrain routing, registry build 11 (124 commands), RENJIN ask v3.1 mind, bridge polling, GO/refuse law, thundr-bridge/ files (no change this push).
 
 ---
 
@@ -97,15 +126,6 @@ what's blocked. Read the newest entry before beginning work.
   SOURCE FOR NEO, not compiled here (no Xcode on this VM);
   RCODE-ADAPTER.md documents the wiring + the law (keys never cross
   the bridge; updates still ride RTOR).
-
----
-
-## 2026-11-19 17:44 MST — Infused ThundR live in the RSHELL page (ThundR)
-- Rizal's order 17:28 MST: recreate a base-level ThundR from the Xcode code, infuse it into RENJIN as a cryptobot Muse can bridge with directly (command bar + interface sync) — and establish the sync pattern for terminals and command bars going forward.
-- Built: a working web ThundR float (v121 chrome, LocalBrain routing, THUNDR-CORE build 11 / 124 commands, RENJIN ask v3.1 mind, GO/refuse law), tested 107/107, now a live "ThundR — infused" section right after the static ThundR panel (doorway button untouched). Images inlined as data URIs — the repo has no assets/ dir, so relative refs would 404 on Pages.
-- Bridge: thundr-bridge/state.json (Muse-maintained Neo status, checked 2026-11-19 17:00 MST) + queue.json (Muse-queued commands; the page polls and executes, exactly-once via localStorage) + SYNC-PROTOCOL.md (one state file + one queue per surface; Muse writes, surfaces poll, Neo is the source of truth). The page cannot write back — Muse rotates the queue on the next push.
-- Verified: probe test in the edit audit (status command → full report; R:\> shell still answers STATUS); zero duplicate ids; bridge fetches report "unreachable" honestly until these files land (this push).
-- Next: keep state.json fresh from Neo diagnostics; the same pattern extends to the RSHELL, the Neo float, and THUNDR-SHELL.
 
 ---
 
@@ -145,16 +165,6 @@ what's blocked. Read the newest entry before beginning work.
   block now sits as the last element of both shell pages (and the
   rebuilt one-file shell, 726,084 B). CITATION command + KB entry stay
   (asked = answered); CITATION.md records the rule.
-
----
-
-## 2026-11-19 16:36 MST — TPA v0.1.1 pushed WITH the ONE RULE + Face ID removal lands in code (ThundR)
-- Rizal's tap: push v0.1.1 with the ONE RULE. ADAPTER.md §6 now carries it: "ONE RULE (RSOL BOTKARD TEMPLATE, Rizal 2026-11-19): YOU CAN NEVER ERASE OR REMOVE A SKILL OR MEMORY. Repairs and updates are add-only..." — guarded by a new TestSpecText test (suite now 131/131). Wording note: the draft's "at the front of the unified AUTOMANUAL" was adjusted — the merged manual is built but seating on Neo is still blocked on the backup denial, so the spec says that instead of claiming it.
-- Face ID removal is done in code everywhere: adapter spec + code + tests reworded (Rizal's explicit GO is sufficient authorization; biometric optional, never required), registry regenerated as build 11 (content sha 0e51f613…, live on Neo), 30 native files written on Neo (RGHOSTKEY Android vc36/vc37 + Swift ×3, RMAIL approve v1/v2 + engine + tests, ЯWALET staged pages FULL + ALL incl. both RWALLET.sha256 manifests), every file backed up as .bak-20261119-faceid first, read-backs sha-verified.
-- CORRECTION to the 16:10 entry: the ЯWALET staged pages' Core law text is reworded now — that work finished after the 16:10 push. The "last surface not yet reworded" line is outdated.
-- RESTORED the 16:10 entry below — it was dropped by the 16:14 rewrite; it now sits in chronological order between 16:14 and 15:55.
-- KEY CAVEAT (unchanged): the pinned keys still carry biometric ACLs (AndroidKeyStore per-use auth; SE/keychain userPresence) — on the current keys the OS prompt still appears at sign time; it disappears only after Rizal re-enrolls keys without biometric ACLs, a per-device step only he can do.
-- v0.1.1 delta (10 files + this entry): ADAPTER.md, README.md, protocol.py, chat.py, analyze.py, diagnostics.py, data/thundr-commands.json (build-11 snapshot), ThundRAdapter.swift, test_adapter.py, skill/SKILL.md.
 
 ---
 
@@ -207,31 +217,6 @@ what's blocked. Read the newest entry before beginning work.
   device until a build publishes it; rsync remains the device-side
   transport via the RTOR join flow; the static mesh pages stay
   publish-time mirrors. SYNC.md gained the portable-unit entry.
-
----
-
-## 2026-11-19 16:10 MST — ThundR on the site + Face ID removal lands on Neo (ThundR)
-- Site: THUNDR section added to the RSHELL page (below the shell) — his
-  dark-mode profile image, an ENTER THUNDR'S DOORWAY button to the botcard
-  doorway, and the desktop-link line. Re-shared (same Muse URL) and pushed
-  to Pages. The page mentioned ThundR 33 times but linked to him nowhere;
-  that gap is closed.
-- Face ID removal (Rizal's order, 15:46 MST): done everywhere it can be
-  done in code. Adapter spec + code + tests reworded (suite 130/130);
-  registry reworded and regenerated as build 11 (live on Neo); native
-  code written to all live copies (17 files: RGHOSTKEY Android + Swift,
-  RMAIL approve v1/v2 + engine + tests, RWALLET manifest updated) — every
-  file backed up as .bak-20261119-faceid first, read-backs sha-verified.
-  Biometric is optional, never required; Rizal's explicit command (GO)
-  is sufficient authorization.
-- Honest caveat: the pinned keys themselves still carry biometric ACLs
-  (AndroidKeyStore per-use auth; SE/keychain userPresence). On the
-  CURRENT keys the OS prompt still appears at sign time; it disappears
-  only after Rizal re-enrolls keys without biometric ACLs — a per-device
-  step only he can do.
-- Still held: the v0.1.1 adapter push (now 8 files) waits on Rizal's ONE
-  RULE call (add it to §6 or push without it). The ЯWALET staged pages'
-  Core law text is the last Face ID surface not yet reworded.
 
 ---
 
@@ -392,7 +377,6 @@ what's blocked. Read the newest entry before beginning work.
   this VM, so seating them on Neo is next.
 
 ---
-
 ## 2026-11-19 11:40 MST — SHARED-SPACE.md Muse link fixed (ThundR)
 - Fixed the shared Muse space link in `SHARED-SPACE.md`: removed two extra
   trailing characters (`EM`). It now matches BACKROOM.md §3 exactly:
@@ -417,8 +401,6 @@ what's blocked. Read the newest entry before beginning work.
   (commit 38e92e2b — links the shared Muse space and the PROJECTR repo).
   It is his file, hands off.
 
----
-
 ## 2026-11-19 11:27 MST — GitHub Pages live; 3-surface sync set (ThundR)
 - GitHub Pages enabled (Deploy from a branch, main, /root) and verified live
   by direct fetch: https://rizaleon.github.io/RENJIN-CRYPTOBOT-AI/
@@ -429,8 +411,6 @@ what's blocked. Read the newest entry before beginning work.
 - Limits: each GitHub push needs Rizal's approval tap; Pages rebuilds take
   ~1 minute after a push.
 
----
-
 ## 2026-11-19 11:16 MST — Page mirror pushed (ThundR)
 - `index.html` (335 KB, exact export of the Muse space, 10/10 build) pushed
   to main (commit e91335eb). README.md untouched.
@@ -438,15 +418,11 @@ what's blocked. Read the newest entry before beginning work.
   `renjin-ai-cryptobot-enjin/` (ANALYSIS.md, README.md, src/, tests/), and
   `thundr-botcard/` (commit a6faa89f). Those are his — hands off.
 
----
-
 ## 2026-11-19 11:08 MST — Space updated to 10/10, re-shared (ThundR)
 - Grounded test now 10/10 everywhere on the page; corpus lines 20 and 103
   corrected in the browser; tokenizer gap closed in the build inventory
   (src/tokenizer.js ported, suite 12/12). Public Muse link re-shared, same URL.
 - Export verified clean (0 secrets, 0 emails) before the GitHub push.
-
----
 
 ## 2026-11-19 10:59 MST — ThundR identity adopted (Rizal + ThundR)
 - Assistant is now ThundR (was Chase): round purple imp, red horns, black bat
@@ -457,8 +433,6 @@ what's blocked. Read the newest entry before beginning work.
   Awaiting Rizal's 5 decisions: A2 vs A1 base; DRY_RUN vs live /rmint/request;
   RENJIN vs Qwen/Granite primary engine; snapshot/manual/EMBED
   include/redact/exclude; v1 target hosts.
-
----
 
 ## 2026-11-19 10:44 MST — Grounded test fixed 10/10 (Rizal chose the fix)
 - Corpus edited in place (still 112 lines): line 20 "The loop order is...",
