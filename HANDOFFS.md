@@ -6,12 +6,34 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
-## 2026-11-19 17:44 MST — Infused ThundR live in the RSHELL page (ThundR)
-- Rizal's order 17:28 MST: recreate a base-level ThundR from the Xcode code, infuse it into RENJIN as a cryptobot Muse can bridge with directly (command bar + interface sync) — and establish the sync pattern for terminals and command bars going forward.
-- Built: a working web ThundR float (v121 chrome, LocalBrain routing, THUNDR-CORE build 11 / 124 commands, RENJIN ask v3.1 mind, GO/refuse law), tested 107/107, now a live "ThundR — infused" section right after the static ThundR panel (doorway button untouched). Images inlined as data URIs — the repo has no assets/ dir, so relative refs would 404 on Pages.
-- Bridge: thundr-bridge/state.json (Muse-maintained Neo status, checked 2026-11-19 17:00 MST) + queue.json (Muse-queued commands; the page polls and executes, exactly-once via localStorage) + SYNC-PROTOCOL.md (one state file + one queue per surface; Muse writes, surfaces poll, Neo is the source of truth). The page cannot write back — Muse rotates the queue on the next push.
-- Verified: probe test in the edit audit (status command → full report; R:\> shell still answers STATUS); zero duplicate ids; bridge fetches report "unreachable" honestly until these files land (this push).
-- Next: keep state.json fresh from Neo diagnostics; the same pattern extends to the RSHELL, the Neo float, and THUNDR-SHELL.
+## 2026-11-19 17:45 MST — Inner Beacon live in the shells + RCODE/Xcode plugin & adapter (ThundR)
+- Rizal seated the .RZL FILE FORMAT spec (Inner Beacon, assembly
+  sequence, REQ-0+1 folder-is-the-app, starter object, ЯSCOUT anatomy):
+  `renjin/RZL-FILE-FORMAT.md`, corpus lessons 151–155, KB beacon entry
+  (KB 39; corpus-v2 155 lessons / 11,261 B).
+- The beacon RUNS in both one-file builds (730,973 / 730,976 B): a
+  `__RZL_MANIFEST__` parts inventory is embedded at build time; on open,
+  BEACON runs first (core detectHost + OS/arch/resources as the browser
+  exposes them, unknowns labeled), then the model boots. BEACON command
+  re-runs it anytime. Retrain on corpus 155: loss 3.279 / held-out
+  3.273 (seed variance; best run remains 2.975), state:current
+  08c7c77b…, embedded stores re-verified.
+- KB routing fix (from the live test): the purity entry now sits ahead
+  of the greedy 'model' entry — "is the model pure .rzl" answers the
+  law (RENJIN e6498a58 / PROJECTR 175a5069).
+- RCODE/XCODE (Rizal's order): `renjin/adapters/` — rcode-host-adapter.js
+  implements the core's YASEED_HOST contract for the RCODE app
+  (hostId rcode-ios/macos, getYaId = public ЯID only, promise bridge);
+  rcode-bridge-plugin.js registers through the core's own
+  registerPlugin (selftest → device-signed descriptor → chain entry);
+  test-rcode-adapter.js proves it in Node (ALL PASS: detectHost picked
+  up the adapter, getYaId round-tripped, plugin.register chained,
+  chain_ok). RCodeHostBridge.swift is the native WKWebView half —
+  SOURCE FOR NEO, not compiled here (no Xcode on this VM);
+  RCODE-ADAPTER.md documents the wiring + the law (keys never cross
+  the bridge; updates still ride RTOR).
+
+---
 
 ## 2026-11-19 16:58 MST — PURE .RZL LAW + the Interface gets the living pack (ThundR)
 - Rizal's law, verbatim: "make sure this RENJIN MODEL STAYS PURE .RZL
