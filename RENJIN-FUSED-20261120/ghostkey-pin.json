@@ -1,0 +1,16 @@
+{
+  "schema": "renjin-ghostkey-pin-v1",
+  "kind": "public cert only",
+  "name": "RGHOSTKEY-v1-20261120",
+  "cert_file": "RENJIN/ghostkey/out/RGHOSTKEY-v1-20261120.pem",
+  "file_sha256": "2b112834e17fe8bb4bb757b363d2f3ea18e91859ee68aac043f2d04c35c16b69",
+  "fingerprint_sha256": "6D:8A:57:30:9D:3F:56:29:9E:4F:B5:DD:0D:35:4C:2E:3A:68:4A:0E:FC:E8:DF:C8:32:05:8E:4F:DD:DA:16:C3",
+  "algorithm": "ED25519",
+  "subject": "CN=Renjin Ghostkey, O=ROS, OU=RGHOSTCHAIN, UID=ЯID-0001-3QQS, serialNumber=RZL111682, pseudonym=@chaserizal, name=Rizal, title=CHIEF (Decider), OU=RZL DEVICES AND COMPONENTS, description=ROS RID RIZAL · signature RZL111682 · owner-command · 2026-11-20",
+  "owner_rid": "ЯID-0001-3QQS",
+  "serial_number_attr": "RZL111682",
+  "not_before": "2026-11-20T19:48:08Z",
+  "not_after": "2036-11-19T19:48:08Z",
+  "note": "public cert only. Never a private key. Bots and apps recompute the SHA-256 fingerprint and print PASS/FAIL + subject. No signing.",
+  "authorized_by": "owner-command t180u"
+}

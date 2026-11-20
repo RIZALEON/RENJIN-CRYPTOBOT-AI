@@ -1,0 +1,18 @@
+{
+  "schema": "rzl.rghostchain.enjin_egg.payload.v1",
+  "draft": true,
+  "NOT_APPENDED": true,
+  "type_would_be": "note",
+  "subtype": "enjin_egg",
+  "id": "rgenerator",
+  "version": "2.1.9-egg6",
+  "sha256": "94f834694cd6434f8fa6704f0a220c6178cce47a183decfd944623c4a7ef9f99",
+  "size": 490597,
+  "path": "parts/RGENERATOR-2.1.9-egg6-passkey-UNSIGNED.rzl",
+  "role": "generator-UNSIGNED",
+  "parent_hash": "5bb1d6f0cb9d5b0d53839cfe9669a59037161aefbee5795c0a944d12f2b7eb0d",
+  "manifest_sha256": null,
+  "assembly_version": "0.0.1",
+  "sig_plan": "unsigned draft · owner signs with RGHOSTKEY / Face ID later",
+  "note": "DRAFT ONLY. Do not append to rghostchain.jsonl. Create-only offline artifact for Rizal/KUBO review."
+}
