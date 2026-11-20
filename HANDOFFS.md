@@ -6,6 +6,12 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-20 16:18 MST — RKLOWD III transponder copy is device-aware now (ThundR, main chat — Rizal's GO 16:16 MST, from his macOS screenshot)
+
+- The transponder runs on macOS too (RENJIN Mac app, booted 2026-11-20 16:12 MST) but its copy hardcoded "iPhone" in two places. Both spots are now device-aware at runtime (navigator.userAgent / navigator.platform): "this iPhone" on iPhone, "this Mac" on macOS, "this device" otherwise; "AirDrop/share it onward" on Apple devices, "share it onward" elsewhere. The 17e seat reads exactly as before.
+- Changed only `rklowd-iii/RKLOWD3-TRANSPONDER.html`: tagline word in a span (neutral "this device" default, set at load) + a detection snippet at the top of the script + the sendOutbox() message. Buttons, commands, starfield, ONE RULE line, signals() logic untouched. Verified: node --check clean; vm sandbox run over 4 device profiles (iPhone / Mac / Android / Windows) 29/29.
+- Note: if the RENJIN Mac app bundles its own copy of this file instead of loading the repo/Pages copy, the app still needs a Neo-side refresh to pick this up.
+
 ## 2026-11-20 16:14 MST — RAUTH integrated into the ThundR command structure + KB (ThundR, main chat — Rizal's order, from his Neo screenshots)
 - RAUTH = RENJIN cryptoauthenticator (Neo seat `RCRYPTOFORGE/RENJIN/cryptoauth/`, RAUTH-0.1.2.html, UNSIGNED staging, 127.0.0.1 / file://, no network). Locked on-device vault: items encrypted at rest with WebCrypto AES-GCM, key derived by PBKDF2-SHA-256 on the device only; unlock by passphrase or ASSM-session unlock (empty passphrase). 0.1.2 receives the ghostkey certificate: CN=Renjin Ghostkey, O=ROS, OU=RGHOSTCHAIN, UID ЯID-0001-3QQS, serialNumber RZL111682, SHA-256 fingerprint `6d8a57309d3f56299e…a16c3` — UID + serial checks passed, received 2026-11-20T20:43:47Z. RAUTH never generates, signs, or seals keys; seals stay with Rizal.
 - Seated in both shell pages: a `RAUTH` command (aliases cryptoauth / cryptoauthenticator) printing the full record, a HELP line, and a KB entry (keys rauth / cryptoauthenticator / authenticator / vault / ghostkey cert) placed before the greedy model entry. KB now **44**. Also fixed three stale handler strings (SIZE / CHAIN / CHAIN VERIFY now read the height-5 seat, 7 live assets, export 2026-11-20; two of them compute height from the seated records).
