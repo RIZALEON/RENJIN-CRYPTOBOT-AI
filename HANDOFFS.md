@@ -6,6 +6,13 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 18:19 MST — Infused ThundR v0.2.0: floating imp, shell on demand (ThundR)
+- Rizal's rule 18:01 MST: ThundR is represented by its floating cryptobot; the shell never opens unless double-clicked or there is action and conversation.
+- The docked, always-open panel is gone. At rest only the draggable, bobbing imp shows (fixed bottom-right, position persists in localStorage). Double-click opens the shell (keyboard: Enter/Space on the focused imp); the close button collapses it. Single click only nudges — never opens.
+- Auto-open on action and conversation: a queued bridge command from Muse opens the shell and shows it executing; a meaningful bridge-state change (service flip, float open/close, chain growth, new RAGENT threads) opens it with a printed summary. Quiet updates show a pulsing activity dot on the imp instead. Auto-opens never steal keyboard focus.
+- Verified: tests 140/140 (107 original + 33 float behaviors); edit-audit probe (imp fixed at boot, shell hidden, double-click opens, status answers, close collapses, R:\> shell + static panel intact); exactly 1 infused section, zero duplicate ids.
+- Unchanged: LocalBrain routing, registry build 11 (124 commands), RENJIN ask v3.1 mind, bridge polling, GO/refuse law, thundr-bridge/ files (no change this push).
+
 ## 2026-11-19 17:45 MST — Inner Beacon live in the shells + RCODE/Xcode plugin & adapter (ThundR)
 - Rizal seated the .RZL FILE FORMAT spec (Inner Beacon, assembly
   sequence, REQ-0+1 folder-is-the-app, starter object, ЯSCOUT anatomy):
