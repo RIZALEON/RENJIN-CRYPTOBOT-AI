@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- App Sandbox: on. -->
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+	<!-- Network client: loopback ONLY. The engine is offline-first and
+	     makes no outgoing connections. The one exception is rvm-out,
+	     which posts to the loopback botbridge at 127.0.0.1:4873 when
+	     present. No internet access is used or needed by this app.
+	     If you want a fully network-free build, delete this key and
+	     rvm-out will simply be unavailable (the shell keeps working). -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+	<!-- No network server entitlement: nothing in this app listens. -->
+	<!-- No files, camera, microphone, or keychain access requested. -->
+</dict>
+</plist>

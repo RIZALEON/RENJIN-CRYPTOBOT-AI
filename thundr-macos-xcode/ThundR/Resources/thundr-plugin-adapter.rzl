@@ -1,0 +1,72 @@
+{
+ "schema": "rzl.doc.v1",
+ "spec": "RZL-DOC 0.1",
+ "name": "THUNDR-PLUGIN-ADAPTER",
+ "title": "ThundR Plugin Adapter 0.1.0 — integrated adapter for all bots and AI, certainly Muse",
+ "rev": 1,
+ "layer": "PUBLIC",
+ "lang": "en",
+ "stamp": {
+  "class": "THUNDR PLUGIN ADAPTER",
+  "id": "thundr-plugin",
+  "version": "0.1.0",
+  "protocol": "rzl.thundr.plugin.v1",
+  "envelope": "rzl.link.v1",
+  "creator": "Chase Rizal",
+  "date": "2026-11-19",
+  "capabilities": [
+   "communicate",
+   "diagnostics",
+   "analysis",
+   "debug",
+   "repair",
+   "update",
+   "code",
+   "visual"
+  ],
+  "channels": [
+   "Muse <-> R:> Shell <-> ThundR <-> bots",
+   "rzl.link.v1 cmd/report",
+   "rvm-out 127.0.0.1:4873",
+   "RKLOWD OUTBOX/QUEUE",
+   "Яloader RVPNRelay :47800"
+  ],
+  "security": [
+   "Bots never sign",
+   "Keys never leave the device",
+   "Decider approval before device changes",
+   "Propose-first for repairs and updates",
+   "Fail-closed allowlist",
+   "Never erase"
+  ],
+  "limits": "No Xcode run here, no MacBook Neo accessed. Swift file is source for Neo, static-checked only. JS bridge tested in Node 24 with a mock bridge.",
+  "files_sha256": {
+   "ThundRPluginAdapter.swift": "39fda4f2d1e9cb8ea67cbb3a457c032a4a66611e9a402078e84e02e2dd17ced9",
+   "thundr-plugin-bridge.js": "0c8a10cba21aa00a95a9ada700ea7b350bac4620c0212735a0b64e6d5d7ad419",
+   "test-thundr-adapter.js": "75e195374f30481a62cf44d1b6afcdf73ec65cb67d912620a80fd988da28dc86",
+   "README.md": "84525905d53165f8e4ab472ad1315e6e62926415aed90f6be57e6a0702c2ec8f"
+  }
+ },
+ "blocks": [
+  {
+   "type": "head",
+   "level": 1,
+   "text": "ThundR Plugin Adapter 0.1.0"
+  },
+  {
+   "type": "text",
+   "text": "Integrated plugin adapter for all bots and AI, certainly Muse: communication, diagnostics, analysis, debugging, repairs, updates, and coding and visual integrations. Protocol rzl.thundr.plugin.v1 over rzl.link.v1 envelopes.",
+   "tag": "declared"
+  },
+  {
+   "type": "text",
+   "text": "LAW: bots never sign. Keys never leave the device. Decider approval before anything changes a device. Repairs and updates are propose-first. Fail-closed allowlist. Never erase.",
+   "tag": "declared"
+  },
+  {
+   "type": "text",
+   "text": "Neo only: Xcode builds, Swift compilation, RTHUNDR.app, the old non-pure brain inference (excluded from the pure .RZL project), Face ID unlocks, Яloader installs. Shell: diagnostics, analysis, purity scan, tests, proposals, Trackers.",
+   "tag": "declared"
+  }
+ ]
+}
