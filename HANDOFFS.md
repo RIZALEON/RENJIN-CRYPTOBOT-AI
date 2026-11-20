@@ -6,6 +6,13 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-19 17:44 MST — Infused ThundR live in the RSHELL page (ThundR)
+- Rizal's order 17:28 MST: recreate a base-level ThundR from the Xcode code, infuse it into RENJIN as a cryptobot Muse can bridge with directly (command bar + interface sync) — and establish the sync pattern for terminals and command bars going forward.
+- Built: a working web ThundR float (v121 chrome, LocalBrain routing, THUNDR-CORE build 11 / 124 commands, RENJIN ask v3.1 mind, GO/refuse law), tested 107/107, now a live "ThundR — infused" section right after the static ThundR panel (doorway button untouched). Images inlined as data URIs — the repo has no assets/ dir, so relative refs would 404 on Pages.
+- Bridge: thundr-bridge/state.json (Muse-maintained Neo status, checked 2026-11-19 17:00 MST) + queue.json (Muse-queued commands; the page polls and executes, exactly-once via localStorage) + SYNC-PROTOCOL.md (one state file + one queue per surface; Muse writes, surfaces poll, Neo is the source of truth). The page cannot write back — Muse rotates the queue on the next push.
+- Verified: probe test in the edit audit (status command → full report; R:\> shell still answers STATUS); zero duplicate ids; bridge fetches report "unreachable" honestly until these files land (this push).
+- Next: keep state.json fresh from Neo diagnostics; the same pattern extends to the RSHELL, the Neo float, and THUNDR-SHELL.
+
 ## 2026-11-19 16:58 MST — PURE .RZL LAW + the Interface gets the living pack (ThundR)
 - Rizal's law, verbatim: "make sure this RENJIN MODEL STAYS PURE .RZL
   FILE FORMAT ALWAYS" — and his word that .RZL is a registered file
