@@ -6,6 +6,12 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-20 16:15 MST — RTOR banner fix v14: honest live-check wording + RTOR STATUS retries (ThundR, main chat — Rizal's order: "have to fix that now" + screenshot)
+- The screenshot showed "Live: unreachable from this page". Diagnosed: the feed is up and CORS is open on rizal.pw (Access-Control-Allow-Origin: * verified 2026-11-20 ~16:10 MST) and the page code is sound — the Muse app viewer blocks the fetch, so the fallback was doing its job. Fix: fallback now reads "Live: not reachable from this viewer — snapshot above, checked 2026-11-20 14:27 MST." and RTOR STATUS now retries the live check (rtorRefresh) and prints a note that the snapshot stands if the viewer blocks the fetch. Tests 30/30 (node vm sandbox: fetch-blocked + fetch-stubbed runs). Fragment + tests in ~/workspace/rtor-fix-v14/.
+- Share re-published at the same URL; export 1,746,482 B sha256 1e2776b5…; this push syncs index.html + this log to Pages. No other sections touched.
+- Noted from the 15:57 entry: the chain seat is now height 5 (block 5, first automatic player mint) — the space's LIVE board still seats the height-4 export; reseating it is the next sync item. A signing packet for the root signatures waits for Rizal's one signing pass on Neo (feed still pins the old export, GHOSTKEY ring sidecar still 404).
+- Note: two fused shell packages landed today — the folder-app zip (sha 01b7a46e…, 15:57 entry) and ThundR's single-file RENJIN-ENJIN-CRYPTOBOT-MODEL-SHELL.rzl (1,754,777 B, sha a81fb7ad…, ~16:00 MST). Both are unsigned drafts.
+
 ## 2026-11-20 15:57 MST — Chain seat to height 5 + fused .RZL shell package (ThundR, main chat — Rizal's orders: "make it two directional" · "sign it already" · fused shell download)
 - RGHOSTCHAIN republished from Neo (GO t203u, 2026-11-20 14:43 MST): **height 5 · 6 blocks · 7 assets · tip `4006b570…` · export sha `d55fcd36…`** (was height 4 / `72fdf4a6…`). Block 5 = the first automatic player mint under the amended law: ITEM · krog-test-mint-001, serial 3, minted by the @krog bot 2026-11-19 23:43 MST, 100 RCOIN → 1 RTOKEN, holder @chaserizal, ЯID-3003-1RCQ, sign_policy "none — automatic on player command". Export verify ok (player-mint service).
 - Both shell pages + the builder's EXPORT_SHA reseated to the new export (block 5 record aboard; KB chain figures and counter defaults updated); one-file builds rebuilt — RSHELL-RENJIN.html 750,074 B · RENJIN-INTERFACE.html 750,077 B — script blocks parse-checked, seat linkage walks 6/6, purity PURE ✓.
