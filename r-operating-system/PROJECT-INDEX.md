@@ -1,5 +1,15 @@
 # RENJIN RZL AI CRYPTO Operating System — GitHub Project Index
 
+## Pure R OPERATING SYSTEM RENJIN SHELL BUILD — at the top
+
+**R:> Shell — pure R OPERATING SYSTEM RENJIN SHELL BUILD, integrated:**
+https://muse.ai/s/r-shell-xjxn6dxbxskxa5xyxp/kkOmaDGgjjCjTlH90iROQIDKXoHChxAg8QmB3lc8S6Y
+Re-shared 2026-11-20 18:17 MST, so this link now serves the integrated build:
+Gizmo (RID Я-DEVICE-1PYZ7VG0Z1-ZE) + ThundR (ЯID-0014-KREH, integrated signing
+device, ThundR's mark, fly set, read/write/check, Autosign v2) + RMAIL v2.1
+with RTOR (7 hub seeder-leechers, RCODE build 15). Shell file 855,396 B,
+SHA256 ef39d68d868fe8fce62872245e590070a610ece211c643ba1cde7881a819fbe4.
+
 ## Most updated fused builds — at the top
 
 1. **R-OPERATING-SYSTEM-PURE-LINUX-RZL.rzl** — the most updated fused build.
