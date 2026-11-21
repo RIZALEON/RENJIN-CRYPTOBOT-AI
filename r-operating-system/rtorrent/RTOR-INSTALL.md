@@ -153,3 +153,16 @@ Nothing in this install or activation moves real money. RMAIL messages, mints, t
 - [ ] RMAIL loop live through GHOSTCHAIN RTOR over relay_8797 — ThundR sending commands, chain updates, and replies, and receiving device reports, chain entries, and confirmations
 - [ ] Updates flowing through GHOSTCHAIN RTOR over RMAIL — chain updates, client updates, status updates, and new build notices, continuously, so devices and ThundR stay in sync on the same live chain
 - [ ] Diagnostics and repairs flowing through GHOSTCHAIN RTOR over RMAIL — health checks, chain verification results, and node status both ways, and repairs propose-first only (ThundR proposes, owner approves, then device applies)
+
+## Detection — from every device and app independently
+
+Detection is done from every device and every app independently. No central
+scan, no single device that detects for the others.
+
+- Each device detects and reports itself and what is on it, on its own.
+- Each app detects and reports itself, on its own.
+- Each report goes into the GHOSTCHAIN RTOR stream (to RTRACKR) from that
+  device / that app directly: designation, RID, its apps or components, and
+  the exact date and time it entered the stream.
+- ThundR on the VM does not detect for a device. ThundR reads the stream and
+  records what each device and app reported for itself.
