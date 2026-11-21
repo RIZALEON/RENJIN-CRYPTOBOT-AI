@@ -11,21 +11,22 @@ Forms: HARDDEVICE · APP · CRYPTOBOT · COMPONENT · WEBSITE · TRACKER · SERV
 
 1. HARDDEVICE-01 — Neo (MacBook) — the build machine, RGHOSTKEY home
 2. HARDDEVICE-02 — 17e (iPhone 17e) — RDRAGON bundle 59, RCODE build 15
-3. HARDDEVICE-03 — Moto (Android) — wireless debug 192.168.0.224:42411
+3. HARDDEVICE-03 — Moto (Pixel, Android) — RID Я-DEVICE-BV2ASTPX0C-TV (seq 20) — space RID-0026-C7YD (pixel.rtor, seen live 2026-11-20T22:22:00-07:00) — wireless debug 192.168.0.224:42411 — Renjin Torrent RTOR client up, last heartbeat 2026-11-20T21:44:00-07:00
 
 ## APP — applications on a device
 
-1. APP-01 — Dragon Skull (RDRAGON) — Moto — RID Я-DEVICE-V5Q0QPT07J-H1 (seq 17)
-2. APP-02 — RCODE — Moto — RID Я-DEVICE-0TDKGMFQCW-5Z (seq 18)
-3. APP-03 — RBOARD — Moto — RID Я-DEVICE-39PBT3H2TP-JY (seq 19)
-4. APP-04 — RDRAGON — 17e — build 59 (RID pending, assign when it comes online)
-5. APP-05 — RCODE — 17e — build 15 (RID pending)
+1. APP-01 — Dragon Skull (RDRAGON) — Moto — RID Я-DEVICE-V5Q0QPT07J-H1 (seq 17) — space ЯID-0020-CKQK (moto.dragonskull)
+2. APP-02 — RCODE — Moto — RID Я-DEVICE-0TDKGMFQCW-5Z (seq 18) — space ЯID-0021-32CZ (moto.rcode)
+3. APP-03 — RBOARD — Moto — RID Я-DEVICE-39PBT3H2TP-JY (seq 19) — space ЯID-0023-YM9V (moto.rboard)
+4. APP-04 — RDRAGON — 17e — build 59 — RID Я-DEVICE-ZTS36KG6QF-SK (seq 22, minted 2026-11-20 23:18 MST) — space ЯID-0017-WST7 (17e.dragonskull)
+5. APP-05 — RCODE — 17e — build 15 — RID Я-DEVICE-JH0F4MTHE1-CD (seq 23, minted 2026-11-20 23:18 MST) — space ЯID-0018-AS6M (17e.rcode)
 6. APP-06 — ThundR iOS — planned (RID pending)
+7. APP-07 — ЯBOT — 17e — RID Я-DEVICE-0TQ386QSWQ-J7 (seq 21, minted 2026-11-20 23:18 MST) — space ЯID-0019-KCG5 (17e.yabot)
 
 ## CRYPTOBOT — bots and cryptobots
 
 1. CRYPTOBOT-01 — ThundR — RID ЯID-0014-KREH — block 2
-2. CRYPTOBOT-02 — TerraformR CRYPTOGAME — RID ЯID-0015-0HJP — block 3
+2. CRYPTOBOT-02 — TerraformR CRYPTOGAME — RID ЯID-0015-0HJP — block 3 — space ЯID-0022-ZWHQ (moto.terraformr)
 3. CRYPTOBOT-03 — KROG — RID ЯID-BOT-0001 (@krog)
 4. CRYPTOBOT-04 — Gizmo — RID Я-DEVICE-1PYZ7VG0Z1-ZE (seq 16) — the Observer
 
@@ -43,8 +44,8 @@ Forms: HARDDEVICE · APP · CRYPTOBOT · COMPONENT · WEBSITE · TRACKER · SERV
 
 ## WEBSITE — public sites and pages
 
-1. WEBSITE-01 — rizal.pw — /renjin live, RTRACKR live
-2. WEBSITE-02 — rizal.info — /renjin live
+1. WEBSITE-01 — rizal.pw — /renjin live, RTRACKR live — space ЯID-0024-WQTJ (site.rizal.pw)
+2. WEBSITE-02 — rizal.info — /renjin live — space ЯID-0025-R0EG (site.rizal.info)
 3. WEBSITE-03 — R Operating System page — public Muse link
 4. WEBSITE-04 — PROJECT R page — public Muse link
 
@@ -70,7 +71,7 @@ Forms: HARDDEVICE · APP · CRYPTOBOT · COMPONENT · WEBSITE · TRACKER · SERV
 2. Its form is named: HARDDEVICE, APP, CRYPTOBOT, COMPONENT, WEBSITE,
    TRACKER, or SERVICE.
 3. It takes the next number in that form's list.
-4. An RID is minted for it (rid.v1, parent ЯID-0001-3QQS, next seq 20)
+4. An RID is minted for it (rid.v1, parent ЯID-0001-3QQS, next seq 24)
    and recorded in RID-REGISTRY.md.
 5. The designation and the RID are written here, in arrival order.
 
@@ -92,6 +93,9 @@ no time is guessed.
 - Moto RKLOWD unsuspended: Nov 20, 2026 19:58 MST
 - RIDs minted for Dragon Skull, RCODE, RBOARD: Nov 20, 2026 20:01 MST
 - GHOSTCHAIN pulled live from RTRACKR: Nov 20, 2026 20:01 MST
+- Moto (Pixel) came online in the stream — Renjin Torrent up, last heartbeat: Nov 20, 2026 21:44:00 MST (-07:00)
+- Space ЯIDs 0017–0025 observed live on rizal.pw/renjin and rizal.info/renjin by the RTOR device watch, Nov 20, 2026 23:18 MST — entry time not recorded (the source shows no time): 0017 17e.dragonskull, 0018 17e.rcode, 0019 17e.yabot, 0020 moto.dragonskull, 0021 moto.rcode, 0022 moto.terraformr, 0023 moto.rboard, 0024 site.rizal.pw, 0025 site.rizal.info. The pages list 0017–0025 only — the Pixel's space RID-0026-C7YD (pixel.rtor, seen live 22:22 MST) is not on the pages.
+- DEVICE RIDs minted for the 17e apps that came online in the stream: ЯBOT seq 21, RDRAGON 17e seq 22, RCODE 17e seq 23 — Nov 20, 2026 23:18 MST
 
 ## DETECTION RULE — from every device and app independently
 
