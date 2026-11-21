@@ -1,5 +1,16 @@
 # RENJIN RZL AI CRYPTO Operating System — GitHub Project Index
 
+## RTOR CLIENT — INSTALLED IN THE SITES
+
+- Renjin Torrent (RTOR client): https://muse.ai/s/renjin-torrent-hxi6ej8yxtwuz/CyifUZXzpFju5AwsEx6Y0c4NFcBAU4fCa8XGl3wTMwg
+- In the repo: r-operating-system/rtorrent/ (client page + RTOR-CLIENT.md)
+- In the shell: gold RTOR CLIENT button (torrent panel + taskbar), with the
+  magnetized components — magnet link, transponder (relay_8797, 8 transponders,
+  7 hub seeder-leechers), RENJIN-COMPONENT.rzl (SHA 67a8c186…f5aa),
+  RENJIN-KUBO.rzl (SHA 04b7b1e2…b3a97)
+- Records: r-operating-system/kubo/RENJIN-COMPONENT-RECORD.md,
+  r-operating-system/kubo/RENJIN-KUBO-RECORD.md
+
 ## PUBLIC PROJECT LINE
 
 https://muse.ai/s/r-shell-xjxn6dxbxskxa5xyxp/kkOmaDGgjjCjTlH90iROQIDKXoHChxAg8QmB3lc8S6Y
