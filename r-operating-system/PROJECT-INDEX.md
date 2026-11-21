@@ -13,7 +13,8 @@ Gizmo (RID Я-DEVICE-1PYZ7VG0Z1-ZE) + ThundR (ЯID-0014-KREH, integrated signing
 device, ThundR's mark, fly set, read/write/check, Autosign v2) + RMAIL v2.1
 with RTOR (7 hub seeder-leechers, RCODE build 15). Shell file now 927,276 B (OS-desktop re-skin, 2026-11-20 18:29 MST),
 SHA256 7cdff9165d7cdcf16f15e4ea42ae62b5fabc730b189e696346c2af17837aa985
-(previous integrated build: 855,396 B, SHA ef39d68d…fbe4).
+(previous integrated build: 855,396 B, SHA ef39d68d…fbe4 — also kept in the repo at
+rshell/previous/R-SHELL-MERGED.html, added 2026-11-20 18:35 MST).
 
 ## Most updated fused builds — at the top
 
