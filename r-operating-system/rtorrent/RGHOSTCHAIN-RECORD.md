@@ -9,6 +9,16 @@ MT, source Neo RMINT hybrid live export (GO t203u). Height 5, 6 blocks, tip
 
 https://rizaleon.github.io/RENJIN-CRYPTOBOT-AI/r-operating-system/rtorrent/RGHOSTCHAIN.rzl
 
+## Shared link that works right now (verified 2026-11-20 21:55 MST)
+
+The Pages link above 404s until GitHub Pages redeploys the new file. The raw
+link below serves the full file now, across devices:
+
+https://raw.githubusercontent.com/RIZALEON/RENJIN-CRYPTOBOT-AI/main/r-operating-system/rtorrent/RGHOSTCHAIN.rzl
+
+The file itself is confirmed in the repo at
+r-operating-system/rtorrent/RGHOSTCHAIN.rzl on main (commit 75dcd185).
+
 ## Magnet
 
 magnet:?xt=urn:btih:92d1572a642aa073efa1979000e7705126e8924fbf94403b6617f65a45e81e37&dn=RGHOSTCHAIN.rzl&tr=https://rizal.pw/rtrackr
