@@ -11,6 +11,14 @@
 - Records: r-operating-system/kubo/RENJIN-COMPONENT-RECORD.md,
   r-operating-system/kubo/RENJIN-KUBO-RECORD.md
 
+## ANDROID STATUS — 2026-11-20 19:49 MST
+
+- Live on the sites (rizal.pw/renjin, rizal.info/renjin), NOT on Android yet.
+- Copy onto the Moto's apps still running over wireless debug; confirm once
+  each file checks out on the phone. Guide: r-operating-system/rtorrent/MOTO-INSTALL.md
+- New RTOR Android app: built but NOT installed — needs real signing first
+  (on the integrated signing device, on the owner's tap).
+
 ## PUBLIC PROJECT LINE
 
 https://muse.ai/s/r-shell-xjxn6dxbxskxa5xyxp/kkOmaDGgjjCjTlH90iROQIDKXoHChxAg8QmB3lc8S6Y
