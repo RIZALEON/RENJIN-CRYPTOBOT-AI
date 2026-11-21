@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=RTOR
+Comment=RTOR GHOSTCHAIN cryptoclient: seed and leech
+Exec=rtor.sh %u
+Icon=icon.png
+Terminal=false
+Type=Application
+X-Lomiri-Touch=true
+X-Ubuntu-Touch=true

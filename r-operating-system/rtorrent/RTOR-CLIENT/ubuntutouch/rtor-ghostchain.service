@@ -1,0 +1,12 @@
+[Unit]
+Description=RTOR GHOSTCHAIN cryptoclient (always-on seed/leech, 127.0.0.1:4984)
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/opt/click.ubuntu.com/rtor.rizal/current/rtor-service.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

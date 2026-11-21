@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+ <key>Label</key><string>info.rizal.rtor-ghostchain</string>
+ <key>ProgramArguments</key><array>
+  <string>/Users/rizalsystem/R/ЯLAB/RCRYPTOFORGE/RUNTIME/rtor-neo/bin/rtor-ghostchain</string><string>serve</string>
+  <string>--pkg</string><string>/Users/rizalsystem/R/ЯLAB/RCRYPTOFORGE/RUNTIME/rtor-neo</string>
+  <string>--data</string><string>/Users/rizalsystem/R/ЯLAB/RCRYPTOFORGE/RUNTIME/rtor-neo/data</string>
+  <string>--addr</string><string>127.0.0.1:4986</string>
+ </array>
+ <key>EnvironmentVariables</key><dict>
+  <key>RTOR_PEER_LISTEN</key><string>0.0.0.0:4985</string>
+  <key>RTOR_DEVICE</key><string>rtor-neo-rtrackr-backside</string>
+  <key>RTOR_LOG</key><string>/Users/rizalsystem/R/ЯLAB/RCRYPTOFORGE/RUNTIME/rtor-neo/data/client.log</string>
+ </dict>
+ <key>RunAtLoad</key><true/>
+ <key>KeepAlive</key><true/>
+ <key>ThrottleInterval</key><integer>10</integer>
+</dict></plist>

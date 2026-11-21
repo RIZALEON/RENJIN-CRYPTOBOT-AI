@@ -1,0 +1,17 @@
+{
+  "name": "rtor.rizal",
+  "title": "RTOR",
+  "version": "0.2.3",
+  "architecture": "arm64",
+  "framework": "ubuntu-sdk-20.04",
+  "maintainer": "Rizal <rizal@localhost>",
+  "description": "RTOR GHOSTCHAIN cryptoclient 0.2.3 for Ubuntu Touch: always-on seed and leech (>= 1 KB/s each way, measured) of .rzl, crypto, RTOR and magnet files with LAN RTOR peers (Neo, Pixel) and public RTRACKR. UI loopback only (127.0.0.1:4984); peer port 4985 LAN only. Unsigned; re-seed waits for Rizal's RGHOSTKEY tap.",
+  "hooks": {
+    "rtor": {
+      "apparmor": "rtor.apparmor",
+      "desktop": "rtor.desktop",
+      "content-hub": "rtor.content-hub",
+      "urls": "rtor.url-dispatcher"
+    }
+  }
+}

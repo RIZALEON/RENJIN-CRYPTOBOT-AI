@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RTOR · Renjin Torrent</title>
+<style>
+:root{--g:#39FF14;--p:#8A2BE2;--ink:#ecebf3;--dim:#a9a3c4;--card:rgba(20,14,40,.72);--line:rgba(138,43,226,.35);--bad:#ff5c7a;--wait:#ffd166;--mono:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%}
+body{color:var(--ink);font:15px/1.45 -apple-system,system-ui,Segoe UI,Roboto,sans-serif;background:#07051a;
+background-image:radial-gradient(1px 1px at 12% 18%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 72% 12%,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 38% 62%,#fff7 50%,transparent 51%),radial-gradient(1px 1px at 86% 48%,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 22% 84%,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 58% 34%,#fff4 50%,transparent 51%),radial-gradient(1px 1px at 92% 82%,#fff7 50%,transparent 51%),radial-gradient(1px 1px at 6% 52%,#fff5 50%,transparent 51%),linear-gradient(180deg,#0b0726 0%,#1a0b3d 45%,#2b0f4f 75%,#120a2a 100%);background-attachment:fixed}
+header{padding:16px 18px 10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:19px;letter-spacing:.06em}h1 b{color:var(--g);text-shadow:0 0 10px #39ff1466}h1 span{color:var(--p)}
+nav{margin-left:auto}nav a{color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 11px;margin-left:6px;font-size:12px}
+main{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px;padding:14px;max-width:1200px;margin:0 auto}
+.c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;backdrop-filter:blur(6px)}
+.c h2{font-size:12px;letter-spacing:.12em;color:var(--g);margin:0 0 10px;text-transform:uppercase}
+.wide{grid-column:1/-1}.mono{font-family:var(--mono);font-size:12px;word-break:break-all}
+.ok{color:var(--g)}.bad{color:var(--bad)}.wait{color:var(--wait)}.dim{color:var(--dim)}
+button,.btn{background:var(--p);color:#fff;border:0;border-radius:10px;padding:8px 13px;font-weight:600;margin:4px 6px 4px 0;cursor:pointer;font-size:13px;display:inline-block}
+button.g{background:transparent;border:1px solid var(--g);color:var(--g)}button.s{padding:5px 9px;font-size:12px}
+input,textarea{width:100%;background:#0c0820cc;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:9px;font:inherit;margin:4px 0}
+pre{background:#0c0820cc;border-radius:10px;padding:8px;max-height:240px;overflow:auto;margin:6px 0 0;white-space:pre-wrap}
+.row{display:flex;justify-content:space-between;gap:8px;padding:4px 0;border-bottom:1px dashed #ffffff14}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:7px 6px;border-bottom:1px solid #ffffff12;text-align:left;vertical-align:top}th{color:var(--dim);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.tag{display:inline-block;border:1px solid var(--p);color:#d9c2ff;border-radius:6px;padding:0 6px;font-size:11px}
+.drop{border:1.5px dashed var(--g);border-radius:12px;padding:14px;text-align:center;color:var(--dim)}.drop.on{background:#39ff1414}
+.note{color:var(--dim);font-size:12px}
+</style></head><body>
+<header><h1><b>R:&gt;</b> RTOR <span>·</span> Renjin Torrent</h1>
+<nav><a href="/torrent">Renjin Torrent page</a><a href="/shell">R:&gt; Shell</a><a href="https://rizal.pw/rtrackr" target="_blank" rel="noopener">RTRACKR</a></nav></header>
+<main>
+<section class="c wide"><h2>Files</h2><table><thead><tr><th>Name</th><th>Type</th><th>Size</th><th>Verified</th><th>Seeding ↑ upload</th><th>Leeching ↓ download</th><th></th></tr></thead><tbody id="lib"><tr><td colspan="7" class="dim">empty</td></tr></tbody></table>
+<p class="note">Seeding and leeching are always on for every file. Seeding keeps a verified copy in each reachable drop point; leeching re-checks queued magnets across library, drops and exact sources every 30 s. Rates are measured from real byte counters over a 10 s window (0 B/s = idle — no peer/drop transfer). Any throttle is held at 1 KB/s or more per direction. <span id="limits" class="mono"></span></p>
+<div id="lq"></div></section>
+<section class="c wide"><h2>Open a file to seed</h2>
+<div id="drop" class="drop">Drop a file here or <label class="btn" style="margin:0 4px">CHOOSE FILE<input id="pick" type="file" multiple style="display:none"></label><br>
+<span class="note">.rzl · crypto files (public wallet/chain export JSON, public .pem/.crt) · .rtor · .torrent · .magnet · SHA256SUMS · any file. Private keys are refused.</span></div>
+<pre id="iout" class="mono" style="display:none"></pre></section>
+<section class="c wide"><h2>Leech by magnet</h2>
+<input id="mag" class="mono" placeholder="magnet:?xt=urn:sha256:… or urn:btih:(40-hex v1 / 64-hex) …">
+<button onclick="leech()">LEECH</button><button class="g" onclick="parseM()">READ MAGNET</button><button class="g" onclick="useRecorded()">RENJIN CORE V3 MAGNET</button>
+<pre id="lout" class="mono" style="display:none"></pre>
+<p class="note">Leech looks in this library, then this space's RKLOWD / RMAIL drop points, then any exact-source URL in the magnet. A file is accepted only if its SHA-256 matches.</p></section>
+<section class="c wide" id="ghostchain-file"><h2>RGHOSTCHAIN file</h2>
+<p class="note">The shared GHOSTCHAIN file for the RTOR client: the same link on every device. Live GHOSTCHAIN from RTRACKR, snapshot Nov 20, 2026 2:43:28 PM MT, height 5, 6 blocks, tip 4006b57088…f0bb5b.</p>
+<button id="ghostAdd" onclick="addGhostchain()">ADD RGHOSTCHAIN</button><button class="g" onclick="loadGhostMagnet()">LOAD THIS MAGNET INTO LEECH FIELD</button>
+<pre id="gout" class="mono" style="display:none"></pre>
+<p class="note"><b>Raw GitHub link (working across devices now):</b><br><a class="mono" href="https://raw.githubusercontent.com/RIZALEON/RENJIN-CRYPTOBOT-AI/main/r-operating-system/rtorrent/RGHOSTCHAIN.rzl" target="_blank" rel="noopener" style="word-break:break-all">https://raw.githubusercontent.com/RIZALEON/RENJIN-CRYPTOBOT-AI/main/r-operating-system/rtorrent/RGHOSTCHAIN.rzl</a></p>
+<p class="note"><b>GitHub Pages link (may 404 until Pages redeploys):</b><br><a class="mono" href="https://rizaleon.github.io/RENJIN-CRYPTOBOT-AI/r-operating-system/rtorrent/RGHOSTCHAIN.rzl" target="_blank" rel="noopener" style="word-break:break-all">https://rizaleon.github.io/RENJIN-CRYPTOBOT-AI/r-operating-system/rtorrent/RGHOSTCHAIN.rzl</a></p>
+<p class="note"><b>Magnet:</b><br><span class="mono" style="word-break:break-all">magnet:?xt=urn:btih:92d1572a642aa073efa1979000e7705126e8924fbf94403b6617f65a45e81e37&amp;dn=RGHOSTCHAIN.rzl&amp;tr=https://rizal.pw/rtrackr</span></p>
+<p class="note"><b>SHA-256:</b> <span class="mono" style="word-break:break-all">92d1572a642aa073efa1979000e7705126e8924fbf94403b6617f65a45e81e37</span>. The client accepts the file only if its SHA-256 matches; any other hash is refused. No measured RTOR speed yet, and no live device swarm is claimed.</p></section>
+
+<section class="c"><h2>Space · ЯID</h2><div id="sp"></div></section>
+<section class="c"><h2>Install check</h2><div id="rzl"></div><div id="magc" class="mono" style="margin-top:8px"></div></section>
+<section class="c"><h2>Ghost chain</h2><div id="chain"></div><button onclick="verify()">CHAIN VERIFY</button><pre id="vout" class="mono" style="display:none"></pre></section>
+<section class="c"><h2>RMAIL · relay_8797</h2><div id="rm"></div><button onclick="sendMagnet()">SEND CORE MAGNET</button><button class="g" onclick="flush()">RETRY OUTBOX</button><pre id="rout" class="mono" style="display:none"></pre>
+<p class="note">Mail never signs or mints. Undelivered mail stays in the outbox and is retried.</p></section>
+<section class="c"><h2>RTRACKR</h2><div id="tr"></div><button class="g" onclick="beat()">HEARTBEAT NOW</button></section>
+<section class="c"><h2>Re-seed</h2><p class="wait" id="rsText">Waiting for Rizal's RGHOSTKEY tap on the trusted device.</p><div id="rsInfo" class="mono dim"></div><p class="note">This client holds no key and no seed. Signing happens only on the owner's tap.</p></section>
+<section class="c wide"><p class="note">Speeds shown are measured from real bytes moved (10 s window); idle shows 0. Peers are listed only when they answer on port 4985. No real money moves.</p></section>
+</main>
+<script>
+function reseedUI(r){if(!r)return;const t=document.getElementById('rsText'),i=document.getElementById('rsInfo');t.textContent=r.text;t.className=r.state==='sealed'?'ok':'wait';
+ i.textContent='chain height '+r.chain_height+(r.chain_tip?' · tip '+r.chain_tip.slice(0,10)+'…':'')+' · checked '+(r.checked||'')+(r.state==='sealed'?'':' · '+(r.unmet||[]).join('; '))+(r.err?' · '+r.err:'')}
+const $=id=>document.getElementById(id),J=(u,o)=>fetch(u,o).then(r=>r.json());
+const P=(u,b)=>J(u,{method:'POST',headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):'{}'});
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const row=(k,v,c)=>'<div class="row"><span>'+k+'</span><span class="mono '+(c||'')+'">'+v+'</span></div>';
+const show=(id,t)=>{const e=$(id);e.style.display='block';e.textContent=typeof t==='string'?t:JSON.stringify(t,null,1)};
+const sz=n=>n<1024?n+' B':n<1048576?(n/1024).toFixed(1)+' KB':(n/1048576).toFixed(1)+' MB';
+const GHOST_SHA="92d1572a642aa073efa1979000e7705126e8924fbf94403b6617f65a45e81e37",GHOST_RAW="https://raw.githubusercontent.com/RIZALEON/RENJIN-CRYPTOBOT-AI/main/r-operating-system/rtorrent/RGHOSTCHAIN.rzl",GHOST_PAGES="https://rizaleon.github.io/RENJIN-CRYPTOBOT-AI/r-operating-system/rtorrent/RGHOSTCHAIN.rzl";
+const GHOST_MAGNET="magnet:?xt=urn:btih:92d1572a642aa073efa1979000e7705126e8924fbf94403b6617f65a45e81e37&dn=RGHOSTCHAIN.rzl&tr=https://rizal.pw/rtrackr";
+const GHOST_LEECH=GHOST_MAGNET+"&ws="+encodeURIComponent(GHOST_RAW)+"&as="+encodeURIComponent(GHOST_PAGES);
+function loadGhostMagnet(){$('mag').value=GHOST_LEECH;parseM()}
+async function addGhostchain(){loadGhostMagnet();show('gout','leeching RGHOSTCHAIN.rzl (accepted only if SHA-256 = '+GHOST_SHA+') …');const r=await P('/api/leech',{magnet:GHOST_LEECH});const ok=r.ok&&r.item&&r.item.sha256===GHOST_SHA;show('gout',(ok?'ADDED · verified sha256 '+GHOST_SHA+' · from '+r.from:'NOT ADDED · '+(r.note||r.err||'hash mismatch'))+'\n'+JSON.stringify(r,null,1));load()}
+const RECORDED="magnet:?xt=urn:btih:3a19e054d6d3718d4f4a87a863dc97b691a7da578f820b8906197820400069c6&xt=urn:sha256:16f9dd002f25a26ddc7df8a6d2ef39ea898326df1414f6139663416ec9eb9b08&dn=RENJIN-CORE-V3.rzl&tr=https://rizal.pw/rtrackr";
+async function upload(files){let out=[];for(const f of files){const r=await fetch('/api/import',{method:'POST',headers:{'X-Filename':encodeURIComponent(f.name)},body:f}).then(r=>r.json());
+ out.push(r.ok?(r.item?('OK  '+r.item.type+'  '+r.item.name+'  '+r.item.sha256.slice(0,16)+'…'+(r.already_in_library?'  (already in library)':'')):('OK  SHA256SUMS: '+r.sums_added+' sums')):('REFUSED  '+f.name+': '+r.refused))}
+ show('iout',out.join('\n'));load()}
+$('pick').onchange=e=>upload(e.target.files);
+const d=$('drop');['dragenter','dragover'].forEach(t=>d.addEventListener(t,e=>{e.preventDefault();d.classList.add('on')}));
+['dragleave','drop'].forEach(t=>d.addEventListener(t,e=>{e.preventDefault();d.classList.remove('on')}));d.addEventListener('drop',e=>upload(e.dataTransfer.files));
+async function seed(sha){const r=await P('/api/seed',{sha256:sha});show('iout',r.ok?('SEEDING '+r.item.name+'\ncopies in drop points: '+(r.item.seeded_to||[]).length+(r.notes&&r.notes.length?'\n'+r.notes.join('\n'):'')+'\nRMAIL announce '+r.rmail.id+' → '+r.rmail.to+' (queued)'):r.err);load()}
+async function leech(){const r=await P('/api/leech',{magnet:$('mag').value});show('lout',r.ok?('GOT '+r.item.name+' · '+r.item.sha256+'\nfrom '+r.from):('NOT FOUND · tried: '+r.tried.join(', ')+'\n'+(r.note||'')));load()}
+async function parseM(){const r=await P('/api/magnet/parse',{magnet:$('mag').value});show('lout',r.err?('error: '+r.err+'\n'+JSON.stringify(r.magnet,null,1)):r.magnet)}
+function useRecorded(){$('mag').value=RECORDED;parseM()}
+function copyMag(m){navigator.clipboard&&navigator.clipboard.writeText(m);$('mag').value=m}
+function rate(b){b=b||0;return b>=1048576?(b/1048576).toFixed(2)+' MB/s':b>=1024?(b/1024).toFixed(2)+' KB/s':b.toFixed(0)+' B/s'}
+function xcell(x,arrow,extra){x=x||{};const on='<span class="tag" title="always on" style="background:#39FF14;color:#000">ON</span> ';
+ const r='<b class="mono">'+arrow+' '+rate(x.rate_bps)+'</b>'+(x.active?' <span class="ok">active</span>':'');
+ const last=x.last?'<div class="mono dim">last '+sz(x.last.bytes)+' in '+x.last.ms.toFixed(1)+' ms = '+rate(x.last.bps)+'</div>':'';
+ const tot='<div class="mono dim">total '+sz(x.total_bytes||0)+(extra?' · '+esc(extra):'')+'</div>';
+ return on+r+(x.note?'<div class="dim">'+esc(x.note)+'</div>':'')+last+tot}
+async function load(){const s=await J('/api/status'),L=await J('/api/library');reseedUI(s.reseed);
+ $('lib').innerHTML=(L.items||[]).length?L.items.map(i=>'<tr><td>'+esc(i.name)+'<div class="mono dim">'+i.sha256.slice(0,20)+'…</div></td><td><span class="tag">'+esc(i.type)+'</span></td><td>'+sz(i.size)+'</td><td>'+i.verified.map(v=>'<span class="'+(v.ok?'ok':'bad')+'">'+esc(v.method)+'</span>').join('<br>')+'</td><td>'+xcell(i.seeding,'↑',(i.seeded_to||[]).length+' drop cop'+((i.seeded_to||[]).length==1?'y':'ies'))+'</td><td>'+xcell(i.leeching,'↓',(i.sources||[]).length?'sources '+i.sources.length:'')+'</td><td><button class="s" onclick="seed(\''+i.sha256+'\')">SEED</button><button class="s g" onclick="copyMag(\''+esc(i.magnet).replace(/'/g,'%27')+'\')">MAGNET</button><a class="btn s" style="padding:5px 9px" href="/api/library/raw?sha='+i.sha256+'">SAVE</a></td></tr>').join(''):'<tr><td colspan="7" class="dim">No files yet. Open one above or leech a magnet.</td></tr>';
+ if(L.limits)$('limits').textContent='limits up '+(L.limits.up_bps?rate(L.limits.up_bps):'unlimited')+' · down '+(L.limits.down_bps?rate(L.limits.down_bps):'unlimited')+' · floor '+rate(L.rate_floor_bps);
+ $('lq').innerHTML=(L.leech_queue||[]).length?'<div class="note"><b>Leeching queue (always on)</b><br>'+L.leech_queue.map(q=>'<span class="mono">'+esc(q.magnet.slice(0,90))+'…</span> · tries '+q.tries+(q.note?' · '+esc(q.note):'')).join('<br>')+'</div>':'';
+ const sp=s.space;$('sp').innerHTML=sp.loaded?row('ЯID',esc(sp.rid))+row('space',esc(sp.space))+row('RKLOWD node',esc(sp.rklowd_node))+row('RMAIL',esc(sp.rmail_address))+(sp.drop_points||[]).map(x=>row('drop '+esc(x.name),esc(x.path),x.reachable?'ok':'bad')).join(''):'<p class="wait">'+esc(sp.note)+'</p>';
+ $('rzl').innerHTML=s.rzl.map(r=>row(esc(r.name),(r.ok?'SHA256 OK ':'MISMATCH ')+esc((r.got||r.err||'').slice(0,12))+'…',r.ok?'ok':'bad')).join('');
+ $('magc').innerHTML='<span class="'+(s.magnet_ok?'ok':'bad')+'">'+esc(s.magnet_check)+'</span>';
+ $('chain').innerHTML=row('height',s.chain_height)+row('head',esc(s.chain_head.slice(0,20))+'…');
+ $('rm').innerHTML=row('routes',esc(s.rmail.routes.join(' → ')))+row('outbox pending',s.rmail.outbox_pending,s.rmail.outbox_pending?'wait':'ok')+row('sent',s.rmail.sent);
+ const hb=s.rtrackr.last_heartbeat;$('tr').innerHTML=row('tracker',esc(s.rtrackr.tracker))+row('last heartbeat',hb?esc(hb.ts):'—')+row('post',esc(s.rtrackr.last_post||'—'),'wait')}
+async function verify(){const v=await P('/api/chain/verify');show('vout',(v.ok?'CHAIN OK':'CHAIN BROKEN')+' · height '+v.height+'\nhead '+v.head+(v.problems.length?'\n'+v.problems.join('\n'):''));load()}
+async function sendMagnet(){const r=await P('/api/rmail/send-magnet');show('rout',{id:r.queued.id,to:r.queued.to,delivery:r.delivery});load()}
+async function flush(){show('rout',await P('/api/rmail/outbox'));load()}
+async function beat(){await P('/api/rtrackr/heartbeat');load()}
+const q=new URLSearchParams(location.search);if(q.get('magnet')){$('mag').value=q.get('magnet');parseM()}
+if(q.get('imported'))show('iout',q.get('imported'));
+async function pend(){try{const r=await J('/api/pending-open');(r.urls||[]).forEach(u=>{if(/^magnet:/i.test(u)){$('mag').value=u;parseM()}})}catch(e){}}
+load();pend();setInterval(load,10000);setInterval(pend,2000);
+</script></body></html>

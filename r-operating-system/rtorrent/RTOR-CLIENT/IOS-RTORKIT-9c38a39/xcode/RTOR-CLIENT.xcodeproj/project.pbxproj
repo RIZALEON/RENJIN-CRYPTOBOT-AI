@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09DF7318F22287F463E795E7 /* RTORNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEEAF4ECD32894CFDB6624 /* RTORNet.swift */; };
+		1392A0F7C60B330D83A15B10 /* RTORSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83AA9CBAAAEB5625649600 /* RTORSpace.swift */; };
+		42E5D88857B916893E1ECEE2 /* RTORKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69F4D313423E082CCA7CFF /* RTORKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		440816CA305146B00661E993 /* RTORMagnet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA99E450A71B8273A54C960A /* RTORMagnet.swift */; };
+		520DB2BE6908629510AC8A50 /* RTORKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69F4D313423E082CCA7CFF /* RTORKit.framework */; };
+		5D9750C99003A700B7C3BD51 /* RTORMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EDD475AA4E1F4C91E11FF /* RTORMail.swift */; };
+		673B1CC87AC42FB8ACE8BEB2 /* RTORTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADA16FCF97A44065E4DB34 /* RTORTransfer.swift */; };
+		982865899CD6FA087EE558C8 /* RTORApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BE535C913DE948C1B77A92 /* RTORApp.swift */; };
+		9C4B5DCBD96F98730EA30860 /* RTORFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71457C2E8B57CBF278392D5 /* RTORFile.swift */; };
+		C11232CD387D049A078BC7C2 /* RTORLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398151179F5B682B3C5A9CA9 /* RTORLibrary.swift */; };
+		E8823A0C85B47C296C917259 /* RTORView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73F9AFAA55BD115A8D6F3A /* RTORView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7917811F45A1446107C11599 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 781C003F8D0B2786A7F1348E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC1A7A654A000619BA956038;
+			remoteInfo = RTORKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C2F56DA4F79D6E553DD8CA6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				42E5D88857B916893E1ECEE2 /* RTORKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02BE535C913DE948C1B77A92 /* RTORApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORApp.swift; sourceTree = "<group>"; };
+		0E69F4D313423E082CCA7CFF /* RTORKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RTORKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34EEEAF4ECD32894CFDB6624 /* RTORNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORNet.swift; sourceTree = "<group>"; };
+		3605B03EC0BE05021BA589CD /* RTOR.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RTOR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		398151179F5B682B3C5A9CA9 /* RTORLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORLibrary.swift; sourceTree = "<group>"; };
+		9761B52F59881F0BB1432298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C03EDD475AA4E1F4C91E11FF /* RTORMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORMail.swift; sourceTree = "<group>"; };
+		D0ADA16FCF97A44065E4DB34 /* RTORTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORTransfer.swift; sourceTree = "<group>"; };
+		DA99E450A71B8273A54C960A /* RTORMagnet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORMagnet.swift; sourceTree = "<group>"; };
+		DB73F9AFAA55BD115A8D6F3A /* RTORView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORView.swift; sourceTree = "<group>"; };
+		DB83AA9CBAAAEB5625649600 /* RTORSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORSpace.swift; sourceTree = "<group>"; };
+		F71457C2E8B57CBF278392D5 /* RTORFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORFile.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80B2D7BE1FA898AB0FCBCF50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				520DB2BE6908629510AC8A50 /* RTORKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50F1154B427BE863B1FA106F = {
+			isa = PBXGroup;
+			children = (
+				FA8E4FF720EB78BFF629096A /* RTORApp */,
+				F90A8DAAA87C1B698DBA0ADD /* RTORKit */,
+				CB8360FE285C52155D12CA33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB8360FE285C52155D12CA33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3605B03EC0BE05021BA589CD /* RTOR.app */,
+				0E69F4D313423E082CCA7CFF /* RTORKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F90A8DAAA87C1B698DBA0ADD /* RTORKit */ = {
+			isa = PBXGroup;
+			children = (
+				F71457C2E8B57CBF278392D5 /* RTORFile.swift */,
+				398151179F5B682B3C5A9CA9 /* RTORLibrary.swift */,
+				DA99E450A71B8273A54C960A /* RTORMagnet.swift */,
+				C03EDD475AA4E1F4C91E11FF /* RTORMail.swift */,
+				34EEEAF4ECD32894CFDB6624 /* RTORNet.swift */,
+				DB83AA9CBAAAEB5625649600 /* RTORSpace.swift */,
+				D0ADA16FCF97A44065E4DB34 /* RTORTransfer.swift */,
+				DB73F9AFAA55BD115A8D6F3A /* RTORView.swift */,
+			);
+			name = RTORKit;
+			path = ../ios/RTORKit/Sources/RTORKit;
+			sourceTree = "<group>";
+		};
+		FA8E4FF720EB78BFF629096A /* RTORApp */ = {
+			isa = PBXGroup;
+			children = (
+				9761B52F59881F0BB1432298 /* Info.plist */,
+				02BE535C913DE948C1B77A92 /* RTORApp.swift */,
+			);
+			name = RTORApp;
+			path = ../ios/RTORApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		0DF13B0849E42A5617B739D3 /* RTOR-UbuntuTouch */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(SRCROOT)/../scripts/build.sh ubuntutouch $(ACTION)";
+			buildConfigurationList = A31DE44BDC74B59E2D5CFC70 /* Build configuration list for PBXLegacyTarget "RTOR-UbuntuTouch" */;
+			buildPhases = (
+				FE8098D2853A83D89FC8CA67 /* Sources */,
+			);
+			buildToolPath = /bin/zsh;
+			buildWorkingDirectory = "$(SRCROOT)/..";
+			dependencies = (
+			);
+			name = "RTOR-UbuntuTouch";
+			packageProductDependencies = (
+			);
+			passBuildSettingsInEnvironment = 1;
+			productName = "RTOR-UbuntuTouch";
+		};
+		377AC40CAF889B8192581BE2 /* RTOR-Android */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(SRCROOT)/../scripts/build.sh android $(ACTION)";
+			buildConfigurationList = 533CC42AFCEE0A1744805575 /* Build configuration list for PBXLegacyTarget "RTOR-Android" */;
+			buildPhases = (
+				A6AD8D2EE3B2B51872CFB833 /* Sources */,
+			);
+			buildToolPath = /bin/zsh;
+			buildWorkingDirectory = "$(SRCROOT)/..";
+			dependencies = (
+			);
+			name = "RTOR-Android";
+			packageProductDependencies = (
+			);
+			passBuildSettingsInEnvironment = 1;
+			productName = "RTOR-Android";
+		};
+		48111976A184B35231AB950D /* RTOR-Linux */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(SRCROOT)/../scripts/build.sh linux $(ACTION)";
+			buildConfigurationList = F86AA4020556539C5944D08B /* Build configuration list for PBXLegacyTarget "RTOR-Linux" */;
+			buildPhases = (
+				68FFB62018DC105AF1FFB49A /* Sources */,
+			);
+			buildToolPath = /bin/zsh;
+			buildWorkingDirectory = "$(SRCROOT)/..";
+			dependencies = (
+			);
+			name = "RTOR-Linux";
+			packageProductDependencies = (
+			);
+			passBuildSettingsInEnvironment = 1;
+			productName = "RTOR-Linux";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		AC1A7A654A000619BA956038 /* RTORKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34AB4BBE9C6010361BB9B915 /* Build configuration list for PBXNativeTarget "RTORKit" */;
+			buildPhases = (
+				F92A495CF56BC2CCA4B14746 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RTORKit;
+			packageProductDependencies = (
+			);
+			productName = RTORKit;
+			productReference = 0E69F4D313423E082CCA7CFF /* RTORKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ED43E20197441DFB9B33D98E /* RTOR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 709E276FBCCBAA7EB89888B1 /* Build configuration list for PBXNativeTarget "RTOR" */;
+			buildPhases = (
+				050C3CE758B0F25FBD2E3E51 /* Sources */,
+				80B2D7BE1FA898AB0FCBCF50 /* Frameworks */,
+				2C2F56DA4F79D6E553DD8CA6 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB35B0156704AFF86E37D3BE /* PBXTargetDependency */,
+			);
+			name = RTOR;
+			packageProductDependencies = (
+			);
+			productName = RTOR;
+			productReference = 3605B03EC0BE05021BA589CD /* RTOR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		781C003F8D0B2786A7F1348E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 6A38DFC883CA890086F73731 /* Build configuration list for PBXProject "RTOR-CLIENT" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 50F1154B427BE863B1FA106F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CB8360FE285C52155D12CA33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48111976A184B35231AB950D /* RTOR-Linux */,
+				377AC40CAF889B8192581BE2 /* RTOR-Android */,
+				0DF13B0849E42A5617B739D3 /* RTOR-UbuntuTouch */,
+				AC1A7A654A000619BA956038 /* RTORKit */,
+				ED43E20197441DFB9B33D98E /* RTOR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		050C3CE758B0F25FBD2E3E51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				982865899CD6FA087EE558C8 /* RTORApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68FFB62018DC105AF1FFB49A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6AD8D2EE3B2B51872CFB833 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F92A495CF56BC2CCA4B14746 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4B5DCBD96F98730EA30860 /* RTORFile.swift in Sources */,
+				C11232CD387D049A078BC7C2 /* RTORLibrary.swift in Sources */,
+				440816CA305146B00661E993 /* RTORMagnet.swift in Sources */,
+				5D9750C99003A700B7C3BD51 /* RTORMail.swift in Sources */,
+				09DF7318F22287F463E795E7 /* RTORNet.swift in Sources */,
+				1392A0F7C60B330D83A15B10 /* RTORSpace.swift in Sources */,
+				673B1CC87AC42FB8ACE8BEB2 /* RTORTransfer.swift in Sources */,
+				E8823A0C85B47C296C917259 /* RTORView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE8098D2853A83D89FC8CA67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB35B0156704AFF86E37D3BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC1A7A654A000619BA956038 /* RTORKit */;
+			targetProxy = 7917811F45A1446107C11599 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		026D3F752988BDFA6B98643F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3C21AFFE3DCC9F6C756344E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.rizal.rtor.RTOR-Android";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52B5A5B197AF87A67F7040B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.rizal.rtor.RTOR-Linux";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5751CC0AEC90AA2E7AD09513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ../ios/RTORApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = info.rizal.rtor;
+				PRODUCT_NAME = RTOR;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8089F2A08229CFD2C7EFE071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = info.rizal.rtor.kit;
+				PRODUCT_NAME = RTORKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		839D74E174B445FD5E61BE2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B153CA0E6BA7B4BF78651F7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.rizal.rtor.RTOR-UbuntuTouch";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C8948267FD6FDDE3DF884BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ../ios/RTORApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = info.rizal.rtor;
+				PRODUCT_NAME = RTOR;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CECF87CA75916F23A4C55C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.rizal.rtor.RTOR-UbuntuTouch";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DFB60F00E3DCEBAB04A2CAA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = info.rizal.rtor.kit;
+				PRODUCT_NAME = RTORKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		E14780CAA1CB311B93AC3979 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.rizal.rtor.RTOR-Android";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F268AFC959E61E0B7B011297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.rizal.rtor.RTOR-Linux";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34AB4BBE9C6010361BB9B915 /* Build configuration list for PBXNativeTarget "RTORKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFB60F00E3DCEBAB04A2CAA1 /* Debug */,
+				8089F2A08229CFD2C7EFE071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		533CC42AFCEE0A1744805575 /* Build configuration list for PBXLegacyTarget "RTOR-Android" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14780CAA1CB311B93AC3979 /* Debug */,
+				3C21AFFE3DCC9F6C756344E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6A38DFC883CA890086F73731 /* Build configuration list for PBXProject "RTOR-CLIENT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839D74E174B445FD5E61BE2B /* Debug */,
+				026D3F752988BDFA6B98643F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		709E276FBCCBAA7EB89888B1 /* Build configuration list for PBXNativeTarget "RTOR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8948267FD6FDDE3DF884BFE /* Debug */,
+				5751CC0AEC90AA2E7AD09513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A31DE44BDC74B59E2D5CFC70 /* Build configuration list for PBXLegacyTarget "RTOR-UbuntuTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B153CA0E6BA7B4BF78651F7F /* Debug */,
+				CECF87CA75916F23A4C55C1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F86AA4020556539C5944D08B /* Build configuration list for PBXLegacyTarget "RTOR-Linux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F268AFC959E61E0B7B011297 /* Debug */,
+				52B5A5B197AF87A67F7040B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 781C003F8D0B2786A7F1348E /* Project object */;
+}

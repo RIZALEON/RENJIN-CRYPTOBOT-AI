@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="info.rizal.rtorghostchain" android:versionCode="6" android:versionName="0.2.3">
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application android:label="RTOR" android:extractNativeLibs="true"
+        android:usesCleartextTraffic="true" android:allowBackup="false"
+        android:theme="@android:style/Theme.Material.NoActionBar">
+        <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|smallestScreenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- magnet: links -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="magnet" />
+            </intent-filter>
+            <!-- known MIME types: torrent, JSON (public wallet/chain exports), PEM/certs, octet-stream (.rzl/.rtor) -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="application/x-bittorrent" />
+                <data android:mimeType="application/json" />
+                <data android:mimeType="application/x-pem-file" />
+                <data android:mimeType="application/x-x509-ca-cert" />
+                <data android:mimeType="application/pkix-cert" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="application/vnd.rizal.rzl" />
+                <data android:mimeType="application/vnd.rizal.rtor" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <!-- by extension (file managers that send */* with a path) -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.rzl" />
+                <data android:pathPattern=".*\\..*\\.rzl" />
+                <data android:pathPattern=".*\\.rtor" />
+                <data android:pathPattern=".*\\..*\\.rtor" />
+                <data android:pathPattern=".*\\.torrent" />
+                <data android:pathPattern=".*\\.magnet" />
+                <data android:pathPattern=".*\\.pem" />
+                <data android:pathPattern=".*\\.crt" />
+            </intent-filter>
+            <!-- Share sheet -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <!-- always-on RTOR server: specialUse (Android 15 forbids dataSync from BOOT_COMPLETED) -->
+        <service android:name=".RtorService" android:exported="false" android:foregroundServiceType="specialUse">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Always-on peer-to-peer file seeding and leeching (RTOR) on the local network" />
+        </service>
+        <receiver android:name=".BootReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
