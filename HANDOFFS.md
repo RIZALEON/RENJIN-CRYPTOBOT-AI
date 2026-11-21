@@ -6,6 +6,9 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-20 19:03 MST — r-operating-system MANIFEST hashes fixed (ThundR, main chat — Rizal's order)
+- `r-operating-system/MANIFEST.sha256`: the two rshell entries still carried the pre-re-skin hash (`ef39d68d…`, the 855,396 B build) after the OS-desktop re-skin (commit `81d89d6e`) replaced both files. Both lines now carry the current files' hash `7cdff9165d7cdcf16f15e4ea42ae62b5fabc730b189e696346c2af17837aa985` (927,276 B). The listed file set is unchanged (the manifest covers the fused package contents; `rshell/previous/` is an archive seat outside the package). Verified before push: the full pulled tree at head `4dd1cb72` passes `sha256sum -c` 29/29 with the fixed manifest.
+
 ## 2026-11-20 17:20 MST — Citation to the bottom + integrated into the unified RGHOSTCHAIN code (ThundR, main chat — Rizal's order)
 - Rizal's ruling: the operating system's citation goes **at the bottom instead of the top**, integrated into the unified RGHOSTKEY code. Executed in every code seat held here:
   - The 2-line citation header was removed from the TOP of `renjin/build-rshell-single.js`, `renjin/adapters/rcode-host-adapter.js`, `renjin/adapters/rcode-bridge-plugin.js`, `renjin/adapters/linux/rcode-linux-host.js` and `renjin/check-purity.js`; each file now closes with the full citation block as its last element.
