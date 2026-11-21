@@ -417,8 +417,9 @@
          Classic torrent-client look: ruled rows, up/down arrows,
          progress bars. The rows are the apps, devices and
          cryptobots on record, in their recorded roles — hub
-         seeder-leechers, the tracker, and engineers. No speeds
-         are shown because none have been measured yet. */
+         seeder-leechers, the tracker, and engineers. The three
+         measured RTOR 0.2.3 peers show their measured speeds;
+         the other rows show their recorded role. */
       .torrent {
         position: relative;
         z-index: 1;
@@ -514,7 +515,8 @@
          components on record beside it: the magnet link built from
          the recorded PKG SHA-256 + STATE hashes, the magnetized
          RTOR GHOSTCHAIN transponder, and the two fused .rzl files.
-         Recorded values only — no live swarm or speed is claimed. */
+         Recorded values, plus the measured speeds of the three
+         RTOR 0.2.3 peers recorded in the torrent table. */
       .magnet-block {
         margin: 0 0 10px;
         padding: 9px 10px;
@@ -1685,7 +1687,7 @@
               <span class="magnet-value">RENJIN-KUBO.rzl · 932,923 B · SHA256 04b7b1e2…b3a97 · most complete blocks, chains and keys, for RTOR back-and-forth testing</span>
             </div>
           </div>
-          <div class="magnet-note">Magnetized components on record · 2026-11-20 — the magnet is built from the recorded PKG SHA-256 and STATE hashes above. Recorded values only: no live swarm, speed, or device data is claimed here.</div>
+          <div class="magnet-note">Magnetized components on record · 2026-11-20 — the magnet is built from the recorded PKG SHA-256 and STATE hashes above. Recorded values only in this block: the measured RTOR 0.2.3 speeds are in the torrent table and notes below.</div>
         </div>
         <div class="ghostfile-block">
           <div class="ghostfile-head">
@@ -1715,10 +1717,10 @@
             </div>
             <div class="magnet-row">
               <span class="magnet-label">PIXEL · LIVE</span>
-              <span class="magnet-value">Renjin Torrent client up on the Pixel · HARDDEVICE-03 · Moto · RID Я-DEVICE-BV2ASTPX0C-TV · seeding RGHOSTCHAIN.rzl and RGHOSTCHAIN-RECORD.md · SPACE-RID RID-0026-C7YD · space pixel.rtor · RKLOWD node rklowd.pixel · RMAIL rtor-pixel-rtor@rizal.pw · last heartbeat 2026-11-20T22:22:00-07:00 · RE-SEED still waiting for Rizal&rsquo;s RGHOSTKEY tap on the trusted device</span>
+              <span class="magnet-value">Renjin Torrent client up on the Pixel · HARDDEVICE-03 · Moto · RID Я-DEVICE-BV2ASTPX0C-TV · seeding RGHOSTCHAIN.rzl and RGHOSTCHAIN-RECORD.md · SPACE-RID RID-0026-C7YD · space pixel.rtor · RKLOWD node rklowd.pixel · RMAIL rtor-pixel-rtor@rizal.pw · last heartbeat 2026-11-20T22:22:00-07:00 · RTOR 0.2.3 live · ~3 KB/s measured, seeding + leeching · RE-SEED still waiting for Rizal&rsquo;s RGHOSTKEY tap on the trusted device</span>
             </div>
           </div>
-          <div class="magnet-note">The client accepts the file only if its SHA-256 matches — any other hash is refused. No measured RTOR speed yet, and no live device swarm is claimed until a device run proves it.</div>
+          <div class="magnet-note">The client accepts the file only if its SHA-256 matches — any other hash is refused. First measured RTOR speeds are now on record (RTOR 0.2.3, from measured bytes): Moto ~1.5 KB/s each way with the Neo · Pixel ~3 KB/s · Neo ~4.5 KB/s — each peer seeding and leeching above 1 KB/s. No live device swarm is claimed beyond these three measured peers.</div>
         </div>
         <table class="torrent-table">
           <thead>
@@ -1727,9 +1729,9 @@
           <tbody>
             <tr>
               <td class="t-name" data-label="NAME">MacBook Neo</td>
-              <td data-label="SIZE">199 seed files</td>
-              <td class="up" data-label="UP">↑ seed — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ leech — no measured speed yet</td>
+              <td data-label="SIZE">199 seed files · RTOR 0.2.3 live</td>
+              <td class="up" data-label="UP">↑ seed ~4.5 KB/s — measured</td>
+              <td class="down" data-label="DOWN">↓ leech ~4.5 KB/s — measured</td>
               <td data-label="RATIO">seed + leech</td>
               <td data-label="STATUS">Seeder-leecher · hub<span class="t-bar"><span class="t-fill" style="width:100%"></span></span></td>
               <td data-label="PEERS">7 hub on record</td>
@@ -1737,26 +1739,35 @@
             <tr>
               <td class="t-name" data-label="NAME">iPhone 17e</td>
               <td data-label="SIZE">— not on record</td>
-              <td class="up" data-label="UP">↑ seed — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ leech — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ seed — on record</td>
+              <td class="down" data-label="DOWN">↓ leech — on record</td>
               <td data-label="RATIO">seed + leech</td>
               <td data-label="STATUS">Seeder-leecher · hub<span class="t-bar"><span class="t-fill" style="width:100%"></span></span></td>
               <td data-label="PEERS">7 hub on record</td>
             </tr>
             <tr>
               <td class="t-name" data-label="NAME">Motorola Moto</td>
-              <td data-label="SIZE">RENJIN files installed · every copy hash-matched</td>
-              <td class="up" data-label="UP">↑ seed — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ leech — no measured speed yet</td>
+              <td data-label="SIZE">RENJIN files installed · every copy hash-matched · RTOR 0.2.3 live</td>
+              <td class="up" data-label="UP">↑ seed ~1.5 KB/s each way with Neo — measured</td>
+              <td class="down" data-label="DOWN">↓ leech ~1.5 KB/s each way with Neo — measured</td>
               <td data-label="RATIO">seed + leech</td>
-              <td data-label="STATUS">Seeder-leecher · hub · files in /sdcard/ЯLAB/RENJIN/ + a RENJIN folder in each of the 4 apps · wireless debug 192.168.0.224:42411 · RKLOWD unsuspended — inbox copy syncs now · apps cannot use the files yet: loader + rebuild signed on the integrated signing device, on the owner&rsquo;s tap · Dragon Skull first, approved<span class="t-bar"><span class="t-fill" style="width:100%"></span></span></td>
+              <td data-label="STATUS">Seeder-leecher · hub · files in /sdcard/ЯLAB/RENJIN/ + a RENJIN folder in each of the 4 apps · wireless debug 192.168.0.224:42411 · RKLOWD unsuspended — inbox copy syncs now · apps cannot use the files yet: loader + rebuild signed on the integrated signing device, on the owner&rsquo;s tap · Dragon Skull first, approved · RTOR 0.2.3 installed over wireless debugging — starts on its own, Files at the top, signed with the new RTOR release key (no Face ID step) · signed APK in the Moto&rsquo;s Downloads and on rizal.pw 0.2.3 + rizal.info 0.2.3<span class="t-bar"><span class="t-fill" style="width:100%"></span></span></td>
               <td data-label="PEERS">7 hub on record</td>
+            </tr>
+            <tr>
+              <td class="t-name" data-label="NAME">Pixel</td>
+              <td data-label="SIZE">RTOR 0.2.3 live · space pixel.rtor · SPACE-RID RID-0026-C7YD</td>
+              <td class="up" data-label="UP">↑ seed ~3 KB/s — measured</td>
+              <td class="down" data-label="DOWN">↓ leech ~3 KB/s — measured</td>
+              <td data-label="RATIO">seed + leech</td>
+              <td data-label="STATUS">Measured peer · RTOR 0.2.3 · seeding RGHOSTCHAIN.rzl + RGHOSTCHAIN-RECORD.md · RKLOWD node rklowd.pixel<span class="t-bar"><span class="t-fill" style="width:100%"></span></span></td>
+              <td data-label="PEERS">3 measured peers</td>
             </tr>
             <tr>
               <td class="t-name" data-label="NAME">rizal.pw</td>
               <td data-label="SIZE">feed 20261118-5 · 28 entries</td>
-              <td class="up" data-label="UP">↑ seed — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ leech — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ seed — on record</td>
+              <td class="down" data-label="DOWN">↓ leech — on record</td>
               <td data-label="RATIO">seed + leech</td>
               <td data-label="STATUS">Seeder-leecher · hub · website seeder<span class="t-bar"><span class="t-fill" style="width:100%"></span></span></td>
               <td data-label="PEERS">7 hub on record</td>
@@ -1764,8 +1775,8 @@
             <tr>
               <td class="t-name" data-label="NAME">RMAIL</td>
               <td data-label="SIZE">v2.1 · relay_8797</td>
-              <td class="up" data-label="UP">↑ via RTOR — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ via RTOR — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ via RTOR — on record</td>
+              <td class="down" data-label="DOWN">↓ via RTOR — on record</td>
               <td data-label="RATIO">seed + leech</td>
               <td data-label="STATUS">Seeder-leecher · hub node · mail never signs<span class="t-bar"><span class="t-fill" style="width:100%"></span></span></td>
               <td data-label="PEERS">7 hub on record</td>
@@ -1774,7 +1785,7 @@
               <td class="t-name" data-label="NAME">RTRACKR</td>
               <td data-label="SIZE">GHOSTCHAIN live pull · height 5 · 6 blocks · snapshot Nov 20, 2026 2:43:28 PM MT</td>
               <td class="up" data-label="UP">↑ — read-only window, writes nothing</td>
-              <td class="down" data-label="DOWN">↓ tracks the chain + pool — no measured speed yet</td>
+              <td class="down" data-label="DOWN">↓ tracks the chain + pool — on record</td>
               <td data-label="RATIO">—</td>
               <td data-label="STATUS"><span class="eng">Engineer · tracker</span> · GHOSTCHAIN tip 4006b57088…f0bb5b · chain verify OK · 7 live assets<span class="t-bar"><span class="t-fill gold" style="width:100%"></span></span></td>
               <td data-label="PEERS">8 transponders on record</td>
@@ -1782,8 +1793,8 @@
             <tr>
               <td class="t-name" data-label="NAME">RCODE</td>
               <td data-label="SIZE">build 15 · APP-02 · RID Я-DEVICE-0TDKGMFQCW-5Z · verify ok</td>
-              <td class="up" data-label="UP">↑ checked over Rtor — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ updates over Rtor — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ checked over Rtor — on record</td>
+              <td class="down" data-label="DOWN">↓ updates over Rtor — on record</td>
               <td data-label="RATIO">—</td>
               <td data-label="STATUS"><span class="eng">Engineer · app on record</span> · up to date (build 15)<span class="t-bar"><span class="t-fill eng" style="width:100%"></span></span></td>
               <td data-label="PEERS">via 7-node hub</td>
@@ -1791,8 +1802,8 @@
             <tr>
               <td class="t-name" data-label="NAME">ThundR</td>
               <td data-label="SIZE">ЯID-0014-KREH</td>
-              <td class="up" data-label="UP">↑ carries signing requests over RTOR — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ reads targets + expiries — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ carries signing requests over RTOR — on record</td>
+              <td class="down" data-label="DOWN">↓ reads targets + expiries — on record</td>
               <td data-label="RATIO">—</td>
               <td data-label="STATUS"><span class="eng">Engineer · cryptobot</span> · never holds a key<span class="t-bar"><span class="t-fill eng" style="width:100%"></span></span></td>
               <td data-label="PEERS">via 7-node hub</td>
@@ -1800,8 +1811,8 @@
             <tr>
               <td class="t-name" data-label="NAME">Gizmo</td>
               <td data-label="SIZE">RID Я-DEVICE-1PYZ7VG0Z1-ZE</td>
-              <td class="up" data-label="UP">↑ scan / analyze on record — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ owns the Moto update — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ scan / analyze on record — on record</td>
+              <td class="down" data-label="DOWN">↓ owns the Moto update — on record</td>
               <td data-label="RATIO">—</td>
               <td data-label="STATUS"><span class="eng">Engineer · cryptobot</span> · RBOT “The Observer”<span class="t-bar"><span class="t-fill eng" style="width:100%"></span></span></td>
               <td data-label="PEERS">via 7-node hub</td>
@@ -1809,8 +1820,8 @@
             <tr>
               <td class="t-name" data-label="NAME">RDRAGON</td>
               <td data-label="SIZE">build 59 on 17e (record)</td>
-              <td class="up" data-label="UP">↑ host app on record — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ host app on record — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ host app on record — on record</td>
+              <td class="down" data-label="DOWN">↓ host app on record — on record</td>
               <td data-label="RATIO">—</td>
               <td data-label="STATUS"><span class="eng">Engineer · host app</span><span class="t-bar"><span class="t-fill eng" style="width:100%"></span></span></td>
               <td data-label="PEERS">via 7-node hub</td>
@@ -1818,8 +1829,8 @@
             <tr>
               <td class="t-name" data-label="NAME">TerraformR</td>
               <td data-label="SIZE">ЯID-0015-0HJP</td>
-              <td class="up" data-label="UP">↑ CRYPTOGAME on record — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ CRYPTOGAME on record — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ CRYPTOGAME on record — on record</td>
+              <td class="down" data-label="DOWN">↓ CRYPTOGAME on record — on record</td>
               <td data-label="RATIO">—</td>
               <td data-label="STATUS"><span class="eng">Engineer · cryptogame</span><span class="t-bar"><span class="t-fill eng" style="width:100%"></span></span></td>
               <td data-label="PEERS">via 7-node hub</td>
@@ -1827,8 +1838,8 @@
             <tr>
               <td class="t-name" data-label="NAME">KROG</td>
               <td data-label="SIZE">@krog · ЯID-BOT-0001</td>
-              <td class="up" data-label="UP">↑ bot on record — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ bot on record — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ bot on record — on record</td>
+              <td class="down" data-label="DOWN">↓ bot on record — on record</td>
               <td data-label="RATIO">—</td>
               <td data-label="STATUS"><span class="eng">Engineer · cryptobot</span><span class="t-bar"><span class="t-fill eng" style="width:100%"></span></span></td>
               <td data-label="PEERS">via 7-node hub</td>
@@ -1836,8 +1847,8 @@
             <tr>
               <td class="t-name" data-label="NAME">ЯBOWZR</td>
               <td data-label="SIZE">host · rbowzr / ybot</td>
-              <td class="up" data-label="UP">↑ hosts ЯENJIN on record — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ hosts ЯENJIN on record — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ hosts ЯENJIN on record — on record</td>
+              <td class="down" data-label="DOWN">↓ hosts ЯENJIN on record — on record</td>
               <td data-label="RATIO">—</td>
               <td data-label="STATUS"><span class="eng">Engineer · host</span><span class="t-bar"><span class="t-fill eng" style="width:100%"></span></span></td>
               <td data-label="PEERS">via 7-node hub</td>
@@ -1845,8 +1856,8 @@
             <tr>
               <td class="t-name" data-label="NAME">RSCRIBE</td>
               <td data-label="SIZE">bot on record</td>
-              <td class="up" data-label="UP">↑ bot on record — no measured speed yet</td>
-              <td class="down" data-label="DOWN">↓ bot on record — no measured speed yet</td>
+              <td class="up" data-label="UP">↑ bot on record — on record</td>
+              <td class="down" data-label="DOWN">↓ bot on record — on record</td>
               <td data-label="RATIO">—</td>
               <td data-label="STATUS"><span class="eng">Engineer · cryptobot</span><span class="t-bar"><span class="t-fill eng" style="width:100%"></span></span></td>
               <td data-label="PEERS">via 7-node hub</td>
@@ -1855,14 +1866,14 @@
               <td class="t-name" data-label="NAME">RWALLET</td>
               <td data-label="SIZE">PRIVATE staged build</td>
               <td class="up" data-label="UP">↑ — sign/mint only on Face ID / RGHOSTKEY tap</td>
-              <td class="down" data-label="DOWN">↓ read-only first — no measured speed yet</td>
+              <td class="down" data-label="DOWN">↓ read-only first — on record</td>
               <td data-label="RATIO">—</td>
               <td data-label="STATUS"><span class="eng">Engineer · wallet</span> · keys behind biometrics (ЯCASKET)<span class="t-bar"><span class="t-fill eng" style="width:100%"></span></span></td>
               <td data-label="PEERS">via 7-node hub</td>
             </tr>
           </tbody>
         </table>
-        <div class="torrent-note"><strong>RTOR SPEED — no measured average yet:</strong> awaiting the first timed seed/leech run on the Neo, so every up/down cell says so instead of inventing a speed. <strong>Bars show the role on record, not a transfer percentage.</strong> Record: 7 hub seeder-leechers · 8 transponders · RCODE build 15 · RMAIL v2.1 — dated 2026-11-20, not a live heartbeat count.<br /><strong>GHOSTCHAIN — live pull from RTRACKR, Nov 20, 2026 20:01 MST:</strong> height 5 · 6 blocks · tip 4006b57088…f0bb5b · chain verify OK · snapshot as of Nov 20, 2026 2:43:28 PM MT · source Neo RMINT hybrid live export (GO t203u) · 7 live assets. Full block list, designations, RIDs and entry times: RTOR LIVE panel below. <strong>No live device swarm is claimed</strong> until a device run proves it.</div>
+        <div class="torrent-note"><strong>RTOR SPEED — first measured speeds · RTOR 0.2.3:</strong> measured from real bytes, all three peers seeding and leeching above 1 KB/s — Moto ~1.5 KB/s each way with the Neo · Pixel ~3 KB/s · Neo ~4.5 KB/s. RTOR 0.2.3 is live on the Moto, the Pixel and the Neo: on the Moto it was installed over wireless debugging, starts on its own with Files at the top, and is signed with the new RTOR release key (no Face ID step); the signed APK is in the Moto&rsquo;s Downloads and on rizal.pw 0.2.3 and rizal.info 0.2.3. <strong>Bars show the role on record, not a transfer percentage.</strong> Record: 7 hub seeder-leechers · 8 transponders · RCODE build 15 · RMAIL v2.1 — dated 2026-11-20, not a live heartbeat count.<br /><strong>GHOSTCHAIN — live pull from RTRACKR, Nov 20, 2026 20:01 MST:</strong> height 5 · 6 blocks · tip 4006b57088…f0bb5b · chain verify OK · snapshot as of Nov 20, 2026 2:43:28 PM MT · source Neo RMINT hybrid live export (GO t203u) · 7 live assets. Full block list, designations, RIDs and entry times: RTOR LIVE panel below. <strong>No live device swarm is claimed beyond the three measured RTOR 0.2.3 peers</strong> (Moto · Pixel · Neo).</div>
       </section>
 
       <section class="activity" aria-label="RTOR Activity — all blocks tracked, live in-page feed of the blocks on record">
@@ -1900,16 +1911,17 @@
           </div>
           <div class="broadcast-stat">
             <span class="broadcast-label">RTOR SPEED — AVG SEED / LEECH SPEED — UPDATES · RMAIL · RTRACKR</span>
-            <span class="broadcast-value broadcast-value--speed">No measured average yet — awaiting the first timed seed/leech run on the Neo</span>
+            <span class="broadcast-value broadcast-value--speed">RTOR 0.2.3 · measured from real bytes, all above 1 KB/s — Moto ~1.5 KB/s each way with the Neo · Pixel ~3 KB/s · Neo ~4.5 KB/s (seed + leech)</span>
           </div>
         </div>
         <div class="broadcast-cols">
           <div>
             <div class="broadcast-col-title">DEVICES CURRENTLY LINKED — 7 NODES ON RECORD · ALL HUB SEEDER-LEECHERS</div>
             <ul class="broadcast-list">
-              <li>MacBook Neo — hub seeder-leecher, 199 seed files</li>
+              <li>MacBook Neo — hub seeder-leecher, 199 seed files · RTOR 0.2.3 live · ~4.5 KB/s measured (seed + leech)</li>
               <li>iPhone 17e — hub seeder-leecher</li>
-              <li>Motorola Moto — hub seeder-leecher · RENJIN files installed, hash-matched · RKLOWD unsuspended, inbox syncs now</li>
+              <li>Motorola Moto — hub seeder-leecher · RENJIN files installed, hash-matched · RKLOWD unsuspended, inbox syncs now · RTOR 0.2.3 live · ~1.5 KB/s each way with the Neo, measured</li>
+              <li>Pixel — measured peer · RTOR 0.2.3 live · ~3 KB/s measured (seed + leech) · space pixel.rtor</li>
               <li>rizal.pw — hub seeder-leecher</li>
               <li>rizal.info — hub seeder-leecher</li>
               <li>RMAIL node — hub seeder-leecher</li>
@@ -2006,8 +2018,8 @@
           </ul>
         </div>
         <div class="broadcast-note">
-          <strong>Devices currently linked — 7 nodes on record, all hub seeder-leechers — each one seeds and leeches — not a live heartbeat count</strong> — dated 2026-11-20. Neo was last verified online 2026-11-20; Moto: RENJIN files installed and hash-matched (Nov 20, 2026 ~19:57 MST), RKLOWD unsuspended so the inbox copy syncs now — apps still need the loader before they can use the files, so <strong>no live device swarm is claimed</strong> until a device run proves it.<br />
-          <strong>RTOR SPEED:</strong> No measured average yet — awaiting the first timed seed/leech run on the Neo. No speed number is invented here, and device-to-device torrent/leech is not yet proven. <span class="accent">What is measured:</span> GHOSTCHAIN live pull from RTRACKR (Nov 20, 2026 20:01 MST) · height 5 · 6 blocks · tip 4006b57088…f0bb5b · chain verify OK · snapshot Nov 20, 2026 2:43:28 PM MT · 7 live assets · feed RTOR 20261118-5 · 28 entries · RSYNC entry 2026-11-20 10:09 AM MST · hub cycle 10:16:53–10:18:29 AM MST · RMAIL Queue 0 / outbox 0 · 110 legacy RPIPE-drop files still sitting, not imported.<br />
+          <strong>Devices currently linked — 7 nodes on record, all hub seeder-leechers — each one seeds and leeches — not a live heartbeat count</strong> — dated 2026-11-20. Neo was last verified online 2026-11-20; Moto: RENJIN files installed and hash-matched (Nov 20, 2026 ~19:57 MST), RKLOWD unsuspended so the inbox copy syncs now — apps still need the loader before they can use the files, so <strong>no live device swarm is claimed beyond the three measured RTOR 0.2.3 peers</strong> (Moto · Pixel · Neo).<br />
+          <strong>RTOR SPEED:</strong> First measured speeds, from real bytes on RTOR 0.2.3 — Moto ~1.5 KB/s each way with the Neo · Pixel ~3 KB/s · Neo ~4.5 KB/s, each peer seeding and leeching above 1 KB/s. RTOR 0.2.3 is live on all three peers; on the Moto it was installed over wireless debugging, starts on its own with Files at the top, and is signed with the new RTOR release key (no Face ID step); the signed APK is in the Moto&rsquo;s Downloads and on rizal.pw 0.2.3 and rizal.info 0.2.3. No swarm is claimed beyond these three measured peers. <span class="accent">What is measured:</span> GHOSTCHAIN live pull from RTRACKR (Nov 20, 2026 20:01 MST) · height 5 · 6 blocks · tip 4006b57088…f0bb5b · chain verify OK · snapshot Nov 20, 2026 2:43:28 PM MT · 7 live assets · feed RTOR 20261118-5 · 28 entries · RSYNC entry 2026-11-20 10:09 AM MST · hub cycle 10:16:53–10:18:29 AM MST · RMAIL Queue 0 / outbox 0 · 110 legacy RPIPE-drop files still sitting, not imported.<br />
           <strong>Live feed in this page:</strong> the live clock and last-updated time above tick every second while this shell is open — the panel is live in the browser, not a frozen snapshot. The record values are the last verified record, dated 2026-11-20. Type <span class="accent">RTOR SPEED</span> or <span class="accent">BROADCAST</span> for this record in the transcript.
         </div>
       </section>
@@ -3633,7 +3645,7 @@ globalThis.RZL_EGG = {
         /* ---------- grounded RZL knowledge, from the PROJECT R record ---------- */
         var KB = [
           { keys: ['terraformr', 'terraform'], text: 'TerraformR — the Godot game built with RDRAGON. The command set in this shell is a read-only record: download the mint-live branch (commit d02fe19, private repo RIZALEON/TERAFORMR), copy its scripts over the full game tree on the Neo, test with mint_live_cmd_test.gd, export iOS + Web with Godot 4.7.2-stable, then build the standalone app and the RDRAGON copy. The build itself runs on the Neo, only on Chase\u2019s GO. Type TERAFORMR for the full command set.' },
-          { keys: ['broadcast', 'rtor live'], text: 'BROADCAST — RTOR LIVE 24/7, with RMAIL and RENJIN. DEVICES CURRENTLY LINKED: 7 nodes on record, all hub seeder-leechers — each one seeds and leeches (not a live heartbeat count): MacBook Neo (hub seeder-leecher, 199 seed files), iPhone 17e (hub seeder-leecher), Motorola Moto (hub seeder-leecher), rizal.pw (hub seeder-leecher), rizal.info (hub seeder-leecher), RMAIL node (hub seeder-leecher), BRIDGE-LANDING (hub seeder-leecher). 8 transponders on record: RPIPE 127.0.0.1:8900 (hub contract), RMAIL transponder 127.0.0.1:8797/send, relay_8797, ASSM-RSYNC API loopback :8752, botbridge / rvm-out 127.0.0.1:4873, Heart :4879 (Neo-only), phone :8796, hive :8798. RTOR-LINKED APPS ON RECORD (not a live heartbeat, on record from Chase\u2019s screenshot 2026-11-20 2:47 PM MST on the 17e): RCODE — build 15, up to date (build 15), checked over Rtor, signed by GHOSTKEY root e5833fdfbbfe; MINT: Mint (Approve) — Face ID here, seal in \u042fWALLET, sent over Rtor, RCODE never signs; Backend: llama.cpp, Offline \u00b7 Apple on-device model, Load offline model; Settings on record: Server, KROG bot (test), ASSM bot identity, ThundR signed commands, Account. RTOR SPEED — AVG SEED / LEECH SPEED — UPDATES \u00b7 RMAIL \u00b7 RTRACKR: No measured average yet — awaiting the first timed seed/leech run on the Neo. Device-to-device torrent/leech is not yet proven and no timed seed/leech run has been recorded. Measured record: feed 20261118-5 \u00b7 28 entries, RSYNC entry 2026-11-20 10:09 AM MST, hub cycle 10:16:53\u201310:18:29 AM MST, RMAIL Queue 0 / outbox 0. Live feed panel with a ticking live clock, last verified record dated 2026-11-20. Type BROADCAST or RTOR SPEED for the full record.' },
+          { keys: ['broadcast', 'rtor live'], text: 'BROADCAST — RTOR LIVE 24/7, with RMAIL and RENJIN. DEVICES CURRENTLY LINKED: 7 nodes on record, all hub seeder-leechers — each one seeds and leeches (not a live heartbeat count): MacBook Neo (hub seeder-leecher, 199 seed files), iPhone 17e (hub seeder-leecher), Motorola Moto (hub seeder-leecher), rizal.pw (hub seeder-leecher), rizal.info (hub seeder-leecher), RMAIL node (hub seeder-leecher), BRIDGE-LANDING (hub seeder-leecher). 8 transponders on record: RPIPE 127.0.0.1:8900 (hub contract), RMAIL transponder 127.0.0.1:8797/send, relay_8797, ASSM-RSYNC API loopback :8752, botbridge / rvm-out 127.0.0.1:4873, Heart :4879 (Neo-only), phone :8796, hive :8798. RTOR-LINKED APPS ON RECORD (not a live heartbeat, on record from Chase\u2019s screenshot 2026-11-20 2:47 PM MST on the 17e): RCODE — build 15, up to date (build 15), checked over Rtor, signed by GHOSTKEY root e5833fdfbbfe; MINT: Mint (Approve) — Face ID here, seal in \u042fWALLET, sent over Rtor, RCODE never signs; Backend: llama.cpp, Offline \u00b7 Apple on-device model, Load offline model; Settings on record: Server, KROG bot (test), ASSM bot identity, ThundR signed commands, Account. RTOR SPEED — AVG SEED / LEECH SPEED — UPDATES \u00b7 RMAIL \u00b7 RTRACKR: First measured speeds on RTOR 0.2.3, from real bytes — Moto ~1.5 KB/s each way with the Neo, Pixel ~3 KB/s, Neo ~4.5 KB/s, each seeding and leeching above 1 KB/s. RTOR 0.2.3 is live on the Moto, the Pixel and the Neo (Moto installed over wireless debugging, starts on its own, Files at the top, signed with the new RTOR release key, no Face ID step; signed APK in the Moto Downloads folder and on rizal.pw 0.2.3 and rizal.info 0.2.3). No swarm is claimed beyond these three measured peers. Measured record: feed 20261118-5 \u00b7 28 entries, RSYNC entry 2026-11-20 10:09 AM MST, hub cycle 10:16:53\u201310:18:29 AM MST, RMAIL Queue 0 / outbox 0. Live feed panel with a ticking live clock, last verified record dated 2026-11-20. Type BROADCAST or RTOR SPEED for the full record.' },
           { keys: ['core v3', 'core-v3', 'corpus-v2', 'trackers', 'tracker', 'store-v3', 'purity', 'chain_ok'], text: 'RENJIN-CORE-V3 — verified trackers: corpus-v2 158 lessons · train 60s, loss 27.631 → 3.26 · held-out 3.246 · chain_ok true · purity PURE, zero foreign formats · 38 files · state 16f9dd002f25a26ddc7df8a6d2ef39ea898326df1414f6139663416ec9eb9b08 · package SHA-256 3a19e054d6d3718d4f4a87a863dc97b691a7da578f820b8906197820400069c6. A fresh process reloaded the trained store-v3.json — chain_ok true, state hash matched. That trained engine is booted in this shell — type MODEL, or TRACKERS for the record.' },
           { keys: ['ghost chain'], text: 'Ghost Chain — the local ledger inside ЯENJIN. Every grow, train and mint step is chained and verifiable on-device. It is a local chain, not a public blockchain: no network, no transfer off-device.' },
           { keys: ['botcard', 'bot card', 'thundr card'], text: 'BOTCARD — ThundR, Muse assistant avatar and PROJECT R / RENJIN cryptobot, created for TerraformR by Chase Rizal. Engine ЯENJIN 0.1, pure RZL, offline-first. Version 1.0, date 2026-11-19. Purple thunder imp with red horns, bat wings, yellow lightning bolt tail; animated profile, 3-second idle loop, dancing videos unavailable. Creator / Decider: Rizal · CHIEF (Decider), owner ЯID-0001-3QQS, @chaserizal. ThundR: @thundr, ЯID-BOT-0002, on chain as ЯID-0014-KREH. Citation: https://x.ai/bot/d4DuzLgwb0Z8lD4Q33z4M — the x.ai bot profile for Rizal CHIEF Decider: Library, Computer Idle, Add to Slack, Routines 0 on, Notifications on. Sign record merged in: TerraformR 0.5.1 loads clean, authorized-by-owner-command, ROS RID RIZAL signature RZL111682. Read-only, pure RZL, no keys, no passwords. Type BOTCARD for the full card record.' },
@@ -3655,8 +3667,8 @@ globalThis.RZL_EGG = {
           { keys: ['bash', 'terminal', 'ubuntu'], text: 'BASH — Bash on Ubuntu Linux is the build/test terminal Muse uses for this Renjin shell RVM build: no editor app, no Xcode, no Godot, no Swift toolchain on that VM. Code is written straight into files and tested from the terminal — node --check for JavaScript, test scripts run in Node, hashes checked. This is a build environment record, NOT a live host shell inside the RVM: the RVM itself has no host shell — host.exec is forbidden, xcode.build is forbidden, and the ЯSEED panel is a command panel, not a system terminal. The only shell-like console inside the RVM is BusyBox inside the optional Linux guest. This shell does not run host commands from here and does not open a live Bash session; Xcode / Godot / device work runs on the Neo instead. Type BASH for the full record.' },
           { keys: ['agents', 'copilot', 'gemini', 'ragent', 'agent mode', 'bridge tests', 'bridge'], text: 'AGENTS — the bridge is for all AI and bots, not just Gemini and Copilot, record 2026-11-20. The bridge — xcode, rforge and ragent tools — serves all AI and bots, including ThundR, RAGENT, RCODE, RDRAGON, TerraformR, KBOT, and any other bot / AI that connects through it. Gemini CLI 0.70.0 and GitHub Copilot for Xcode 0.51.0 are two clients on it, not the whole bridge. Both are installed in RCRYPTOFORGE, not /Applications. Latest bridge tests passed 26 of 26: RAGENT answered from Apple\u2019s model, and the backup models stayed off. Xcode\u2019s external-agents switch was already on, so it was not changed. Only thing still blocked is Xcode\u2019s own tools, which wait for Chase to click Allow. The Allow clicks and the Neo steps can only be done on the Neo by Chase — this shell cannot click them from here. Type AGENTS for the full record and the five steps in order.' },
           { keys: ['link', 'ylink', 'botbridge', 'connect'], text: 'ЯLINK — hardline / courier / LAN lanes for sending ЯENJIN a signed bundle. A live ask channel needs a paired botbridge on 127.0.0.1:4873 with Decider approval. This page is not paired to a device.' },
-          { keys: ['rtor speed', 'seed speed', 'leech speed'], text: 'RTOR SPEED — AVG SEED / LEECH SPEED — UPDATES \u00b7 RMAIL \u00b7 RTRACKR: No measured average yet — awaiting the first timed seed/leech run on the Neo. No speed number is invented. DEVICES CURRENTLY LINKED: 7 nodes on record, all hub seeder-leechers — MacBook Neo, iPhone 17e, Motorola Moto, rizal.pw, rizal.info, RMAIL node, BRIDGE-LANDING — plus RTOR-linked app on record: RCODE build 15. Measured record: feed 20261118-5 \u00b7 28 entries, RSYNC entry 2026-11-20 10:09 AM MST, hub cycle 10:16:53\u201310:18:29 AM MST, RMAIL Queue 0 / outbox 0. Type RTOR SPEED for the full record.' },
-          { keys: ['rtor', 'transponder', 'rpipe', 'rsync', 'leech', 'seeder'], text: 'RTOR — the Linux transponder: to seed and leech messages, updates, and packages, both directions, for both Muse and the website. RPIPE is the hub contract RKLOWD devices speak, at 127.0.0.1:8900. RTOR is the signed-update system; its feed carries fleet appcasts and RTRACKR data. Feed RTOR 20261118-5 · 28 entries · signed-by-owner · the same on rizal.pw and rizal.info. RSYNC: fresh entry rsync-20261120-linktest-go-pt59u, authorized-by-owner-command (not a cryptographic signature), live on rizal.pw via PR #72; older relay entries are signed / sealed but carry no prev_hash. Seeder running on the Neo with 199 seed files. RMAIL is linked through RTOR and RSYNC. RTOR-LINKED APPS ON RECORD (not a live heartbeat, on record from Chase\u2019s screenshot 2026-11-20 2:47 PM MST on the 17e): RCODE — build 15, up to date (build 15), checked over Rtor, signed by GHOSTKEY root e5833fdfbbfe; MINT: Mint (Approve) — Face ID here, seal in \u042fWALLET, sent over Rtor, RCODE never signs; Backend: llama.cpp, Offline \u00b7 Apple on-device model, Load offline model; Settings on record: Server, KROG bot (test), ASSM bot identity, ThundR signed commands, Account. Device-to-device torrent / leech is not yet proven. This is a read-only record of the pickup mechanism: this shell does not run the transponder, does not seed or leech live, and signs nothing. Type RTOR for the full record.' },
+          { keys: ['rtor speed', 'seed speed', 'leech speed'], text: 'RTOR SPEED — AVG SEED / LEECH SPEED — UPDATES \u00b7 RMAIL \u00b7 RTRACKR: First measured speeds on RTOR 0.2.3, from real bytes — Moto ~1.5 KB/s each way with the Neo, Pixel ~3 KB/s, Neo ~4.5 KB/s, each seeding and leeching above 1 KB/s; RTOR 0.2.3 live on the Moto, the Pixel and the Neo. No swarm claimed beyond these three measured peers. DEVICES CURRENTLY LINKED: 7 nodes on record, all hub seeder-leechers — MacBook Neo, iPhone 17e, Motorola Moto, rizal.pw, rizal.info, RMAIL node, BRIDGE-LANDING — plus RTOR-linked app on record: RCODE build 15. Measured record: feed 20261118-5 \u00b7 28 entries, RSYNC entry 2026-11-20 10:09 AM MST, hub cycle 10:16:53\u201310:18:29 AM MST, RMAIL Queue 0 / outbox 0. Type RTOR SPEED for the full record.' },
+          { keys: ['rtor', 'transponder', 'rpipe', 'rsync', 'leech', 'seeder'], text: 'RTOR — the Linux transponder: to seed and leech messages, updates, and packages, both directions, for both Muse and the website. RPIPE is the hub contract RKLOWD devices speak, at 127.0.0.1:8900. RTOR is the signed-update system; its feed carries fleet appcasts and RTRACKR data. Feed RTOR 20261118-5 · 28 entries · signed-by-owner · the same on rizal.pw and rizal.info. RSYNC: fresh entry rsync-20261120-linktest-go-pt59u, authorized-by-owner-command (not a cryptographic signature), live on rizal.pw via PR #72; older relay entries are signed / sealed but carry no prev_hash. Seeder running on the Neo with 199 seed files. RMAIL is linked through RTOR and RSYNC. RTOR-LINKED APPS ON RECORD (not a live heartbeat, on record from Chase\u2019s screenshot 2026-11-20 2:47 PM MST on the 17e): RCODE — build 15, up to date (build 15), checked over Rtor, signed by GHOSTKEY root e5833fdfbbfe; MINT: Mint (Approve) — Face ID here, seal in \u042fWALLET, sent over Rtor, RCODE never signs; Backend: llama.cpp, Offline \u00b7 Apple on-device model, Load offline model; Settings on record: Server, KROG bot (test), ASSM bot identity, ThundR signed commands, Account. Device-to-device torrent / leech is now measured on three RTOR 0.2.3 peers — Moto ~1.5 KB/s each way with the Neo, Pixel ~3 KB/s, Neo ~4.5 KB/s — and no swarm is claimed beyond those three. This is a read-only record of the pickup mechanism: this shell does not run the transponder, does not seed or leech live, and signs nothing. Type RTOR for the full record.' },
           { keys: ['rmail', 'rpipe', 'rmail-guest', 'rnet-rmaild'], text: 'RMAIL — a hybrid crypto RMAIL email and direct message: the offline, signed, store-and-forward message layer of RKLOWD, linked through RTOR and RSYNC. Not plain email, not a public inbox. Messages are rmail-v1 (v2 client), keyed by RWALLET public address, never a private key, signed ECDSA P-256 / SHA-256; verified:true only from an ACTIVE trusted device with a checking signature. Back in the sync cycle since 2026-11-20 10:16 AM MST; 17e received the push, Moto was offline. RMAIL DELIVERY SYSTEM on record 2026-11-20: RMAIL v2.1 browser outbox, configurable hand-off, mail never signs or mints, active target relay_8797; delivered through RTOR via the hub seeder-leechers (all 7 nodes seed and leech), not by mail signing anything; Inbox 148 on record (screenshot count, not a live count), tabs Inbox / Outbox / Sent / Verified / Guest, Compose / Sync; approval flow and \u042fWALLET law as in the RMAIL record. Read-only in this shell — no send. Type RMAIL for the RDRAGON panel record from Chase\u2019s screenshots (11/10–11/13/2026) plus the full verified 2026-11-20 record.' },
           { keys: ['bots', 'bot login', 'bot logins', 'ghostkey login', 'ghostkey logins', 'krog', 'bot-profiles', 'bot-login', 'bot-preapproved', 'bot-registrations'], text: 'BOTS — bot logins for RGHOSTKEY integrations, paths only, from KBOT\u2019s report 2026-11-20 (Neo back online). All under ~/R/ЯLAB/RCRYPTOFORGE/. KROG @krog ЯID-BOT-0001, ThundR @thundr ЯID-BOT-0002 / on chain as ЯID-0014-KREH, allowlist for @rdragon-bot and @thundr, proposed sign-ups for RCODE, RDRAGON and ThundR, TerraformЯ CRYPTOGAME ЯID-0015-0HJP (no login), KBOT (no login anywhere), owner login on live ASSM :8752. Test server :8753 is not running. No password values here — paths only. Bots never sign, keys never leave the device. Type BOTS for the full list.' },
           { keys: ['hub', 'mesh', 'rklowd', 'ghostroot'], text: 'RKLOWD — the hub / mesh layer: GHOSTROOT and RNET-MESH, store-and-forward nodes for 17e / Neo / moto.' },
@@ -3686,7 +3698,7 @@ globalThis.RZL_EGG = {
           '  HELP ............... this list',
           '  TERAFORMR .......... TerraformR + RDRAGON command set · build on the Neo, on GO only',
           '  BROADCAST .......... RTOR LIVE 24/7 — with RMAIL and RENJIN · LIVE FEED · devices currently linked: 7 nodes · 8 transponders',
-          '  RTOR SPEED ......... RTOR SPEED — avg seed / leech speed — updates · RMAIL · RTRACKR · no measured average yet (also: SPEED)',
+          '  RTOR SPEED ......... RTOR SPEED — avg seed / leech speed — updates · RMAIL · RTRACKR · first measured speeds · RTOR 0.2.3: Moto ~1.5 · Pixel ~3 · Neo ~4.5 KB/s (also: SPEED)',
           '  TRACKERS ........... RENJIN-CORE-V3 verified trackers',
           '  STATUS ............. ЯENJIN / model v2 status',
           '  RZL ................ pure RZL — the model, from the ground up',
@@ -4151,8 +4163,11 @@ globalThis.RZL_EGG = {
           'SEEDER  running on the Neo with 199 seed files.',
           'RMAIL  is linked through RTOR and RSYNC.',
           'CHAIN  RTOR never writes the chain.',
-          'NOT PROVEN  device-to-device torrent / leech is not yet',
-          '  proven — said plainly.',
+          'MEASURED  device-to-device torrent / leech is now',
+          '  measured on three RTOR 0.2.3 peers — Moto ~1.5 KB/s',
+          '  each way with the Neo, Pixel ~3 KB/s, Neo ~4.5 KB/s,',
+          '  from real bytes, each above 1 KB/s, seed + leech.',
+          '  No swarm is claimed beyond those three peers.',
           '',
           'RTOR-LINKED APPS ON RECORD — NOT A LIVE HEARTBEAT',
           '  On record from Chase\u2019s screenshot, 2026-11-20,',
@@ -4209,11 +4224,11 @@ globalThis.RZL_EGG = {
           '  record: RCODE build 15 (above).',
         ];
 
-        /* RTOR SPEED — the RTOR SPEED record, added 2026-11-20.
-           Same record the panel shows: no measured average yet,
-           no invented speed number, no invented heartbeat.
-           Measured record is the feed / RSYNC / hub-cycle /
-           RMAIL record that does exist. */
+        /* RTOR SPEED — the RTOR SPEED record, added 2026-11-20,
+           updated with the first measured speeds (RTOR 0.2.3,
+           reported 2026-11-20): Moto ~1.5 KB/s each way with
+           the Neo, Pixel ~3 KB/s, Neo ~4.5 KB/s, from real
+           bytes. No swarm beyond those three measured peers. */
         var RTOR_SPEED = [
           'RTOR SPEED — AVG SEED / LEECH SPEED — UPDATES · RMAIL · RTRACKR',
           'LIVE FEED · panel clock ticks every second in this shell',
@@ -4221,9 +4236,9 @@ globalThis.RZL_EGG = {
           'DEVICES CURRENTLY LINKED: 7 nodes on record',
           '  All 7 are hub seeder-leechers — each one seeds and',
           '  leeches. Dated 2026-11-20, not a live heartbeat count.',
-          '  MacBook Neo — hub seeder-leecher, 199 seed files',
+          '  MacBook Neo — hub seeder-leecher, 199 seed files · RTOR 0.2.3 · ~4.5 KB/s measured',
           '  iPhone 17e — hub seeder-leecher',
-          '  Motorola Moto — hub seeder-leecher',
+          '  Motorola Moto — hub seeder-leecher · RTOR 0.2.3 · ~1.5 KB/s each way with Neo, measured',
           '  rizal.pw — hub seeder-leecher',
           '  rizal.info — hub seeder-leecher',
           '  RMAIL node — hub seeder-leecher',
@@ -4231,11 +4246,15 @@ globalThis.RZL_EGG = {
           'RTOR-LINKED APP ON RECORD: RCODE build 15',
           '',
           'RTOR SPEED',
-          '  No measured average yet — awaiting the first timed seed/leech run on the Neo',
-          '  No speed number is quoted here, because none has',
-          '  been measured. Device-to-device torrent/leech is',
-          '  not yet proven, and no timed seed/leech run has',
-          '  been recorded.',
+          '  First measured speeds — RTOR 0.2.3, from real bytes:',
+          '  Moto ~1.5 KB/s each way with the Neo · Pixel ~3 KB/s ·',
+          '  Neo ~4.5 KB/s. Each peer seeds and leeches above',
+          '  1 KB/s. RTOR 0.2.3 live on the Moto, the Pixel and',
+          '  the Neo — Moto installed over wireless debugging,',
+          '  starts on its own, Files at the top, signed with the',
+          '  new RTOR release key (no Face ID step); signed APK',
+          '  in the Moto Downloads folder and on rizal.pw 0.2.3',
+          '  and rizal.info 0.2.3. No swarm beyond these three.',
           '',
           'WHAT IS MEASURED — the record that does exist:',
           '  Feed 20261118-5 · 28 entries',
@@ -4248,18 +4267,19 @@ globalThis.RZL_EGG = {
            last verified record, 2026-11-20. Live in this page:
            the panel clock / last-updated time ticks every second
            while the shell is open. Read-only in this shell, pure
-           RZL. No average seed/leech speed number is quoted,
-           because none has been measured, and the device count
-           is nodes on record, not a live heartbeat count. */
+           RZL. The first measured seed/leech speeds (RTOR 0.2.3)
+           are quoted — Moto ~1.5, Pixel ~3, Neo ~4.5 KB/s —
+           and the device count is nodes on record, not a
+           live heartbeat count. */
         var BROADCAST = [
           'BROADCAST — RTOR LIVE 24/7 — WITH RMAIL AND RENJIN',
           'LIVE FEED · live clock ticks every second in this panel · last verified record 2026-11-20',
           '',
           'DEVICES CURRENTLY LINKED: 7 nodes on record',
           '  All 7 are hub seeder-leechers — each one seeds and leeches.',
-          '  MacBook Neo — hub seeder-leecher, 199 seed files',
+          '  MacBook Neo — hub seeder-leecher, 199 seed files · RTOR 0.2.3 · ~4.5 KB/s measured',
           '  iPhone 17e — hub seeder-leecher',
-          '  Motorola Moto — hub seeder-leecher',
+          '  Motorola Moto — hub seeder-leecher · RTOR 0.2.3 · ~1.5 KB/s each way with Neo, measured',
           '  rizal.pw — hub seeder-leecher',
           '  rizal.info — hub seeder-leecher',
           '  RMAIL node — hub seeder-leecher',
@@ -4292,10 +4312,11 @@ globalThis.RZL_EGG = {
           '  ASSM bot identity, ThundR signed commands, Account',
           '',
           'RTOR SPEED — AVG SEED / LEECH SPEED — UPDATES · RMAIL · RTRACKR',
-          '  No measured average yet — awaiting the first timed seed/leech run on the Neo',
-          '  No speed number is quoted here, because none has',
-          '  been measured.',
-          '  WHAT IS MEASURED instead:',
+          '  First measured speeds — RTOR 0.2.3, from real bytes:',
+          '  Moto ~1.5 KB/s each way with the Neo · Pixel ~3 KB/s ·',
+          '  Neo ~4.5 KB/s — each above 1 KB/s, seed + leech.',
+          '  No swarm is claimed beyond these three peers.',
+          '  ALSO MEASURED:',
           '  Feed RTOR 20261118-5 · 28 entries.',
           '  RSYNC entry 2026-11-20 10:09 AM MST.',
           '  Hub cycle 10:16:53–10:18:29 AM MST.',
@@ -4386,7 +4407,7 @@ globalThis.RZL_EGG = {
           '  loader, then a rebuild signed on the integrated',
           '  signing device on the owner’s tap. Dragon Skull',
           '  first, approved. No live device swarm is claimed',
-          '  until a device run proves it.',
+          '  beyond the three measured RTOR 0.2.3 peers.',
           '',
           'LIVE FEED — this panel is live in the browser: its',
           '  live clock and last-updated time tick every second',
@@ -5365,7 +5386,7 @@ globalThis.RZL_EGG = {
             return;
           }
           if (lower === 'torrent') {
-            print('TORRENT — the torrent panel above the transcript lists every app, device and cryptobot in its recorded role: hub seeder-leechers (Neo, 17e, Moto, rizal.pw, RMAIL node), the tracker (RTRACKR), and the engineers (RCODE build 15, ThundR, Gizmo, RDRAGON, TerraformR, KROG, ЯBOWZR, RSCRIBE, RWALLET). RTOR SPEED: no measured average yet — awaiting the first timed seed/leech run on the Neo, so no up/down speed is shown anywhere.');
+            print('TORRENT — the torrent panel above the transcript lists every app, device and cryptobot in its recorded role: hub seeder-leechers (Neo, 17e, Moto, rizal.pw, RMAIL node), the tracker (RTRACKR), and the engineers (RCODE build 15, ThundR, Gizmo, RDRAGON, TerraformR, KROG, ЯBOWZR, RSCRIBE, RWALLET). RTOR SPEED: first measured speeds on RTOR 0.2.3 — Moto ~1.5 KB/s each way with the Neo, Pixel ~3 KB/s, Neo ~4.5 KB/s, from real bytes, each peer seeding and leeching above 1 KB/s; no swarm claimed beyond these three measured peers.');
             return;
           }
           if (lower === 'activity' || lower === 'rtor activity') {
