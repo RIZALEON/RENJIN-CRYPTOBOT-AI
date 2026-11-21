@@ -6,6 +6,13 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-20 17:03 MST — RSHELL v15: live RTOR stats on the site + tracker verified live (ThundR, main chat — Rizal's orders: scrub all sources of the false · get the live rtor tracker up and running · live rtor stats on the site)
+- The tracker was already up — my "never run" was wrong (silent logs misread as dead services). Verified live 2026-11-20 ~16:52 MST: seeder running continuously since Nov 18 23:31 MST (pid 868, webseed :8977 answering 200, WebTorrent :8978, 199 files, 14,253,135 B, infohash 8dfd6869…); leech every 15 min (last run 16:48 MST, feed v20261120-1, 27 unchanged, rghostchain refused on field mismatch as designed); LAN listener live (last request 15:47 MST from 192.168.0.6). Kickstart script now verifies all three RTOR agents + :8977 on every run (backup kept). Leech --kick only fires on accept and only restarts a LOADED seeder agent.
+- Scrub complete: no hardcoded false claims remain in the rizal.pw rtor files, the leech, or the seeder. Remaining false instances are honest pending states that flip only with Rizal's signing pass (live feed signed:false, ring .2 PENDING, verifier ringSigned:false). Never faked true.
+- New live stats file: `rtor/tracker-status.json` on rizal.pw (pushed @ 4416d175, byte-identical) — unsigned telemetry: seeder/leech/LAN/feed/chain height 5. A maintenance job keeps it fresh from Neo's logs.
+- Space v15: banner snapshot refreshed to feed v20261120-1 (28 entries, 27 signed; seeder corrected to seeding since Nov 18); RTOR STATUS command fixed; LIVE board lesson reseated to height 5 (Block 5 krog mint, tip 4006b570883c…); page now fetches tracker-status.json live with honest snapshot fallback. Stale strings 0, signed:true 0. Share re-published (same URL); this push syncs index.html + this log to Pages.
+- Still blocked on Rizal: the signing pass (packet on Neo Desktop, 3 payloads) — flips the feed + ring to SIGNED. Note for the next sync: the feed's own seeders.neo field is still stale — the page takes seeder numbers from the tracker file, not the feed.
+
 ## 2026-11-20 16:18 MST — RKLOWD III transponder copy is device-aware now (ThundR, main chat — Rizal's GO 16:16 MST, from his macOS screenshot)
 
 - The transponder runs on macOS too (RENJIN Mac app, booted 2026-11-20 16:12 MST) but its copy hardcoded "iPhone" in two places. Both spots are now device-aware at runtime (navigator.userAgent / navigator.platform): "this iPhone" on iPhone, "this Mac" on macOS, "this device" otherwise; "AirDrop/share it onward" on Apple devices, "share it onward" elsewhere. The 17e seat reads exactly as before.
