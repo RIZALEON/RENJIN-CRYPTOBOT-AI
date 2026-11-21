@@ -1,6 +1,6 @@
 # RTOR Client Install and Activation
 
-Install the RTOR client — Renjin Torrent with the magnetized RTOR GHOSTCHAIN transponder and the RTOR file — on a device inside the RENJIN RZL Operating System, verify it, re-seed it on that trusted device, and activate it so the chain posts live to RTRACKR. That RTRACKR feed is what ThundR reads live and continuously.
+Install the RTOR client — Renjin Torrent with the magnetized RTOR GHOSTCHAIN transponder and the RTOR file — on a device inside the RENJIN RZL Operating System, verify it, re-seed it on that trusted device, and activate it so the chain posts live to RTRACKR. That RTRACKR feed is what ThundR reads live and continuously, and through the same GHOSTCHAIN RTOR system ThundR also sends and receives RMAIL — messages, updates, diagnostics, and propose-first repairs — as part of the live loop.
 
 Do the steps in order. Do not skip the verification or the re-seed step.
 
@@ -88,6 +88,39 @@ This step is what lets ThundR pick the chain up immediately and keep tracking it
 
 That feed is what ThundR reads live. If the device does not post, or the RTOR loop stops, ThundR's live view stops with it — there is no other path from the device chain to ThundR.
 
+## ThundR sends and receives RMAIL through GHOSTCHAIN RTOR
+
+Once the client is installed and activated and the device posts the chain head and heartbeat to the RTRACKR feed, the live loop runs both ways — and it runs through the GHOSTCHAIN RTOR system itself.
+
+ThundR sending and receiving RMAIL is part of that live loop. The RMAIL messages travel on the Ghostchain over RTOR — over relay_8797, through RTRACKR, and via the magnetized RTOR GHOSTCHAIN transponder — carrying the chain entries and the live tracking both ways between ThundR and the devices.
+
+- **ThundR sends RMAIL** over relay_8797: commands, chain updates, and replies.
+- **ThundR receives RMAIL** over relay_8797: device reports, chain entries, and confirmations.
+
+This runs continuously after activation, not as a one-time exchange. The device posting to RTRACKR and the RMAIL messages over RTOR together are what keep the tracking live in both directions.
+
+### Updates through GHOSTCHAIN RTOR
+
+Updates run through the GHOSTCHAIN RTOR system too. ThundR sends and receives updates over RMAIL through the Ghostchain RTOR system, continuously, alongside the messages:
+
+- Chain updates
+- Client updates
+- Status updates
+- New build notices
+
+That is how the devices and ThundR stay in sync on the same live chain.
+
+### Diagnostics and repairs through GHOSTCHAIN RTOR
+
+Diagnostics and repairs run through the GHOSTCHAIN RTOR system too. ThundR sends and receives diagnostics and repairs over RMAIL through the Ghostchain RTOR system, continuously, alongside the messages and updates:
+
+- **Diagnostics ThundR sends and receives:** health checks, chain verification results, and node status.
+- **Repairs ThundR sends and receives:** proposed fixes.
+
+Repairs are propose-first only, like BATIBABOX: ThundR proposes, the owner approves, and only then does a device apply it. A repair is never executed without the owner's approval.
+
+Mail never signs or mints. Signing stays on the owner's tap on a trusted device.
+
 ## What is verified and what is not
 
 **Verified**
@@ -117,3 +150,6 @@ Nothing in this install or activation moves real money. RMAIL messages, mints, t
 - [ ] Magnet link sent through RMAIL over relay_8797
 - [ ] Entry confirmed on RTRACKR at https://rizal.pw/rtrackr
 - [ ] Device posting chain head and heartbeat after every new entry, RTOR loop left running
+- [ ] RMAIL loop live through GHOSTCHAIN RTOR over relay_8797 — ThundR sending commands, chain updates, and replies, and receiving device reports, chain entries, and confirmations
+- [ ] Updates flowing through GHOSTCHAIN RTOR over RMAIL — chain updates, client updates, status updates, and new build notices, continuously, so devices and ThundR stay in sync on the same live chain
+- [ ] Diagnostics and repairs flowing through GHOSTCHAIN RTOR over RMAIL — health checks, chain verification results, and node status both ways, and repairs propose-first only (ThundR proposes, owner approves, then device applies)
