@@ -590,6 +590,42 @@
         line-height: 1.5;
       }
 
+      /* ---- RGHOSTCHAIN FILE — the shared chain file, same link on
+         every device. Mirrors the section the Renjin Torrent client
+         carries: raw link (working now), Pages link (may 404 until
+         Pages redeploys), magnet, SHA-256, the chain it carries,
+         and the Pixel's live state as reported by the Pixel itself. */
+      .ghostfile-block {
+        margin: 0 0 10px;
+        padding: 9px 10px;
+        border: 1.5px solid var(--green);
+        border-radius: 8px;
+        background: rgba(0, 16, 7, 0.55);
+        box-shadow: inset 0 0 12px rgba(43, 255, 98, 0.10);
+        min-width: 0;
+      }
+      .ghostfile-head {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px 10px;
+        min-width: 0;
+        margin-bottom: 7px;
+      }
+      .ghostfile-title {
+        color: var(--green-bright);
+        font-size: 12.5px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-shadow: 0 0 8px rgba(43, 255, 98, 0.5);
+      }
+      .ghostfile-sub {
+        color: var(--pale);
+        font-size: 11px;
+        line-height: 1.5;
+      }
+      .ghostfile-block .magnet-label { color: var(--green-bright); }
+
       /* ---- RTOR ACTIVITY — all blocks tracked ----
          Live in-page tracker feed: ticks while the shell is
          open, one tracked event at a time, cycling the blocks
@@ -1650,6 +1686,39 @@
             </div>
           </div>
           <div class="magnet-note">Magnetized components on record · 2026-11-20 — the magnet is built from the recorded PKG SHA-256 and STATE hashes above. Recorded values only: no live swarm, speed, or device data is claimed here.</div>
+        </div>
+        <div class="ghostfile-block">
+          <div class="ghostfile-head">
+            <span class="ghostfile-title">RGHOSTCHAIN FILE</span>
+            <span class="ghostfile-sub">The shared GHOSTCHAIN file for the RTOR client — the same link on every device.</span>
+          </div>
+          <div class="magnet-rows">
+            <div class="magnet-row">
+              <span class="magnet-label">RAW LINK · WORKING NOW</span>
+              <span class="magnet-value"><a href="https://raw.githubusercontent.com/RIZALEON/RENJIN-CRYPTOBOT-AI/main/r-operating-system/rtorrent/RGHOSTCHAIN.rzl" target="_blank" rel="noopener">https://raw.githubusercontent.com/RIZALEON/RENJIN-CRYPTOBOT-AI/main/r-operating-system/rtorrent/RGHOSTCHAIN.rzl</a></span>
+            </div>
+            <div class="magnet-row">
+              <span class="magnet-label">PAGES LINK</span>
+              <span class="magnet-value"><a href="https://rizaleon.github.io/RENJIN-CRYPTOBOT-AI/r-operating-system/rtorrent/RGHOSTCHAIN.rzl" target="_blank" rel="noopener">https://rizaleon.github.io/RENJIN-CRYPTOBOT-AI/r-operating-system/rtorrent/RGHOSTCHAIN.rzl</a> · may 404 until Pages redeploys</span>
+            </div>
+            <div class="magnet-row">
+              <span class="magnet-label">MAGNET</span>
+              <span class="magnet-value"><a href="magnet:?xt=urn:btih:92d1572a642aa073efa1979000e7705126e8924fbf94403b6617f65a45e81e37&amp;dn=RGHOSTCHAIN.rzl&amp;tr=https://rizal.pw/rtrackr">magnet:?xt=urn:btih:92d1572a642aa073efa1979000e7705126e8924fbf94403b6617f65a45e81e37&amp;dn=RGHOSTCHAIN.rzl&amp;tr=https://rizal.pw/rtrackr</a></span>
+            </div>
+            <div class="magnet-row">
+              <span class="magnet-label">SHA-256</span>
+              <span class="magnet-value">92d1572a642aa073efa1979000e7705126e8924fbf94403b6617f65a45e81e37</span>
+            </div>
+            <div class="magnet-row">
+              <span class="magnet-label">CHAIN IT CARRIES</span>
+              <span class="magnet-value">Live GHOSTCHAIN from RTRACKR · snapshot Nov 20, 2026 2:43:28 PM MT · height 5 · 6 blocks · tip 4006b57088…f0bb5b · chain verify OK</span>
+            </div>
+            <div class="magnet-row">
+              <span class="magnet-label">PIXEL · LIVE</span>
+              <span class="magnet-value">Renjin Torrent client up on the Pixel · HARDDEVICE-03 · Moto · RID Я-DEVICE-BV2ASTPX0C-TV · seeding RGHOSTCHAIN.rzl and RGHOSTCHAIN-RECORD.md · SPACE-RID RID-0026-C7YD · space pixel.rtor · RKLOWD node rklowd.pixel · RMAIL rtor-pixel-rtor@rizal.pw · last heartbeat 2026-11-20T22:22:00-07:00 · RE-SEED still waiting for Rizal&rsquo;s RGHOSTKEY tap on the trusted device</span>
+            </div>
+          </div>
+          <div class="magnet-note">The client accepts the file only if its SHA-256 matches — any other hash is refused. No measured RTOR speed yet, and no live device swarm is claimed until a device run proves it.</div>
         </div>
         <table class="torrent-table">
           <thead>
