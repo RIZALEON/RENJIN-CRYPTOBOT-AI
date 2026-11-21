@@ -1,5 +1,9 @@
 # RENJIN RZL AI CRYPTO Operating System — GitHub Project Index
 
+## PUBLIC PROJECT LINE
+
+https://muse.ai/s/r-shell-xjxn6dxbxskxa5xyxp/kkOmaDGgjjCjTlH90iROQIDKXoHChxAg8QmB3lc8S6Y
+
 ## Pure R OPERATING SYSTEM RENJIN SHELL BUILD — at the top
 
 **R:> Shell — pure R OPERATING SYSTEM RENJIN SHELL BUILD, integrated:**
