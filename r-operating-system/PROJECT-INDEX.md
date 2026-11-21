@@ -11,8 +11,9 @@ https://muse.ai/s/r-shell-xjxn6dxbxskxa5xyxp/kkOmaDGgjjCjTlH90iROQIDKXoHChxAg8Qm
 Re-shared 2026-11-20 18:17 MST, so this link now serves the integrated build:
 Gizmo (RID Я-DEVICE-1PYZ7VG0Z1-ZE) + ThundR (ЯID-0014-KREH, integrated signing
 device, ThundR's mark, fly set, read/write/check, Autosign v2) + RMAIL v2.1
-with RTOR (7 hub seeder-leechers, RCODE build 15). Shell file 855,396 B,
-SHA256 ef39d68d868fe8fce62872245e590070a610ece211c643ba1cde7881a819fbe4.
+with RTOR (7 hub seeder-leechers, RCODE build 15). Shell file now 927,276 B (OS-desktop re-skin, 2026-11-20 18:29 MST),
+SHA256 7cdff9165d7cdcf16f15e4ea42ae62b5fabc730b189e696346c2af17837aa985
+(previous integrated build: 855,396 B, SHA ef39d68d…fbe4).
 
 ## Most updated fused builds — at the top
 
