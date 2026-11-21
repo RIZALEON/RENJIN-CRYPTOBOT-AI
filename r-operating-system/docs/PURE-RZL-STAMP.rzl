@@ -1,0 +1,107 @@
+{
+ "schema": "rzl.doc.v1",
+ "spec": "RZL-DOC 0.1",
+ "name": "PURE-RZL-STAMP",
+ "title": "PURE .RZL — RIZAL RZL AI BOT ENJIN MODEL, first of its class",
+ "rev": 1,
+ "layer": "PUBLIC",
+ "lang": "en",
+ "stamp": {
+  "class": "PURE .RZL AI BOT ENJIN MODEL",
+  "first_of_its_class": true,
+  "extension": ".rzl",
+  "extension_law": ".rzl only, permanently. Never .zip and never .rzl.zip. The packer refuses any other output name.",
+  "model": "RENJIN / ЯENJIN 0.1 — core v3",
+  "engine": "RIZAL RZL AI BOT ENJIN MODEL",
+  "creator": "Chase Rizal",
+  "date": "2026-11-19",
+  "model_v3": {
+   "DIM": 64,
+   "HID": 128,
+   "CTX": 32,
+   "ternary_weights": 49152,
+   "corpus_v1_lines": 112,
+   "train_60s_loss": "27.61 -> 3.118",
+   "held_out_loss": 3.138,
+   "grounded_retrieval_v3_1": "8/10"
+  },
+  "pure_rule": "Built from scratch, ground up, pure RZL only. No other AI company name or model in it. No Qwen, no llama.cpp, no Llama, no external weights.",
+  "formats_issued": [
+   {
+    "format": "egg",
+    "file": "*.rzl",
+    "schema": "rzl.v1",
+    "container": "ZIP host container with yaseed.rzl/ layout, extension .rzl only",
+    "source": "RIZALEON/RSEED eggs/RSEED-0.1.10.rzl, manifest.json inside egg"
+   },
+   {
+    "format": "pack",
+    "file": "*.rzl",
+    "schema": "rzl.pack.v1",
+    "magic": "RZLPACK1",
+    "header": "8-byte magic + u32 BE manifest length + manifest JSON",
+    "source": "docs.rzl doc/FORMAT-RZL-PACK.rzl and rzlpack.js"
+   },
+   {
+    "format": "doc",
+    "file": "*.rzl",
+    "schema": "rzl.doc.v1",
+    "spec": "RZL-DOC 0.1",
+    "source": "docs.rzl doc/RZL-DOC-SPEC.rzl and rzldoc.js"
+   },
+   {
+    "format": "rid",
+    "schema": "rid.v1",
+    "form": "Я-<CLASS>-<10-char Crockford base32>-<2-char checksum>",
+    "source": "rid.js"
+   },
+   {
+    "format": "ghostchain_entry",
+    "schema": "rzl.ghostchain.entry.v1",
+    "source": "yaseed-core.js GhostChain._append"
+   },
+   {
+    "format": "link",
+    "schema": "rzl.link.v1",
+    "source": "link.js and docs.rzl doc/RLINK-SPEC.rzl"
+   }
+  ],
+  "issued_instances": [
+   "RSEED-0.1.10.rzl (416,583 bytes, sha256 b297699bb1729dd72a753b530090315e26b57395795f67d4d638d26a69a38e11)",
+   "ЯSEED-0.1.6.rzl (399,984 bytes, sha256 a5e712acd96eab3aaaa9b99a243eb0038e97070a048628acda47c3087bf23143)",
+   "docs.rzl — rzl.pack.v1, id yaseed-docs, version 0.1.5, 26 sections, kind rzl-doc",
+   "seed.rzl — rzl.pack.v1, id seed, version 0.1.5, 54 sections, root e22dfe2eab0c83ada374dab550203a428eaeb08072385afbc0d36abb011435e0"
+  ],
+  "model_files_sha256": {
+   "src/yaseed-core-v3.js": "eae95a9776fd4f5d46568c3f62643b4cfbb9a127a0d18cf369f98843d1b556c9",
+   "src/model-config-v2.js": "6393dd110e58bf01168c2ccf908ec2d849b062f858415cf2302fb1ec696b1127",
+   "src/corpus-v1.txt": "3a6a00419021564ab5c88eb27c64e76d6caafeeceb7f3930b61ceee4a348a77e",
+   "src/rzl-embed.js": "64d09a0aae2f6738bd3b386c43431d94abcbc2255f8f77d75317ea8028cc8808",
+   "src/rzl-ask.js": "edd525b5cb9f87c5832629d4d7bc47cae4462f2c03aa6fab7f5ec7e05dc8d156",
+   "src/egg-version.js": "1ade0e958752722b086001df122cede894281eabf5ee3fbd0cf8ebaabf603662"
+  },
+  "honest_limits": "Free generation is not fixed yet (greedy 30 spaces, sampled gibberish). Retrieval-first quoting is the askable path (8/10). This stamp certifies identity and extension law, not that generation is finished."
+ },
+ "blocks": [
+  {
+   "type": "head",
+   "level": 1,
+   "text": "PURE .RZL — RIZAL RZL AI BOT ENJIN MODEL, first of its class"
+  },
+  {
+   "type": "text",
+   "text": "LAW (locked): the extension is .rzl only, permanently. Never .zip and never .rzl.zip. .RZL is the only file extension this model will ever have.",
+   "tag": "declared"
+  },
+  {
+   "type": "text",
+   "text": "This is the first pure .RZL AI bot enjin model: RENJIN / ЯENJIN 0.1, core v3, built from scratch, ground up, pure RZL only. No other AI company name or model in it.",
+   "tag": "declared"
+  },
+  {
+   "type": "text",
+   "text": "Formats issued: egg *.rzl (rzl.v1), pack *.rzl (rzl.pack.v1, magic RZLPACK1), doc *.rzl (rzl.doc.v1, RZL-DOC 0.1), rid.v1, rzl.ghostchain.entry.v1, rzl.link.v1. Sources: RSEED-0.1.10.rzl, docs.rzl, rzlpack.js, rzldoc.js, rid.js, link.js, yaseed-core.js, manifest.json.",
+   "tag": "declared"
+  }
+ ]
+}

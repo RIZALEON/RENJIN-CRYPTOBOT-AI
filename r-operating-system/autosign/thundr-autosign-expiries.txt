@@ -1,0 +1,6 @@
+# Recorded profile expiries — source=recorded, used only if no live
+# ~/Library/MobileDevice/Provisioning Profiles/*.mobileprovision matches.
+# bundle-id,ISO-8601 expiry (MST)
+info.rizal.dragonskull.rboardkeyboard,2026-11-21T15:44:27-07:00
+info.rizal.dragonskull,2026-11-26T23:30:00-07:00
+info.rizal.dragonskull.thundrwidget,2026-11-26T23:30:00-07:00

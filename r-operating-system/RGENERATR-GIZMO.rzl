@@ -1,0 +1,26 @@
+format: rzl.doc.v1
+name: RGENERATR-GIZMO
+date: 2026-11-20
+owner: Rizal · CHIEF (Decider) · ЯID-0001-3QQS
+minted_by: RGENERATR 2.1.9
+subject: Gizmo — inside RGENERATR
+rid: Я-DEVICE-1PYZ7VG0Z1-ZE
+rid_format: rid.v1, class DEVICE, body 1PYZ7VG0Z1, checksum ZE, verified ok
+rid_material: sha256:4e6d04b504d6ba30329453abd71ccd175be930f68c61dc53d183da83605d301e | parent ЯID-0001-3QQS | device Moto | seq 16 | class DEVICE
+previous_status: RID pending (TERAFORMR BOT CARD screenshot, 2026-11-20)
+role: Gizmo owns the Moto update — install current Dragon Skull (bundle 59) and current RCODE (1.0/14) when Moto is USB-online and Chase GOs.
+approval: authorized-by-owner-command, 2026-11-20 — NOT a cryptographic signature. No ghostkey accessed. No keys in this file.
+law: .rzl only, permanently. Never .zip and never .rzl.zip.
+
+botcard: TERRAFORMR BOT CARD, 2026-10-30 — GIZMO, RBOT "The Observer",
+  permanent in-game AI / Cryptobot, boxy brown robot, red eyes.
+  Creates, modifies, expands, refines and updates the game from within.
+  Own menu, settings, in-game button, /gizmo command center.
+  Follows 4-6 behind Hiro. Relays signed update commands unchanged.
+  Links with external ThundR (GIZMO button <> THUNDR button).
+key_commands: /gizmo status, /gizmo scan | analyze, /gizmo hack | link,
+  /gizmo follow | stay, /gizmo approve, /gizmo updates signed, /gizmo <msg>
+thundr_link: RTHUNDR · ThundR, RID-0014-KREH, ONLINE live on Neo MCR :8329,
+  OFFLINE bundled knowledge, relays owner's signed update commands
+  byte-for-byte, never re-signs or approves.
+thundr_rdos: 127.0.0.1:8329, WALLET 72%, CASKET LOCK, SIGNING GATED.

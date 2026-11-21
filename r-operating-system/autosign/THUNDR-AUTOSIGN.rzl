@@ -1,0 +1,20 @@
+format: rzl.doc.v1
+name: THUNDR-AUTOSIGN
+version: 2.0.0
+date: 2026-11-20
+owner: Rizal · CHIEF (Decider) · ЯID-0001-3QQS
+law: .rzl only, permanently. Never .zip and never .rzl.zip.
+scope: all devices, sites, cryptogames, RVM, and apps through RTOR.
+runs_from: any device inside the RENJIN RZL OPERATING SYSTEM — Neo,
+  17e, Moto, or any hub seeder-leecher — via RTOR. Not Neo-only.
+schedule: every 6 hours — 00:30, 06:30, 12:30, 18:30.
+driver: thundr-autosign.sh v2 — reads targets, reads expiry (live profile
+  first, recorded expiry second), re-signs DUE (<=48h) targets in place
+  with rloader-resign.sh on the Neo, installs over with devicectl,
+  verifies the new expiry is later. Never uninstalls, never wipes.
+  Fails closed if the relay is down, the device is not visible, or
+  rloader-resign.sh is not found. Check-only mode: --check-only.
+first targets: RBOARDKeyboard info.rizal.dragonskull.rboardkeyboard
+  expires 2026-11-21 15:44:27 MST; main/widget expire 2026-11-26 23:30 MST.
+approval: authorized-by-owner-command, 2026-11-20 — NOT a cryptographic
+  signature. No ghostkey accessed. No keys in this file.

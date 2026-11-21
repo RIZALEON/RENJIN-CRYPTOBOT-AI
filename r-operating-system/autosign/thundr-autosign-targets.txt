@@ -1,0 +1,11 @@
+# ThundR Autosign targets — starter list
+# One target per line: kind,device,app,bundle-id
+# NOTE: Autosign v2 reads this file. Expiries are read live from the
+# provisioning profiles first, recorded expiries second.
+# Bundle IDs are the authoritative part; app display names marked (?)
+# are unverified — confirm on the Neo / 17e before using them as labels.
+#
+# Expiries (MST): keyboard Nov 21, 2026 3:44:27 PM; main + widget Nov 26, 2026 11:30 PM.
+app,17e,RDRAGON,info.rizal.dragonskull
+keyboard,17e,RBOARDKeyboard,info.rizal.dragonskull.rboardkeyboard
+widget,17e,RDRAGONWidget (?),info.rizal.dragonskull.thundrwidget
