@@ -6,6 +6,11 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-21 22:41 MST — MANIFEST.sha256 fixed (ThundR, on Rizal's order "fix that")
+
+- `r-operating-system/MANIFEST.sha256`: the two rshell entries had drifted behind the shell commits — updated `rshell/R-SHELL-MERGED.html` and `rshell/index.html` to the current build's hash `9d6494d5bc2b20fff0ce5355cfcdb0af91895eba0b46815a14b97a1a6cd500ce` (the two files are byte-identical copies of the merged shell, 1,113,024 B).
+- Verified: `sha256sum -c` against the full pulled tree at feafa524 now reports **29/29 OK** (was 27 OK / 2 FAILED).
+
 ## 2026-11-21 21:46 MST — RSHELL-RENJIN-MIN.html: the minimized rebuild (ThundR, main chat — Rizal's order "start the rebuild minimized")
 - New file `renjin-complete-build/rshell/RSHELL-RENJIN-MIN.html` (706,318 B, sha256 `dfc4f980…`): the current published shell (753,708 B) minified — terser (compress + local mangle, comments stripped) on the code blocks, conservative CSS minification, lossless store re-serialization. Saved 47,390 B (−6.29%). The embedded store block (564 KB, 75% of the file) is already-compact JSON — lossless compaction found 29 B; any further shrink means a data-encoding change, not minification.
 - Verified behavior-identical: all 5 script blocks parse; full-page node-sim boot on both files gives identical transcripts (egg 0.1.11 · loss 3.1813 · chain 9 entries · chain_ok true; MODEL / CHAIN VERIFY / STATUS / QUEUE / KB answers identical after timestamp normalization); store deep-equals the original and `state:current` is unchanged (`19234a4a…`); starfield base64 payload hash identical; citation block intact as last element before `</body>`; HTML outside script/style bodies byte-identical. The live shell files are untouched — MIN sits beside them as the new seat.
