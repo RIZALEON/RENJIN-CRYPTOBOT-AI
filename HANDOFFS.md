@@ -6,6 +6,10 @@ what's blocked. Read the newest entry before beginning work.
 
 ---
 
+## 2026-11-21 20:31 MST — HANDOFF-2026-11-21 added: the frankensteinrizal.unstoppable night (ThundR, main chat — Rizal's order)
+- New file `HANDOFF-2026-11-21.md` (116,552 B): every link (the owner's seat spaces + this session's), every file address, completed work (17 items), uncompleted work (10 items, each with how to finish it), and the main-chat transcript for 2026-11-21 appended verbatim.
+- Headlines it records: the UD pin `QmYfsPeLtgTguSVHkHwNVUh7j3y4FUtXGWW2WpRKy2LNh8` verified as a wrapped ZIP; the exact uploaded file re-verified byte-identical to the live pin (sha256 `1b30d5ffc…`) and seated in the Site Upload Emulator as frozen BUILD 1; AUTO-UNPACK + GAMEPLAY (clean site loads first) in the ЯBOWZR space; gateway law (Pinata/Filebase serve CORS-open, ipfs.io/dweb.link fail 403/504); Neo rewrite law (the live login page and feed are rebuilt about every two minutes — the RTOR feed entry is the durable seat for the hash).
+
 ## 2026-11-20 19:03 MST — r-operating-system MANIFEST hashes fixed (ThundR, main chat — Rizal's order)
 - `r-operating-system/MANIFEST.sha256`: the two rshell entries still carried the pre-re-skin hash (`ef39d68d…`, the 855,396 B build) after the OS-desktop re-skin (commit `81d89d6e`) replaced both files. Both lines now carry the current files' hash `7cdff9165d7cdcf16f15e4ea42ae62b5fabc730b189e696346c2af17837aa985` (927,276 B). The listed file set is unchanged (the manifest covers the fused package contents; `rshell/previous/` is an archive seat outside the package). Verified before push: the full pulled tree at head `4dd1cb72` passes `sha256sum -c` 29/29 with the fixed manifest.
 
